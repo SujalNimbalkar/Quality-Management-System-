@@ -76,7 +76,7 @@ const TestWindow = () => {
       };
     });
 
-    fetch('/api/mcq/submit-answers', {
+    fetch(`${BACKEND}/api/mcq/submit-answers`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ submissions })

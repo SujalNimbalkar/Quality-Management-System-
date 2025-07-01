@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 const SubmittedAnswers = () => {
   const [scoreLog, setScoreLog] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const BACKEND = import.meta.env.VITE_BACKEND_URL;
   useEffect(() => {
-    fetch('/api/mcq/score-log')
+    fetch(`${BACKEND}/api/mcq/score-log`)
       .then(res => res.json())
       .then(data => {
         setScoreLog(data.scoreLog || []);

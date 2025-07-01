@@ -3,10 +3,11 @@ import ResultTable from './ResultTable';
 import EntityTable from './EntityTable';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './EmployeeDashboard.css';
-
+const BACKEND = import.meta.env.VITE_BACKEND_URL;
 
 // --- Helper: Convert level number to code string ---
 const levelToCode = (level) => `l${level}`;
+
 
 /**
  * EmployeeDashboard component
@@ -49,7 +50,7 @@ const EmployeeDashboard = ({
 
   useEffect(() => {
     if (!employeeId && !employeeInfo?.name) return;
-    fetch('/api/mcq/submitted-answers')
+    fetch(`${BACKEND}/api/mcq/submitted-answers`)
       .then(res => res.json())
       .then(data => {
         console.log('Fetched submissions:', data.submissions); // Debug: inspect backend data
@@ -71,7 +72,7 @@ const EmployeeDashboard = ({
 
   // Dynamically load skillNameToCode from CSV
   useEffect(() => {
-    fetch('/excel_data/skill_code_map.csv')
+    fetch(`${BACKEND}/excel_data/skill_code_map.csv`)
       .then(res => res.text())
       .then(csv => {
         const lines = csv.trim().split('\n');
@@ -126,7 +127,7 @@ const EmployeeDashboard = ({
 
   // --- Fetch all employee results (for superusers) ---
   const handleShowAllResults = async () => {
-    const res = await fetch('/api/employee_assessment_results/all');
+    const res = await fetch(`${BACKEND}/api/employee_assessment_results/all`);
     const data = await res.json();
     setAllResults(data);
     setShowAllResults(true);

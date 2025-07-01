@@ -10,13 +10,13 @@ const EmployeePerformance = () => {
   const [submittedAnswers, setSubmittedAnswers] = useState([]);
   const [radarData, setRadarData] = useState([]);
   const [loading, setLoading] = useState(false);
-
+const BACKEND = import.meta.env.VITE_BACKEND_URL;
   const handleFetch = async () => {
     if (!empId) return;
     setLoading(true);
     const [scoreRes, answersRes] = await Promise.all([
-      fetch('/api/performance/employee_assessment_results/all'),
-      fetch('/api/mcq/submitted-answers')
+      fetch(`${BACKEND}/api/performance/employee_assessment_results/all`),
+      fetch(`${BACKEND}/api/mcq/submitted-answers`)
     ]);
     const scoreData = await scoreRes.json();
     const answersData = await answersRes.json();
