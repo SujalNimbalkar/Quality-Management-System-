@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './TestWindow.css';
+const BACKEND = import.meta.env.VITE_BACKEND_URL;
 
 const TestWindow = () => {
   const location = useLocation();
@@ -33,7 +34,7 @@ const TestWindow = () => {
   useEffect(() => {
     if (skill && level && Object.keys(skillMap).length > 0) {
       const skill_id = skillMap[skill] || skill;
-      fetch(`http://localhost:5000/api/mcq/questions?skill_id=${encodeURIComponent(skill_id)}&level=${level}`)
+      fetch(`${BACKEND}/api/mcq/questions?skill_id=${encodeURIComponent(skill_id)}&level=${level}`)
         .then(res => res.json())
         .then(data => {
           console.log("Requested skill_id:", skill_id, "difficulty:", level);
