@@ -2,14 +2,16 @@ const { google } = require("googleapis");
 const dotenv = require("dotenv");
 dotenv.config();
 
-const KEYFILEPATH = process.env.GOOGLE_APPLICATION_CREDENTIALS;
-console.log("Using KEYFILEPATH:", KEYFILEPATH); // Added log
+const KEYFILEPATH =
+  process.env.GOOGLE_APPLICATION_CREDENTIALS ||
+  JSON.parse(process.env.GOOGLE_CREDENTIALS);
+// console.log("Using KEYFILEPATH:", KEYFILEPATH); // Added log
 const SPREADSHEET_ID = process.env.GOOGLE_SHEET_ID;
-console.log("Using SPREADSHEET_ID:", SPREADSHEET_ID); // Added log
+// console.log("Using SPREADSHEET_ID:", SPREADSHEET_ID); // Added log
 const SUBMISSION_SHEET_ID = process.env.GOOGLE_SUBMITTED_ID;
-console.log("Using SUBMISSION_SHEET_ID:", SUBMISSION_SHEET_ID);
+// console.log("Using SUBMISSION_SHEET_ID:", SUBMISSION_SHEET_ID);
 const SCORE_LOG_SHEET_ID = process.env.GOOGLE_SCORE_LOG_ID;
-console.log("Using SCORE_LOG_SHEET_ID:", SCORE_LOG_SHEET_ID);
+// console.log("Using SCORE_LOG_SHEET_ID:", SCORE_LOG_SHEET_ID);
 
 // Auth helper
 async function getSheetsClient() {
