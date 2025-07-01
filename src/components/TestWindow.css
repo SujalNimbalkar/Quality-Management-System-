@@ -1,0 +1,91 @@
+/* TestWindow styles - Modern Blue/Indigo Theme */
+
+.testwindow-root {
+  background: #f3f6fd;
+  max-width: 700px;
+  margin: 40px auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(40,62,81,0.15);
+  padding: 36px 32px 32px 32px;
+  border: 1px solid #dbeafe;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.testwindow-title {
+  text-align: center;
+  margin-bottom: 36px;
+  color: #2563eb;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.testwindow-questions {
+  padding: 0;
+  margin: 0;
+}
+
+.testwindow-question-card {
+  margin-bottom: 32px;
+  background: #e0e7ff;
+  border-radius: 12px;
+  padding: 24px 20px 20px 20px;
+  box-shadow: 0 1px 4px rgba(40,62,81,0.08);
+}
+
+.testwindow-question-text {
+  font-weight: 700;
+  margin-bottom: 14px;
+  font-size: 1.15rem;
+  color: #1e40af;
+  letter-spacing: 0.01em;
+}
+
+.testwindow-options {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.testwindow-option-item {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.testwindow-option-label {
+  cursor: pointer;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #222b45;
+  font-weight: 500;
+}
+
+.testwindow-radio {
+  margin-right: 10px;
+  accent-color: #2563eb;
+  width: 18px;
+  height: 18px;
+}
+
+.testwindow-submit-row {
+  text-align: center;
+  margin-top: 36px;
+}
+
+.testwindow-submit-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 38px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(40,62,81,0.08);
+  transition: background 0.2s;
+}
+.testwindow-submit-btn:hover {
+  background: #1e40af;
+} 

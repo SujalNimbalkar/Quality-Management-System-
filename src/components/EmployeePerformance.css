@@ -1,0 +1,113 @@
+/* EmployeePerformance styles - Modern Blue/Indigo Theme */
+
+.employee-performance-root {
+  color: #222b45;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #283e51 0%, #485563 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding: 2em 0;
+}
+
+.employee-performance-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(40,62,81,0.15);
+  padding: 2em 2.5em;
+  max-width: 900px;
+  width: 95%;
+  margin-bottom: 2em;
+  color: #222b45;
+  border: 1px solid #dbeafe;
+}
+
+.employee-performance-title {
+  text-align: center;
+  color: #3b82f6;
+  margin-bottom: 1.5em;
+}
+
+.employee-performance-input-row {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+  justify-content: center;
+}
+
+.employee-performance-input {
+  padding: 0.7em 1em;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  font-size: 1em;
+  background: #f8fafc;
+  transition: border 0.2s;
+  color: #111;
+}
+.employee-performance-input:focus {
+  outline: none;
+  border: 1.5px solid #2563eb;
+  background: #fff;
+  color: #111;
+}
+
+.employee-performance-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 2.2em;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(40,62,81,0.08);
+  transition: background 0.2s;
+}
+.employee-performance-btn:hover {
+  background: #1e40af;
+}
+
+.employee-performance-table {
+  margin: 1em 0;
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+  background: #f3f6fd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.employee-performance-table th {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.7em 0.5em;
+}
+.employee-performance-table td {
+  padding: 0.6em 0.5em;
+  border-bottom: 1px solid #dbeafe;
+}
+.employee-performance-table tr:last-child td {
+  border-bottom: none;
+}
+
+.employee-performance-section-title {
+  color: #2563eb;
+  margin-top: 1.5em;
+  margin-bottom: 0.7em;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+.employee-performance-radar-container {
+  margin-top: 2em;
+  background: #f3f6fd;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(40,62,81,0.08);
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 

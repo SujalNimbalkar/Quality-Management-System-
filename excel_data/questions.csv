@@ -1,0 +1,401 @@
+Skill_id,Level_id,Question_number,Question,Option_A,Option_B,Option_C,Option_D,Correct_answer
+sk01,l2,1,What is the goal of the 'Sort' phase in 5S?,Polish all equipment,Identify and remove unnecessary items,Write daily reports,Arrange tools by color,B
+sk01,l2,2,Which tag is commonly used in the 'Sort' process?,Yellow tag,Blue tag,Red tag,Green tag,C
+sk01,l2,3,What is a key practice in the 'Sort?' stage of 5S?,Dispose or repair,Paint them,Label and store,Keep them just in case,A
+sk01,l2,4,"In 5S methodology, what action is aligned with the principle of 'Sort?'?",Storing unnecessary items,Removing outdated tools,Tagging unused items,Reviewing workspace regularly,A
+sk01,l2,5,How does Sort improve the workplace?,By training workers,By creating a clutter-free space,By painting walls,By increasing items,B
+sk01,l2,6,What is a key practice in the 'Order'?' stage of 5S?,Print documents,Organize tools,Clean floors,Remove trash,B
+sk01,l2,7,Frequently used items should be:,Kept in drawers,Within easy reach,Stored far away,Labeled,B
+sk01,l2,8,"In 5S methodology, what action is aligned with the principle of 'method?'?",Hiding tools,Putting items under the table,Storing all items in one box,Color coding,D
+sk01,l2,9,What is a key practice in the 'placed:' stage of 5S?,Randomly,On top shelves,Near the door,At lower levels,D
+sk01,l2,10,What is NOT part of Set in Order?,Tool labeling,Logical arrangement,Visual markers,Random storage,D
+sk01,l2,11,What does 'Shine' in 5S focus on?,Buying new tools,Replacing furniture,Regular cleaning,Color coding,C
+sk01,l2,12,What is a key practice in the 'identifying:' stage of 5S?,Paint issues,Leaks or damage,New items,Useful items,B
+sk01,l2,13,Which of the following is a Shine activity?,Daily cleaning,Product packaging,Production scheduling,Tool labeling,A
+sk01,l2,14,Why is Shine important?,Improves tool color,Maintains safety and efficiency,Saves electricity,Reduces cleaning staff,B
+sk01,l2,15,What is a key practice in the 'performed?' stage of 5S?,Never,Occasionally,Every 6 months,After each use,D
+sk01,l2,16,"In 5S methodology, what action is aligned with the principle of ''Standardize'?'?",Write SOPs,Create uniform practices,Buy new equipment,Paint tools,B
+sk01,l2,17,Standardization ensures:,Random storage,Efficiency and consistency,Overcrowding,Confusion,B
+sk01,l2,18,What is a key practice in the 'practices?' stage of 5S?,Visual aids,Chat groups,Rumors,Sticky notes,A
+sk01,l2,19,Standardize includes:,Creating clutter,Hiding issues,Selling tools,Training employees,D
+sk01,l2,20,"In 5S methodology, what action is aligned with the principle of 'changes?'?",Ignore it,Update procedures,Fire staff,Change departments,B
+sk01,l2,21,What is a key practice in the 'ensures:' stage of 5S?,Changing team leaders,Long-term discipline,One-time 5S activity,Weekly cleaning,B
+sk01,l2,22,How can companies sustain 5S?,Avoid cleaning,Fire staff,Reward good practices,Ignore rules,C
+sk01,l2,23,Which of these helps in sustaining 5S?,Refresher training,More paper,New uniforms,Less meetings,A
+sk01,l2,24,What is a key practice in the 'building:' stage of 5S?,Visuals,Clutter,Discipline and habits,Waste,C
+sk01,l2,25,What is NOT a Sustain activity?,Ignoring non-compliance,Taking ownership,Continuous improvement,Regular training,A
+sk01,l2,26,What is the goal of the 'Sort' phase in 5S?,Identify and remove unnecessary items,Polish all equipment,Arrange tools by color,Write daily reports,A
+sk01,l2,27,What is a key practice in the 'process?' stage of 5S?,Red tag,Yellow tag,Green tag,Blue tag,A
+sk01,l2,28,"In 5S methodology, what action is aligned with the principle of 'Sort?'?",Dispose or repair,Label and store,Keep them just in case,Paint them,A
+sk01,l2,29,Which of the following is NOT encouraged in Sort?,Removing outdated tools,Reviewing workspace regularly,Tagging unused items,Storing unnecessary items,D
+sk01,l2,30,What is a key practice in the 'workplace?' stage of 5S?,By training workers,By creating a clutter-free space,By painting walls,By increasing items,B
+sk01,l2,31,What is the main aim of 'Set in Order'?,Print documents,Remove trash,Clean floors,Organize tools,D
+sk01,l2,32,"In 5S methodology, what action is aligned with the principle of 'be:'?",Kept in drawers,Stored far away,Within easy reach,Labeled,C
+sk01,l2,33,What is a key practice in the 'method?' stage of 5S?,Storing all items in one box,Putting items under the table,Hiding tools,Color coding,D
+sk01,l2,34,Heavy items should be placed:,Randomly,On top shelves,At lower levels,Near the door,C
+sk01,l2,35,What is NOT part of Set in Order?,Random storage,Visual markers,Logical arrangement,Tool labeling,A
+sk01,l2,36,What is a key practice in the 'on?' stage of 5S?,Regular cleaning,Buying new tools,Replacing furniture,Color coding,A
+sk01,l2,37,Cleaning tools helps in identifying:,Useful items,New items,Paint issues,Leaks or damage,D
+sk01,l2,38,Which of the following is a Shine activity?,Production scheduling,Product packaging,Tool labeling,Daily cleaning,D
+sk01,l2,39,What is a key practice in the 'important?' stage of 5S?,Maintains safety and efficiency,Saves electricity,Improves tool color,Reduces cleaning staff,A
+sk01,l2,40,"In 5S methodology, what action is aligned with the principle of 'performed?'?",Never,Every 6 months,Occasionally,After each use,D
+sk01,l2,41,What is the purpose of 'Standardize'?,Write SOPs,Paint tools,Create uniform practices,Buy new equipment,C
+sk01,l2,42,What is a key practice in the 'ensures:' stage of 5S?,Confusion,Random storage,Overcrowding,Efficiency and consistency,D
+sk01,l2,43,What helps reinforce standard practices?,Visual aids,Chat groups,Rumors,Sticky notes,A
+sk01,l2,44,"In 5S methodology, what action is aligned with the principle of 'includes:'?",Hiding issues,Training employees,Selling tools,Creating clutter,B
+sk01,l2,45,What is a key practice in the 'changes?' stage of 5S?,Fire staff,Update procedures,Ignore it,Change departments,B
+sk01,l2,46,Sustain' ensures:,Changing team leaders,One-time 5S activity,Long-term discipline,Weekly cleaning,C
+sk01,l2,47,How can companies sustain 5S?,Fire staff,Avoid cleaning,Reward good practices,Ignore rules,C
+sk01,l2,48,What is a key practice in the '5S?' stage of 5S?,New uniforms,Refresher training,Less meetings,More paper,B
+sk01,l2,49,Sustain focuses on building:,Waste,Visuals,Clutter,Discipline and habits,D
+sk01,l2,50,What is NOT a Sustain activity?,Continuous improvement,Taking ownership,Regular training,Ignoring non-compliance,D
+sk01,l2,51,What is a key practice in the '5S?' stage of 5S?,Polish all equipment,Write daily reports,Identify and remove unnecessary items,Arrange tools by color,C
+sk01,l2,52,"In 5S methodology, what action is aligned with the principle of 'process?'?",Yellow tag,Blue tag,Red tag,Green tag,C
+sk01,l2,53,What should be done with broken tools during Sort?,Label and store,Dispose or repair,Paint them,Keep them just in case,B
+sk01,l2,54,What is a key practice in the 'Sort?' stage of 5S?,Storing unnecessary items,Tagging unused items,Reviewing workspace regularly,Removing outdated tools,A
+sk01,l2,55,How does Sort improve the workplace?,By creating a clutter-free space,By increasing items,By training workers,By painting walls,A
+sk01,l2,56,"In 5S methodology, what action is aligned with the principle of 'Order'?'?",Remove trash,Organize tools,Clean floors,Print documents,B
+sk01,l2,57,What is a key practice in the 'be:' stage of 5S?,Kept in drawers,Labeled,Stored far away,Within easy reach,D
+sk01,l2,58,Which of these is a good organizing method?,Hiding tools,Storing all items in one box,Putting items under the table,Color coding,D
+sk01,l2,59,Heavy items should be placed:,On top shelves,Randomly,Near the door,At lower levels,D
+sk01,l2,60,What is a key practice in the 'Order?' stage of 5S?,Tool labeling,Visual markers,Random storage,Logical arrangement,C
+sk01,l2,61,What does 'Shine' in 5S focus on?,Replacing furniture,Regular cleaning,Buying new tools,Color coding,B
+sk01,l2,62,Cleaning tools helps in identifying:,New items,Leaks or damage,Paint issues,Useful items,B
+sk01,l2,63,What is a key practice in the 'activity?' stage of 5S?,Tool labeling,Product packaging,Daily cleaning,Production scheduling,C
+sk01,l2,64,"In 5S methodology, what action is aligned with the principle of 'important?'?",Improves tool color,Saves electricity,Maintains safety and efficiency,Reduces cleaning staff,C
+sk01,l2,65,When should cleaning be performed?,Never,Every 6 months,Occasionally,After each use,D
+sk01,l2,66,What is a key practice in the ''Standardize'?' stage of 5S?,Create uniform practices,Paint tools,Buy new equipment,Write SOPs,A
+sk01,l2,67,Standardization ensures:,Confusion,Overcrowding,Random storage,Efficiency and consistency,D
+sk01,l2,68,"In 5S methodology, what action is aligned with the principle of 'practices?'?",Rumors,Visual aids,Sticky notes,Chat groups,B
+sk01,l2,69,What is a key practice in the 'includes:' stage of 5S?,Selling tools,Hiding issues,Creating clutter,Training employees,D
+sk01,l2,70,What should be done if workflow changes?,Ignore it,Change departments,Update procedures,Fire staff,C
+sk01,l2,71,Sustain' ensures:,Weekly cleaning,Changing team leaders,One-time 5S activity,Long-term discipline,D
+sk01,l2,72,What is a key practice in the '5S?' stage of 5S?,Avoid cleaning,Reward good practices,Ignore rules,Fire staff,B
+sk01,l2,73,Which of these helps in sustaining 5S?,New uniforms,More paper,Less meetings,Refresher training,D
+sk01,l2,74,Sustain focuses on building:,Discipline and habits,Clutter,Waste,Visuals,A
+sk01,l2,75,What is a key practice in the 'activity?' stage of 5S?,Regular training,Taking ownership,Continuous improvement,Ignoring non-compliance,D
+sk01,l2,76,"In 5S methodology, what action is aligned with the principle of '5S?'?",Write daily reports,Polish all equipment,Identify and remove unnecessary items,Arrange tools by color,C
+sk01,l2,77,Which tag is commonly used in the 'Sort' process?,Green tag,Yellow tag,Red tag,Blue tag,C
+sk01,l2,78,What is a key practice in the 'Sort?' stage of 5S?,Label and store,Keep them just in case,Paint them,Dispose or repair,D
+sk01,l2,79,Which of the following is NOT encouraged in Sort?,Removing outdated tools,Reviewing workspace regularly,Storing unnecessary items,Tagging unused items,C
+sk01,l2,80,"In 5S methodology, what action is aligned with the principle of 'workplace?'?",By creating a clutter-free space,By training workers,By increasing items,By painting walls,A
+sk01,l2,81,What is a key practice in the 'Order'?' stage of 5S?,Organize tools,Clean floors,Print documents,Remove trash,A
+sk01,l2,82,Frequently used items should be:,Stored far away,Kept in drawers,Labeled,Within easy reach,D
+sk01,l2,83,Which of these is a good organizing method?,Hiding tools,Putting items under the table,Storing all items in one box,Color coding,D
+sk01,l2,84,What is a key practice in the 'placed:' stage of 5S?,Near the door,Randomly,On top shelves,At lower levels,D
+sk01,l2,85,What is NOT part of Set in Order?,Visual markers,Random storage,Logical arrangement,Tool labeling,B
+sk01,l2,86,What does 'Shine' in 5S focus on?,Buying new tools,Regular cleaning,Color coding,Replacing furniture,B
+sk01,l2,87,What is a key practice in the 'identifying:' stage of 5S?,Leaks or damage,Useful items,Paint issues,New items,A
+sk01,l2,88,"In 5S methodology, what action is aligned with the principle of 'activity?'?",Production scheduling,Daily cleaning,Product packaging,Tool labeling,B
+sk01,l2,89,Why is Shine important?,Maintains safety and efficiency,Saves electricity,Reduces cleaning staff,Improves tool color,A
+sk01,l2,90,What is a key practice in the 'performed?' stage of 5S?,After each use,Every 6 months,Never,Occasionally,A
+sk01,l2,91,What is the purpose of 'Standardize'?,Buy new equipment,Write SOPs,Paint tools,Create uniform practices,D
+sk01,l2,92,"In 5S methodology, what action is aligned with the principle of 'ensures:'?",Overcrowding,Confusion,Efficiency and consistency,Random storage,C
+sk01,l2,93,What is a key practice in the 'practices?' stage of 5S?,Sticky notes,Visual aids,Chat groups,Rumors,B
+sk01,l2,94,Standardize includes:,Selling tools,Hiding issues,Training employees,Creating clutter,C
+sk01,l2,95,What should be done if workflow changes?,Change departments,Update procedures,Ignore it,Fire staff,B
+sk01,l2,96,What is a key practice in the 'ensures:' stage of 5S?,Long-term discipline,One-time 5S activity,Weekly cleaning,Changing team leaders,A
+sk01,l2,97,How can companies sustain 5S?,Fire staff,Avoid cleaning,Reward good practices,Ignore rules,C
+sk01,l2,98,Which of these helps in sustaining 5S?,More paper,New uniforms,Refresher training,Less meetings,C
+sk01,l2,99,What is a key practice in the 'building:' stage of 5S?,Clutter,Waste,Visuals,Discipline and habits,D
+sk01,l2,100,"In 5S methodology, what action is aligned with the principle of 'activity?'?",Continuous improvement,Taking ownership,Regular training,Ignoring non-compliance,D
+sk01,l3,1,What is the goal of the 'Sort' phase in 5S?,Polish all equipment,Identify and remove unnecessary items,Write daily reports,Arrange tools by color,B
+sk01,l3,2,Which tag is commonly used in the 'Sort' process?,Yellow tag,Blue tag,Red tag,Green tag,C
+sk01,l3,3,What is a key practice in the 'Sort?' stage of 5S?,Dispose or repair,Paint them,Label and store,Keep them just in case,A
+sk01,l3,4,"In 5S methodology, what action is aligned with the principle of 'Sort?'?",Storing unnecessary items,Removing outdated tools,Tagging unused items,Reviewing workspace regularly,A
+sk01,l3,5,How does Sort improve the workplace?,By training workers,By creating a clutter-free space,By painting walls,By increasing items,B
+sk01,l3,6,What is a key practice in the 'Order'?' stage of 5S?,Print documents,Organize tools,Clean floors,Remove trash,B
+sk01,l3,7,Frequently used items should be:,Kept in drawers,Within easy reach,Stored far away,Labeled,B
+sk01,l3,8,"In 5S methodology, what action is aligned with the principle of 'method?'?",Hiding tools,Putting items under the table,Storing all items in one box,Color coding,D
+sk01,l3,9,What is a key practice in the 'placed:' stage of 5S?,Randomly,On top shelves,Near the door,At lower levels,D
+sk01,l3,10,What is NOT part of Set in Order?,Tool labeling,Logical arrangement,Visual markers,Random storage,D
+sk01,l3,11,What does 'Shine' in 5S focus on?,Buying new tools,Replacing furniture,Regular cleaning,Color coding,C
+sk01,l3,12,What is a key practice in the 'identifying:' stage of 5S?,Paint issues,Leaks or damage,New items,Useful items,B
+sk01,l3,13,Which of the following is a Shine activity?,Daily cleaning,Product packaging,Production scheduling,Tool labeling,A
+sk01,l3,14,Why is Shine important?,Improves tool color,Maintains safety and efficiency,Saves electricity,Reduces cleaning staff,B
+sk01,l3,15,What is a key practice in the 'performed?' stage of 5S?,Never,Occasionally,Every 6 months,After each use,D
+sk01,l3,16,"In 5S methodology, what action is aligned with the principle of ''Standardize'?'?",Write SOPs,Create uniform practices,Buy new equipment,Paint tools,B
+sk01,l3,17,Standardization ensures:,Random storage,Efficiency and consistency,Overcrowding,Confusion,B
+sk01,l3,18,What is a key practice in the 'practices?' stage of 5S?,Visual aids,Chat groups,Rumors,Sticky notes,A
+sk01,l3,19,Standardize includes:,Creating clutter,Hiding issues,Selling tools,Training employees,D
+sk01,l3,20,"In 5S methodology, what action is aligned with the principle of 'changes?'?",Ignore it,Update procedures,Fire staff,Change departments,B
+sk01,l3,21,What is a key practice in the 'ensures:' stage of 5S?,Changing team leaders,Long-term discipline,One-time 5S activity,Weekly cleaning,B
+sk01,l3,22,How can companies sustain 5S?,Avoid cleaning,Fire staff,Reward good practices,Ignore rules,C
+sk01,l3,23,Which of these helps in sustaining 5S?,Refresher training,More paper,New uniforms,Less meetings,A
+sk01,l3,24,What is a key practice in the 'building:' stage of 5S?,Visuals,Clutter,Discipline and habits,Waste,C
+sk01,l3,25,What is NOT a Sustain activity?,Ignoring non-compliance,Taking ownership,Continuous improvement,Regular training,A
+sk01,l3,26,What is the goal of the 'Sort' phase in 5S?,Identify and remove unnecessary items,Polish all equipment,Arrange tools by color,Write daily reports,A
+sk01,l3,27,What is a key practice in the 'process?' stage of 5S?,Red tag,Yellow tag,Green tag,Blue tag,A
+sk01,l3,28,"In 5S methodology, what action is aligned with the principle of 'Sort?'?",Dispose or repair,Label and store,Keep them just in case,Paint them,A
+sk01,l3,29,Which of the following is NOT encouraged in Sort?,Removing outdated tools,Reviewing workspace regularly,Tagging unused items,Storing unnecessary items,D
+sk01,l3,30,What is a key practice in the 'workplace?' stage of 5S?,By training workers,By creating a clutter-free space,By painting walls,By increasing items,B
+sk01,l3,31,What is the main aim of 'Set in Order'?,Print documents,Remove trash,Clean floors,Organize tools,D
+sk01,l3,32,"In 5S methodology, what action is aligned with the principle of 'be:'?",Kept in drawers,Stored far away,Within easy reach,Labeled,C
+sk01,l3,33,What is a key practice in the 'method?' stage of 5S?,Storing all items in one box,Putting items under the table,Hiding tools,Color coding,D
+sk01,l3,34,Heavy items should be placed:,Randomly,On top shelves,At lower levels,Near the door,C
+sk01,l3,35,What is NOT part of Set in Order?,Random storage,Visual markers,Logical arrangement,Tool labeling,A
+sk01,l3,36,What is a key practice in the 'on?' stage of 5S?,Regular cleaning,Buying new tools,Replacing furniture,Color coding,A
+sk01,l3,37,Cleaning tools helps in identifying:,Useful items,New items,Paint issues,Leaks or damage,D
+sk01,l3,38,Which of the following is a Shine activity?,Production scheduling,Product packaging,Tool labeling,Daily cleaning,D
+sk01,l3,39,What is a key practice in the 'important?' stage of 5S?,Maintains safety and efficiency,Saves electricity,Improves tool color,Reduces cleaning staff,A
+sk01,l3,40,"In 5S methodology, what action is aligned with the principle of 'performed?'?",Never,Every 6 months,Occasionally,After each use,D
+sk01,l3,41,What is the purpose of 'Standardize'?,Write SOPs,Paint tools,Create uniform practices,Buy new equipment,C
+sk01,l3,42,What is a key practice in the 'ensures:' stage of 5S?,Confusion,Random storage,Overcrowding,Efficiency and consistency,D
+sk01,l3,43,What helps reinforce standard practices?,Visual aids,Chat groups,Rumors,Sticky notes,A
+sk01,l3,44,"In 5S methodology, what action is aligned with the principle of 'includes:'?",Hiding issues,Training employees,Selling tools,Creating clutter,B
+sk01,l3,45,What is a key practice in the 'changes?' stage of 5S?,Fire staff,Update procedures,Ignore it,Change departments,B
+sk01,l3,46,Sustain' ensures:,Changing team leaders,One-time 5S activity,Long-term discipline,Weekly cleaning,C
+sk01,l3,47,How can companies sustain 5S?,Fire staff,Avoid cleaning,Reward good practices,Ignore rules,C
+sk01,l3,48,What is a key practice in the '5S?' stage of 5S?,New uniforms,Refresher training,Less meetings,More paper,B
+sk01,l3,49,Sustain focuses on building:,Waste,Visuals,Clutter,Discipline and habits,D
+sk01,l3,50,What is NOT a Sustain activity?,Continuous improvement,Taking ownership,Regular training,Ignoring non-compliance,D
+sk01,l3,51,What is a key practice in the '5S?' stage of 5S?,Polish all equipment,Write daily reports,Identify and remove unnecessary items,Arrange tools by color,C
+sk01,l3,52,"In 5S methodology, what action is aligned with the principle of 'process?'?",Yellow tag,Blue tag,Red tag,Green tag,C
+sk01,l3,53,What should be done with broken tools during Sort?,Label and store,Dispose or repair,Paint them,Keep them just in case,B
+sk01,l3,54,What is a key practice in the 'Sort?' stage of 5S?,Storing unnecessary items,Tagging unused items,Reviewing workspace regularly,Removing outdated tools,A
+sk01,l3,55,How does Sort improve the workplace?,By creating a clutter-free space,By increasing items,By training workers,By painting walls,A
+sk01,l3,56,"In 5S methodology, what action is aligned with the principle of 'Order'?'?",Remove trash,Organize tools,Clean floors,Print documents,B
+sk01,l3,57,What is a key practice in the 'be:' stage of 5S?,Kept in drawers,Labeled,Stored far away,Within easy reach,D
+sk01,l3,58,Which of these is a good organizing method?,Hiding tools,Storing all items in one box,Putting items under the table,Color coding,D
+sk01,l3,59,Heavy items should be placed:,On top shelves,Randomly,Near the door,At lower levels,D
+sk01,l3,60,What is a key practice in the 'Order?' stage of 5S?,Tool labeling,Visual markers,Random storage,Logical arrangement,C
+sk01,l3,61,What does 'Shine' in 5S focus on?,Replacing furniture,Regular cleaning,Buying new tools,Color coding,B
+sk01,l3,62,Cleaning tools helps in identifying:,New items,Leaks or damage,Paint issues,Useful items,B
+sk01,l3,63,What is a key practice in the 'activity?' stage of 5S?,Tool labeling,Product packaging,Daily cleaning,Production scheduling,C
+sk01,l3,64,"In 5S methodology, what action is aligned with the principle of 'important?'?",Improves tool color,Saves electricity,Maintains safety and efficiency,Reduces cleaning staff,C
+sk01,l3,65,When should cleaning be performed?,Never,Every 6 months,Occasionally,After each use,D
+sk01,l3,66,What is a key practice in the ''Standardize'?' stage of 5S?,Create uniform practices,Paint tools,Buy new equipment,Write SOPs,A
+sk01,l3,67,Standardization ensures:,Confusion,Overcrowding,Random storage,Efficiency and consistency,D
+sk01,l3,68,"In 5S methodology, what action is aligned with the principle of 'practices?'?",Rumors,Visual aids,Sticky notes,Chat groups,B
+sk01,l3,69,What is a key practice in the 'includes:' stage of 5S?,Selling tools,Hiding issues,Creating clutter,Training employees,D
+sk01,l3,70,What should be done if workflow changes?,Ignore it,Change departments,Update procedures,Fire staff,C
+sk01,l3,71,Sustain' ensures:,Weekly cleaning,Changing team leaders,One-time 5S activity,Long-term discipline,D
+sk01,l3,72,What is a key practice in the '5S?' stage of 5S?,Avoid cleaning,Reward good practices,Ignore rules,Fire staff,B
+sk01,l3,73,Which of these helps in sustaining 5S?,New uniforms,More paper,Less meetings,Refresher training,D
+sk01,l3,74,Sustain focuses on building:,Discipline and habits,Clutter,Waste,Visuals,A
+sk01,l3,75,What is a key practice in the 'activity?' stage of 5S?,Regular training,Taking ownership,Continuous improvement,Ignoring non-compliance,D
+sk01,l3,76,"In 5S methodology, what action is aligned with the principle of '5S?'?",Write daily reports,Polish all equipment,Identify and remove unnecessary items,Arrange tools by color,C
+sk01,l3,77,Which tag is commonly used in the 'Sort' process?,Green tag,Yellow tag,Red tag,Blue tag,C
+sk01,l3,78,What is a key practice in the 'Sort?' stage of 5S?,Label and store,Keep them just in case,Paint them,Dispose or repair,D
+sk01,l3,79,Which of the following is NOT encouraged in Sort?,Removing outdated tools,Reviewing workspace regularly,Storing unnecessary items,Tagging unused items,C
+sk01,l3,80,"In 5S methodology, what action is aligned with the principle of 'workplace?'?",By creating a clutter-free space,By training workers,By increasing items,By painting walls,A
+sk01,l3,81,What is a key practice in the 'Order'?' stage of 5S?,Organize tools,Clean floors,Print documents,Remove trash,A
+sk01,l3,82,Frequently used items should be:,Stored far away,Kept in drawers,Labeled,Within easy reach,D
+sk01,l3,83,Which of these is a good organizing method?,Hiding tools,Putting items under the table,Storing all items in one box,Color coding,D
+sk01,l3,84,What is a key practice in the 'placed:' stage of 5S?,Near the door,Randomly,On top shelves,At lower levels,D
+sk01,l3,85,What is NOT part of Set in Order?,Visual markers,Random storage,Logical arrangement,Tool labeling,B
+sk01,l3,86,What does 'Shine' in 5S focus on?,Buying new tools,Regular cleaning,Color coding,Replacing furniture,B
+sk01,l3,87,What is a key practice in the 'identifying:' stage of 5S?,Leaks or damage,Useful items,Paint issues,New items,A
+sk01,l3,88,"In 5S methodology, what action is aligned with the principle of 'activity?'?",Production scheduling,Daily cleaning,Product packaging,Tool labeling,B
+sk01,l3,89,Why is Shine important?,Maintains safety and efficiency,Saves electricity,Reduces cleaning staff,Improves tool color,A
+sk01,l3,90,What is a key practice in the 'performed?' stage of 5S?,After each use,Every 6 months,Never,Occasionally,A
+sk01,l3,91,What is the purpose of 'Standardize'?,Buy new equipment,Write SOPs,Paint tools,Create uniform practices,D
+sk01,l3,92,"In 5S methodology, what action is aligned with the principle of 'ensures:'?",Overcrowding,Confusion,Efficiency and consistency,Random storage,C
+sk01,l3,93,What is a key practice in the 'practices?' stage of 5S?,Sticky notes,Visual aids,Chat groups,Rumors,B
+sk01,l3,94,Standardize includes:,Selling tools,Hiding issues,Training employees,Creating clutter,C
+sk01,l3,95,What should be done if workflow changes?,Change departments,Update procedures,Ignore it,Fire staff,B
+sk01,l3,96,What is a key practice in the 'ensures:' stage of 5S?,Long-term discipline,One-time 5S activity,Weekly cleaning,Changing team leaders,A
+sk01,l3,97,How can companies sustain 5S?,Fire staff,Avoid cleaning,Reward good practices,Ignore rules,C
+sk01,l3,98,Which of these helps in sustaining 5S?,More paper,New uniforms,Refresher training,Less meetings,C
+sk01,l3,99,What is a key practice in the 'building:' stage of 5S?,Clutter,Waste,Visuals,Discipline and habits,D
+sk01,l3,100,"In 5S methodology, what action is aligned with the principle of 'activity?'?",Continuous improvement,Taking ownership,Regular training,Ignoring non-compliance,D
+sk01,l4,1,5S training is theoretical and delivered only via presentations. What outcome is likely?,Quick adoption,Low engagement and shallow retention,Maximum compliance,Budget savings,D
+sk01,l4,2,"Items are consistently color-coded, but no legend or key is posted nearby. What is this a failure of?",Color aesthetics,Visual communication effectiveness,Policy alignment,Organizational identity,C
+sk01,l4,3,A factory uses floor markings but repaints them only when completely faded. What risk does this pose?,Unnecessary repaint costs,Misinterpretation during transitions,Audit bonus deduction,Surface wear,C
+sk01,l4,4,"Employees clean frequently, but waste bins are not emptied regularly. What type of issue is this?",Cleanliness masking,Partial Shine failure,Visual imbalance,Waste reduction conflict,B
+sk01,l4,5,Cleaning tools are stored far from the zones they’re needed. What impact does this create?,Reduced tool maintenance,Delays and resistance in Shine activities,Enhanced storage safety,Better inventory control,B
+sk01,l4,6,"Cleaning activities are outsourced, but internal staff are unaware of schedules. What risk does this create?",Redundant inspection,Poor Shine ownership,Cleaner specialization,Higher cleanliness levels,B
+sk01,l4,7,"Employees clean machinery daily, but there's no record of who did what. What’s the missing element?",Responsibility assignment,Sanitization strategy,Documentation procedure,Visual mapping,A
+sk01,l4,8,"Cleaning is assigned, but no one verifies if it was done correctly. What does this indicate?",High trust,Breakdown in Shine accountability,Time optimization,Visual hierarchy,D
+sk01,l4,9,"Tools are returned to storage, but their exact locations change frequently. What’s the likely consequence?",Reduces training time,Enhances flexibility,Slows retrieval and causes confusion,Encourages problem solving,A
+sk01,l4,10,A department stores frequently accessed files in locked cabinets far from workstations. What principle is being violated?,Promotes security,Encourages filing discipline,Increases access delays,Enables team independence,A
+sk01,l4,11,"A monthly review is conducted, but feedback from the floor team is excluded. What’s being overlooked?",Formal escalation,Corrective actions,Inclusive sustainment,Hierarchy management,A
+sk01,l4,12,"A tool rack has outlines for each item, but several items are regularly found elsewhere. What’s being compromised?",Standard adherence,Creativity,Inventory size,Productivity speed,B
+sk01,l4,13,"High-use equipment is regularly cleaned, but hidden connectors accumulate grime. What gap exists?",Over-cleaning of visible areas,Surface vs. component-level Shine,Material shortage,Tool resizing,C
+sk01,l4,14,"Employees complete 5S checklists, but managers don’t review them. What’s the risk?",Autonomy increase,Checklists become ceremonial,Enhanced trust,Reduced paperwork,B
+sk01,l4,15,"An area has clearly defined zones, but staff still store items wherever convenient. What must be addressed?",Zone flexibility,Reinforcement of storage discipline,Label placement,Tool color,D
+sk01,l4,16,Staff resist removing outdated materials due to sentimental attachment. What 5S risk does this cause?,Organizational pride,Historical reference benefit,Workflow inefficiency,Better collaboration,A
+sk01,l4,17,Employees complete audits faster by copying old entries. What does this signal?,Operational efficiency,Audit overload fatigue,Time-saving standard,Technical acumen,D
+sk01,l4,18,Labels are printed using shorthand codes no longer explained in current documentation. What effect could this have?,Faster label printing,Compliance bonus,Breakdown in shared understanding,Reduced material waste,D
+sk01,l4,19,"Cleaning is done daily, but there is no process to escalate defects found. What is the gap in implementation?",Set in Order failure,Lack of maintenance triggers,Efficient housekeeping,Tool fatigue,A
+sk01,l4,20,"Floor markings are worn and unclear, but not repainted due to “low priority.” What does this indicate?",Budget efficiency,Prioritization skills,Neglect of visual order,Streamlined layout,B
+sk01,l4,21,New layouts are introduced without trial runs or pilot feedback. What risk is introduced?,Color blindness in signage,Ergonomic overdesign,Resistance and hidden inefficiencies,Documentation errors,C
+sk01,l4,22,Employees frequently ask for cleaning supplies despite full stock in designated areas. What could solve this?,Replace cleaning tools,Enhance tool visibility and access,Redesign audit checklist,Increase supply budget,D
+sk01,l4,23,"Standard work instructions are documented, but rarely referenced during operations. What does this suggest?",Overreliance on intuition,Strong memory retention,Poor integration into workflow,Excellent informal training,B
+sk01,l4,24,A facility uses multiple formats for labeling the same item type. What problem does this cause?,Visual noise,Label fatigue,Loss of granularity,Inventory increase,B
+sk01,l4,25,Employees skip checklist items they believe are “not relevant” to their area. What failure does this reflect?,Lack of checklist clarity,Over-documentation,Team micromanagement,High workload,C
+sk01,l4,26,Frequently used tools are stored above head height for space optimization. What’s the tradeoff?,Faster access,Safety and ergonomics compromised,Encourages upward gaze,Creates more workspace,A
+sk01,l4,27,Employees stack cleaned items without verifying their condition. What flaw does this process have?,Over-documentation,Missed defect detection,Time efficiency,Standardized layout,B
+sk01,l4,28,"A redesign improved efficiency, but no one updated the 5S visuals. What’s the expected impact?",Misleading visual guidance,Greater consistency,Easier audit prep,Cross-training support,D
+sk01,l4,29,Management praises 5S adherence but allocates no budget for maintenance supplies. What is likely to fail?,Visual control,Resource-based sustainment,Performance evaluation,Document retention,A
+sk01,l4,30,An employee creates a personal sorting method that’s faster but undocumented. What could this lead to?,Recognition of innovation,Risk of non-standard operation,Better productivity sharing,Stronger team cohesion,C
+sk01,l4,31,"A visual SOP is posted at the workstation, but employees still use verbal instructions. What does this indicate?",Clear visual hierarchy,Failure in standardization adoption,Strong interpersonal training,Priority to legacy knowledge,A
+sk01,l4,32,Some items are both tagged for removal and marked for urgent use. What should be corrected first?,Tagging authority,Label color coding,Sort review and decision clarity,User permissions,B
+sk01,l4,33,"The layout includes shadow boards, but no one is trained to recognize missing tools. What is missing?",Technology integration,Visual literacy and culture,Measurement scale,Inventory overstock,D
+sk01,l4,34,"A Shine audit checklist is used, but items are checked without actual inspection. What failure does this represent?",Checklist fatigue,False compliance,Equipment overuse,Maintenance overload,B
+sk01,l4,35,"An audit report notes “visual tools missing,” but staff say they were never trained on them. What went wrong?",Improper documentation,Lack of visual literacy training,Excessive tool dependency,Frequent layout change,D
+sk01,l4,36,"Despite initial setup, tool locations lack clear labels and markings. What will this likely affect?",Employee autonomy,Visual cues for efficiency,Documentation access,Storage cost,A
+sk01,l4,37,Different areas define “clean” to varying levels of detail. What is missing from implementation?,Standardized definition and metrics,Overhead planning,Color uniformity,Visual layout,C
+sk01,l4,38,"Cleaning logs show all tasks completed, but random inspections reveal missed spots. What’s the likely issue?",Staff turnover,Ineffective tools,False compliance in Shine,Space constraints,C
+sk01,l4,39,"5S visuals are only in English, though 30% of staff prefer regional language. What is overlooked?",Linguistic bias,Effective communication,Personalization strategy,SOP formatting,B
+sk01,l4,40,Employees follow SOPs but do not understand their purpose. What is the risk here?,Misuse of SOPs,Overstandardization,Superficial compliance without awareness,Increased adaptability,A
+sk01,l4,41,"A workspace redesign improved layout, but no formal assessment was done post-change. What 5S step was skipped?",Sustain,Shine,Evaluate and standardize,Sort,B
+sk01,l4,42,"Tools are consistently labeled, but some labels use abbreviations only known to experienced staff. What is being affected?",Ergonomics,Universal comprehension,Color contrast,Audit frequency,B
+sk01,l4,43,"Process documentation is updated, but old formats are still in use in some teams. What issue is arising?",Training consistency,Dual compliance advantage,Standardization failure,Redundancy planning,A
+sk01,l4,44,Teams conduct 5S activities but only during audits. What cultural issue is this?,Overdependence on checklists,Ritualistic compliance mindset,Positive reinforcement gap,Inter-department isolation,D
+sk01,l4,45,"5S practices are implemented, but new employees receive no onboarding. What is most likely to happen?",System scales independently,Initial momentum fades,New ideas improve flow,Team spirit strengthens,B
+sk01,l4,46,Cleaning materials are frequently missing or unavailable. What fundamental issue does this expose?,Material requisition delay,Failure in Shine support infrastructure,Lack of training,Budget misallocation,A
+sk01,l4,47,"Operators complete their 5S tasks, but contractors are unaware of those procedures. What does this gap reflect?",External scope exclusion,Poor cross-team standardization,Compliance prioritization,Efficient role separation,D
+sk01,l4,48,"Visual SOP boards are well-designed, but are mounted behind equipment. What’s the core issue here?",Format inconsistency,Visibility and accessibility,Language barrier,Cluttered design,B
+sk01,l4,49,Obsolete equipment is left in a corner “for training purposes” but never used. What 5S step is being bypassed?,Shine,Sustain,Sort,Standardize,C
+sk01,l4,50,Expired chemicals are clearly marked but not removed. What does this show?,Good tracking of items,Partial execution of sorting,Overdependence on labels,Visual strategy in action,A
+sk01,l4,51,Cleaning agents used in the Shine phase are not suitable for the surface material. What’s the primary risk?,Faster drying time,Visual enhancement,Equipment degradation,Disinfectant overuse,A
+sk01,l4,52,A company initiates 5S but fails to revisit procedures after six months. What’s being neglected?,Visual management,Sustainment practice,Sort methodology,Daily auditing,A
+sk01,l4,53,"During 5S training, visuals are clear, but hands-on practice is missing. What effect can this have?",Increased memory retention,Strong theoretical understanding,Weak implementation consistency,Better policy enforcement,A
+sk01,l4,54,"In one unit, tool carts are used; in another, wall hooks are preferred. There’s no documented reason. What’s missing?",Spatial variety,Standardization logic,Cross-functional consensus,Creativity,B
+sk01,l4,55,Supervisors stop enforcing visual audits as workload increases. What long-term risk does this pose?,5S becomes self-driven,System collapse,Reduced productivity,Loss of team initiative,A
+sk01,l4,56,"Staff continue using an outdated layout out of habit, despite recent improvements. What’s being missed?",Resistance to change,Enhanced familiarity,Reduced walking time,Improved morale,D
+sk01,l4,57,"Cleaning is performed, but signs of leaks and damage are overlooked. Which 5S step is weak?",Standardize,Shine,Set in Order,Sustain,A
+sk01,l4,58,Standard operating procedures are documented but not aligned with actual day-to-day practice. What is the consequence?,Accurate training,Visual tracking,Disconnected systems,Reduced audit needs,C
+sk01,l4,59,Supervisors change SOPs without informing operators. What could result?,Faster execution,Team empowerment,Process deviations,Increased productivity,B
+sk01,l4,60,Signage in a workspace uses multiple font styles and sizes. What might this lead to?,Visual noise and miscommunication,Creative expression,Improved retention,Easier SOP writing,D
+sk01,l4,61,"Teams clean their own areas, but no standard timing or duration is defined. What could this lead to?",Micro-management,Overcleaning,Inconsistent Shine outcomes,Less team bonding,C
+sk01,l4,62,"A checklist item reads “Area tidy,” which staff interpret differently. What is the best fix?",Add images and clear criteria,Translate checklist,Remove subjective checks,Increase supervisor review,D
+sk01,l4,63,A workplace removes outdated files monthly but doesn’t record what was removed. What improvement could be made?,Add barcode system,Introduce waste volume reports,Implement tracking and audit trail,Automate the archive,C
+sk01,l4,64,"Standardized workstations are implemented, but changes are not updated in SOPs. What risk arises?",Duplication of tasks,Misalignment of practices,Workforce resistance,Time-saving shortcuts,B
+sk01,l4,65,Tools are organized by department rather than by frequency of use. What inefficiency may result?,Excess equipment wear,Delayed tool access,High training cost,Overstandardization,C
+sk01,l4,66,Tools are sorted and labeled but moved frequently without notification. What aspect is compromised?,Floor space,Visual guidance accuracy,Cross-training,Waste control,C
+sk01,l4,67,A team keeps outdated tags on removed items to track history. What is the risk?,Visual misinterpretation,Legal compliance,Redundancy tracking,Ergonomic confusion,B
+sk01,l4,68,"The 5S champion role rotates weekly, leading to inconsistency in practice. What is the best improvement?",Add more signage,Delegate to HR,Establish role continuity,Increase rotation speed,C
+sk01,l4,69,"5S visuals are accurate, but the layout is cluttered and hard to scan. What principle is undermined?",Ergonomic balance,Clarity in visual management,Departmental zoning,Organizational memory,C
+sk01,l4,70,"Operators follow 5S well, but visitors consistently disrupt the flow. What’s the solution?",Add 5S orientation for visitors,Restrict outsider access,Assign guides full-time,Increase signage size,D
+sk01,l4,71,A team complies with Shine but sees it only as a cleaning task. What deeper aspect is being overlooked?,Waste sorting,Continuous inspection for abnormality,Time optimization,Staff turnover,D
+sk01,l4,72,"During audits, the focus is solely on cleanliness, not orderliness. What’s being compromised?",Ergonomics,Shine scope,Holistic evaluation,Safety audit,B
+sk01,l4,73,Supervisors alter checklist items to suit inspection timing. What is the deeper issue here?,Authority misuse,Weak audit integrity,Role clarification gaps,Workforce adaptability,C
+sk01,l4,74,Visual maps of material flow exist but are outdated and not used in decision-making. What is this an example of?,Strategic misplacement,Outdated reference material,Passive standardization,Cosmetic visual control,B
+sk01,l4,75,The same team handles both 5S maintenance and process improvement tasks. What risk exists?,Workflow synergy,Priority confusion and overload,Higher accountability,Efficiency gain,D
+sk01,l4,76,"In storage zones, frequently used tools are placed at the back to maintain visual aesthetics. What principle is violated?",Cleanliness,Accessibility over appearance,SOP accuracy,Workforce equality,C
+sk01,l4,77,Visual controls are installed in a high-glare area where they're unreadable in sunlight. What’s the core issue?,Improper material selection,Improper positioning reducing effectiveness,Color code mismatch,Excessive SOP layering,D
+sk01,l4,78,Old reports are neatly stacked in open areas to show history. What is the downside?,Promotes learning culture,Enhances accessibility,Occupies useful workspace,Improves compliance,B
+sk01,l4,79,"A company applies 5S perfectly at its headquarters, but branch locations lag behind. What’s missing?",Site-level customizations,Uniform deployment strategy,Leadership hierarchy,Role rotation plan,D
+sk01,l4,80,Multiple departments interpret “Set in Order” differently and implement unique versions. What issue arises?,Cross-functional learning,Localization benefit,Fragmented application of 5S,Team empowerment,C
+sk01,l4,81,"Team members resist using labeled zones, preferring personalized setups. What must be addressed first?",SOP formatting,Employee buy-in to standardization,Color-coding logic,Visual clutter,C
+sk01,l4,82,A machine area is marked for Shine checks but lacks easy access tools. What practical barrier exists?,Lack of process clarity,Accessibility failure in Shine,Excess tool tracking,Material mismatch,D
+sk01,l4,83,"Teams follow 5S diligently, but no time is allocated for improvements. What 5S value is underutilized?",Sustain,Set in Order,Continuous improvement,Standardize,B
+sk01,l4,84,"Visual controls are added everywhere, but clutter makes them hard to notice. What principle is being ignored?",Color psychology,Visual noise reduction,Documentation layering,Continuous improvement,B
+sk01,l4,85,A cleaning checklist is followed irregularly and lacks assigned responsibilities. What’s the likely outcome?,Team morale improves,Cleanliness becomes inconsistent,More time for core tasks,Enhanced team flexibility,A
+sk01,l4,86,"Some areas follow digital checklists, while others use paper-based ones without reason. What is the likely consequence?",Better digital literacy,Data inconsistency and confusion,Higher engagement,Reduced printing cost,C
+sk01,l4,87,"While sorting, several tools of unknown purpose are found. The team decides to keep them 'just in case.' What does this reflect?",Proactive planning,Failure to eliminate waste,Value-added mindset,Preventive backup culture,A
+sk01,l4,88,Employees across shifts follow different tool placement rules. What impact does this have?,Encourages creativity,Reduces downtime,Improves flexibility,Creates confusion,A
+sk01,l4,89,Color codes for storage bins are changed frequently based on availability. What effect might this have?,Improved color diversity,Confused visual guidance,Flexibility in design,Storage efficiency,A
+sk01,l4,90,"Monthly feedback on 5S is collected, but no action is taken. What impact does this have?",Improved data management,Declining staff trust and engagement,Faster meetings,Reduced complaints,D
+sk01,l4,91,"All tools are sorted properly, but some have redundant functions. What should be done?",Keep extras as backup,Eliminate duplicates to reduce waste,Color them differently,Assign them to different teams,D
+sk01,l4,92,"Checklist items are evaluated based on visual review only, without physical verification. What is being compromised?",SOP literacy,Audit credibility,Document retention,Waste identification,C
+sk01,l4,93,A department passes its 5S audit but fails to meet production targets. What might be the root cause?,Excessive focus on appearance over function,Lack of visual aids,Sorting irregularities,Infrequent audits,D
+sk01,l4,94,The same color is used for waste bins and recycling bins. What issue does this cause?,Time-saving visuals,Color misassociation and misuse,Better matching with decor,Label dependency,D
+sk01,l4,95,"A production team standardizes equipment layout, but shifts regularly modify positions based on personal comfort. What is the risk?",Promotes innovation,Disrupts standardization integrity,Increases collaboration,Balances user needs,A
+sk01,l4,96,A facility achieves 5S compliance during audits but quickly reverts afterward. What does this suggest?,Sustainable behavior,Auditing rigor,Superficial implementation,Visual fatigue,C
+sk01,l4,97,Several duplicate tools are found at multiple stations without tracking. What principle is being ignored?,Ownership accountability,Visual control,Inventory rationalization,Clean zone boundary,C
+sk01,l4,98,Staff claim 5S audits are disruptive and avoid participating. What is most likely lacking?,Adequate equipment,Sustained motivation and ownership,Clear audit criteria,Efficient tools,A
+sk01,l4,99,"Shine reports show 100% compliance, but complaints about odor persist. What might be missed?",Hidden leak inspections,Focused ventilation checks,Overuse of cleaning agents,Scent documentation,D
+sk01,l4,100,"Employees request changes to visual controls, but no process exists to evaluate suggestions. What is lacking?",Feedback loop in sustainment,SOP creation,Standard audit plan,Sort criteria,C
+sk02,l2,1,लंबी वस्तु को दोनों हाथों से उठाना क्यों ज़रूरी है?,पेशेवर दिखने के लिए,संतुलन बनाए रखने और दूसरों को चोट से बचाने के लिए,शक्ति दिखाने के लिए,जल्दी काम खत्म करने के लिए,B
+sk02,l2,2,उपकरणों को चिन्हित स्थानों पर रखना क्यों ज़रूरी है?,क्षेत्र को साफ-सुथरा दिखाने के लिए,उपकरण आसानी से ढूंढने और वापस रखने के लिए,मेहमानों को प्रभावित करने के लिए,कागज़ी काम कम करने के लिए,C
+sk02,l2,3,दोहराए जाने वाले कार्य से होने वाली चोटों से कैसे बचा जा सकता है?,नियमित ब्रेक लें और सही मुद्रा रखें,बहुत तेज़ काम करें,असुविधा को अनदेखा करें,सिर्फ़ एक हाथ का उपयोग करें,A
+sk02,l2,4,कार्यस्थल पर आपातकालीन संपर्क नंबर दिखाई देना क्यों ज़रूरी है?,सजावट के लिए,आपात स्थिति में त्वरित प्रतिक्रिया के लिए,कंपनी नीति का पालन करने के लिए,मेहमानों को प्रभावित करने के लिए,B
+sk02,l2,5,कार्य क्षेत्र को अव्यवस्था से मुक्त क्यों रखना चाहिए?,यह बेहतर दिखता है,"यह फिसलने, ठोकर लगने और गिरने से बचाता है",यह सफाई का समय बचाता है,यह आगंतुकों के लिए अच्छा है,B
+sk02,l2,6,"सुनिश्चित करने के लिए कि उपकरण हमेशा उपलब्ध और अच्छी स्थिति में रहें, सबसे अच्छा तरीका क्या है?",कोई भी कभी भी ले सकता है,उपकरणों को लेबल लगे स्थान पर रखें और नियमित रूप से निरीक्षण करें,उपकरणों को हमेशा लॉक में रखें,केवल टूटने पर बदलें,D
+sk02,l2,7,मशीन गार्ड्स का उपयोग क्यों ज़रूरी है?,वे मशीन को गंदा दिखाते हैं,वे काम को धीमा करते हैं,वे उपयोगकर्ता को चलते हिस्सों से बचाते हैं,उन्हें बदलना कठिन है,C
+sk02,l2,8,अगर आपको किसी उपकरण का उपयोग करना नहीं आता तो क्या करना चाहिए?,अनुमान लगाकर उपयोग करें,निर्देश या प्रशिक्षण लें,किसी और के उपयोग करने का इंतजार करें,सिर्फ़ ब्रेक में इस्तेमाल करें,A
+sk02,l2,9,जाँचे गए और अस्वीकृत सामग्री को क्यों नहीं मिलाना चाहिए?,यह समय बचाता है,यह भ्रम और गुणवत्ता की समस्या से बचाता है,यह बेहतर दिखता है,यह ऑडिट में मदद करता है,C
+sk02,l2,10,अगर किसी मशीन से तेज़ जलने की गंध आ रही हो तो सही कार्रवाई क्या है?,नज़रअंदाज़ करें और काम पूरा करें,मशीन पर तुरंत पानी डालें,मशीन को रोकें और अपने सुपरवाइज़र को बताएं,खिड़कियाँ खोलें और काम जारी रखें,C
+sk02,l2,11,अगर आपातकालीन निकास अवरुद्ध हो तो सही कार्रवाई क्या है?,रुकावट हटाएँ या तुरंत रिपोर्ट करें,"अन्य निकास उपलब्ध हैं, अनदेखा करें",केवल आपातकाल में उपयोग करें,किसी और के हटाने का इंतजार करें,A
+sk02,l2,12,हैंड टूल्स का नियमित निरीक्षण क्यों ज़रूरी है?,उन्हें चमकदार रखने के लिए,सुनिश्चित करने के लिए कि वे सुरक्षित और कार्यशील हैं,कागज़ी काम कम करने के लिए,शेयरिंग से बचने के लिए,D
+sk02,l2,13,अगर आपको कोई सुरक्षा निर्देश समझ न आए तो क्या करना चाहिए?,अनदेखा करें और काम जारी रखें,अपने सुपरवाइज़र या सुरक्षा अधिकारी से स्पष्टीकरण माँगें,अनुमान लगाएँ,किसी सहकर्मी के समझाने का इंतजार करें,A
+sk02,l2,14,मशीन इंटरलॉक या सेफ्टी स्विच को कभी बायपास क्यों नहीं करना चाहिए?,यह समय बचाता है,आपातकाल में अनुमति है,यह गंभीर चोट या नुकसान कर सकता है,यह मशीन को तेज़ चलाता है,D
+sk02,l2,15,रास्ते और फर्श को सूखा और तेल रहित क्यों रखना चाहिए?,साफ करने में आसानी के लिए,फिसलने और गिरने से बचाव के लिए,साफ करने की लागत कम करने के लिए,प्रकाश बेहतर करने के लिए,B
+sk02,l2,16,हैंड टूल्स का नियमित निरीक्षण क्यों ज़रूरी है?,उन्हें चमकदार रखने के लिए,सुनिश्चित करने के लिए कि वे सुरक्षित और कार्यशील हैं,कागज़ी काम कम करने के लिए,शेयरिंग से बचने के लिए,B
+sk02,l2,17,किसी केमिकल का उपयोग करने से पहले Safety Data Sheet (SDS) क्यों पढ़ना चाहिए?,उसकी कीमत जानने के लिए,उसका रंग जानने के लिए,खतरों और सुरक्षित हैंडलिंग को समझने के लिए,किसने सप्लाई किया यह जानने के लिए,C
+sk02,l2,18,वर्कशॉप में आँखों की चोट से बचने का सबसे अच्छा तरीका क्या है?,सेफ्टी गॉगल्स या फेस शील्ड पहनें,तेज़ी से काम करें,मशीन से दूर देखें,सिर्फ़ धूप का चश्मा पहनें,A
+sk02,l2,19,टूटी हुई एक्सटेंशन कॉर्ड का उपयोग क्यों नहीं करना चाहिए?,वे सस्ती होती हैं,वे पुरानी दिखती हैं,वे बिजली का झटका या आग लगा सकती हैं,वे बहुत छोटी होती हैं,D
+sk02,l2,20,कार्य क्षेत्र को अव्यवस्था से मुक्त क्यों रखना चाहिए?,यह बेहतर दिखता है,"यह फिसलने, ठोकर लगने और गिरने से बचाता है",यह सफाई का समय बचाता है,यह आगंतुकों के लिए अच्छा है,D
+sk02,l2,21,अगर काम करते समय मामूली कट लगे तो सबसे पहले क्या करें?,अनदेखा करें और काम जारी रखें,घाव को तुरंत धोकर साफ करें,सुपरवाइज़र के नोटिस का इंतजार करें,सहकर्मी से सलाह लें,B
+sk02,l2,22,अगर क्षेत्र में केमिकल गिर जाए तो सबसे पहले क्या करें?,खुद तुरंत साफ करें,अपने सुपरवाइज़र को रिपोर्ट करें,अगर छोटा है तो अनदेखा करें,सभी खिड़कियाँ और दरवाजे खोलें,B
+sk02,l2,23,गीले फर्श पर फिसलने से कैसे बचें?,तेज़ चलें,गीले क्षेत्र को अनदेखा करें,चेतावनी संकेत लगाएँ और तुरंत साफ करें,खुली चप्पल पहनें,C
+sk02,l2,24,Maintenance से पहले lockout/tagout प्रक्रिया क्यों अपनाएँ?,समय बचाने के लिए,दुर्घटनावश मशीन चालू होने से बचाव के लिए,प्रबंधन को प्रभावित करने के लिए,रिकॉर्ड रखने के लिए,B
+sk02,l2,25,प्रोडक्शन या असेंबली क्षेत्र में खाना-पीना क्यों नहीं चाहिए?,समय बचाने के लिए,यह संदूषण और स्वास्थ्य जोखिम बढ़ाता है,ब्रेक में खाना-पीना ठीक है,यह क्षेत्र शांत रखता है,B
+sk02,l2,26,सीढ़ी का उपयोग करने से पहले सबसे पहले क्या देखना चाहिए?,क्या वह पर्याप्त ऊँची है,क्या वह स्थिर और बिना नुकसान के है,क्या वह नई है,क्या वह रंगी हुई है,A
+sk02,l2,27,आपातकालीन निकास को कार्यशील कैसे रखें?,सुरक्षित रखने के लिए लॉक करें,स्टोरेज के लिए उपयोग करें,निकास को साफ और नियमित रूप से जांचें,उसे चमकीले रंग से पेंट करें,A
+sk02,l2,28,Safety Data Sheet (SDS) क्यों पढ़ना चाहिए?,कीमत जानने के लिए,रंग जानने के लिए,खतरों और सुरक्षित हैंडलिंग को समझने के लिए,किसने सप्लाई किया यह जानने के लिए,C
+sk02,l2,29,अगर प्रोडक्शन एरिया में कोई खाना-पीना करता है तो क्या जोखिम है?,समय बचता है,संदूषण और स्वास्थ्य जोखिम बढ़ता है,ब्रेक में खाना-पीना ठीक है,यह क्षेत्र शांत रहता है,D
+sk02,l2,30,कार्यस्थल में अच्छी लाइटिंग क्यों ज़रूरी है?,बिजली बचाने के लिए,आंखों पर जोर और दुर्घटनाओं से बचाव के लिए,क्षेत्र बड़ा दिखता है,मशीनें तेज़ चलती हैं,B
+sk02,l2,31,रास्ते और निकास को साफ क्यों रखना चाहिए?,साफ करने में आसानी के लिए,जल्दी और सुरक्षित निकासी के लिए,अतिरिक्त सामग्री स्टोर करने के लिए,प्रदर्शन के लिए,B
+sk02,l2,32,अगर केमिकल त्वचा पर गिर जाए तो क्या करें?,सूखने दें,इलाके को तुरंत पानी से धोएं और मेडिकल सहायता लें,कपड़े से ढकें और काम करें,अनदेखा करें जब तक दर्द न हो,B
+sk02,l2,33,सुरक्षा खतरा कब रिपोर्ट करना चाहिए?,सिर्फ़ दुर्घटना के बाद,जैसे ही दिखे तुरंत,शिफ्ट के अंत में,सिर्फ़ सुपरवाइज़र के कहने पर,B
+sk02,l2,34,उपकरण हमेशा उपलब्ध और अच्छी स्थिति में कैसे रखें?,कोई भी कभी भी ले सकता है,लेबल लगे स्थान पर रखें और नियमित निरीक्षण करें,हमेशा लॉक में रखें,केवल टूटने पर बदलें,B
+sk02,l2,35,हैंड टूल्स का उपयोग करने से पहले क्या देखना चाहिए?,उसका रंग,क्या वह नया है,क्या वह साफ और बिना नुकसान के है,क्या वह भारी है,C
+sk02,l2,36,इलेक्ट्रिकल डिवाइस को सुरक्षित तरीके से कैसे अनप्लग करें?,तार को जल्दी खींचें,प्लग को पकड़कर निकालें,गीले हाथों से निकालें,किसी और से करवाएँ,B
+sk02,l2,37,"अगर आप किसी घटना के करीब से बच गए (near-miss), तो क्या करें?",अगर कोई घायल नहीं हुआ तो अनदेखा करें,तुरंत रिपोर्ट करें ताकि सुधार हो सके,अगली सेफ्टी मीटिंग तक इंतजार करें,सिर्फ़ दोस्तों को बताएं,B
+sk02,l2,38,जाँचे गए और अस्वीकृत मटेरियल को क्यों न मिलाएँ?,समय बचाने के लिए,यह भ्रम और गुणवत्ता की समस्या से बचाता है,अच्छा दिखता है,यह ऑडिट में मदद करता है,C
+sk02,l2,39,हैंड टूल्स का उपयोग करने से पहले क्या देखना चाहिए?,उसका रंग,क्या वह नया है,क्या वह साफ और बिना नुकसान के है,क्या वह भारी है,A
+sk02,l2,40,कपड़े या शरीर को साफ करने के लिए compressed air क्यों न इस्तेमाल करें?,यह तेज़ है,यह गंभीर चोट या कणों को त्वचा में घुसा सकता है,यह पानी बचाता है,यह कुछ क्षेत्रों में अनुमति है,B
+sk02,l2,41,टूटा या असुरक्षित टूल क्यों न इस्तेमाल करें?,यह तेज़ है,यह चोट या नुकसान कर सकता है,यह हल्का है,यह इस्तेमाल में आसान है,D
+sk02,l2,42,भारी वस्तुएँ कहाँ स्टोर करनी चाहिए?,ऊपर की शेल्फ पर,टेबल के किनारे,नीचे या ज़मीन के पास,जहाँ जगह मिले,C
+sk02,l2,43,अगर कोई चेतावनी संकेत गायब दिखे तो क्या करें?,अनदेखा करें और काम जारी रखें,रिपोर्ट करें और ठीक होने तक क्षेत्र से बचें,अपना खुद का संकेत बनाएं,सहकर्मी से ठीक करवाएँ,B
+sk02,l2,44,फायर एक्सटिंग्विशर तक पहुंच क्यों न रोकें?,वे शायद ही कभी इस्तेमाल होते हैं,आपात स्थिति में तुरंत ज़रूरत पड़ सकती है,वे महंगे हैं,वे भारी हैं,B
+sk02,l2,45,गीले फर्श पर फिसलने से कैसे बचें?,तेज़ चलें,अनदेखा करें,चेतावनी संकेत लगाएँ और तुरंत साफ करें,खुली चप्पल पहनें,C
+sk02,l2,46,मटेरियल बिन्स को कैसे न मिलाएँ?,लेबल और कलर कोड का उपयोग करें,सभी बिन्स को एक साथ रखें,कोई भी बिन चुन सकता है,सिर्फ़ सुपरवाइज़र संभाले,A
+sk02,l2,47,फर्श पर गीला स्थान दिखे तो क्या करें?,तेज़ चलें,अनदेखा करें,सावधानी से चलें या क्षेत्र से बचें,साइन हटा दें,C
+sk02,l2,48,सीढ़ी का उपयोग करने से पहले सबसे पहले क्या देखें?,क्या वह पर्याप्त ऊँची है,क्या वह स्थिर और बिना नुकसान के है,क्या वह नई है,क्या वह रंगी हुई है,B
+sk02,l2,49,भारी वस्तु को उठाने का सबसे सुरक्षित तरीका क्या है?,पीठ झुकाकर जल्दी उठाएँ,घुटने मोड़कर और पीठ सीधी रखकर उठाएँ,वस्तु को अपनी ओर खींचें,किसी और से उठवाएँ,B
+sk02,l2,50,रसायन को शॉप फ्लोर पर कैसे ले जाएँ?,खुले कंटेनर में ले जाएँ,लेबल लगे कंटेनर में SOP के अनुसार,कोई भी ले जाए,"बड़े, बिना लेबल वाले बिन में",B
+sk02,l2,51,फायर एक्सटिंग्विशर का नियमित निरीक्षण क्यों ज़रूरी है?,उन्हें चमकदार रखने के लिए,सुनिश्चित करने के लिए कि वे आपातकाल में कार्यशील हैं,क्षेत्र को व्यवस्थित दिखाने के लिए,रंग कोड के लिए,B
+sk02,l2,52,वर्कशॉप में आँखों की चोट से बचने का सबसे अच्छा तरीका क्या है?,सेफ्टी गॉगल्स या फेस शील्ड पहनें,तेज़ी से काम करें,मशीन से दूर देखें,सिर्फ़ धूप का चश्मा पहनें,A
+sk02,l2,53,टूटा कांच या तेज़ कचरे को कैसे संभालें?,सामान्य कचरे में डालें,कागज़ में लपेटकर निर्धारित कंटेनर में डालें,फर्श पर छोड़ दें,सहकर्मी से उठवाएँ,B
+sk02,l2,54,Safety Data Sheet (SDS) का उद्देश्य क्या है?,केमिकल की कीमत बताना,सुरक्षित हैंडलिंग और इमरजेंसी उपायों की जानकारी देना,सप्लायर की सूची देना,रंग बताना,B
+sk02,l2,55,"अगर आप किसी घटना के करीब से बच गए (near-miss), तो क्या करें?",सिर्फ़ चोट लगने पर रिपोर्ट करें,सिर्फ़ उपकरण के नुकसान पर रिपोर्ट करें,"हमेशा रिपोर्ट करें, चाहे चोट न लगी हो",शिफ्ट के अंत में रिपोर्ट करें,C
+sk02,l2,56,वर्कशॉप में आँखों की चोट से बचने का सबसे अच्छा तरीका क्या है?,सेफ्टी गॉगल्स या फेस शील्ड पहनें,तेज़ी से काम करें,मशीन से दूर देखें,सिर्फ़ धूप का चश्मा पहनें,A
+sk02,l2,57,स्टोरेज एरिया में बिन्स को ज़्यादा ऊपर क्यों न रखें?,अच्छा दिखता है,अस्थिरता और दुर्घटना का कारण बन सकता है,जगह बचती है,साफ-सफाई में मदद मिलती है,B
+sk02,l2,58,अगर आपको कोई सुरक्षा निर्देश समझ न आए तो क्या करना चाहिए?,अनदेखा करें और काम जारी रखें,अपने सुपरवाइज़र या सुरक्षा अधिकारी से स्पष्टीकरण माँगें,अनुमान लगाएँ,किसी सहकर्मी के समझाने का इंतजार करें,D
+sk02,l2,59,भारी वस्तुएँ कहाँ स्टोर करनी चाहिए?,ऊपर की शेल्फ पर,टेबल के किनारे,नीचे या ज़मीन के पास,जहाँ जगह मिले,C
+sk02,l2,60,टूटा या असुरक्षित टूल क्यों हटाना ज़रूरी है?,क्षेत्र को साफ रखने के लिए,उपयोग से बचने और दुर्घटना रोकने के लिए,स्टोरेज बचाने के लिए,ऑडिट में दिखाने के लिए,B
+sk02,l2,61,दोहराए जाने वाले कार्य से होने वाली चोटों से कैसे बचा जा सकता है?,नियमित ब्रेक लें और सही मुद्रा रखें,बहुत तेज़ काम करें,असुविधा को अनदेखा करें,सिर्फ़ एक हाथ का उपयोग करें,A
+sk02,l2,62,टूटी एक्सटेंशन कॉर्ड का उपयोग क्यों नहीं करना चाहिए?,वे सस्ती होती हैं,वे पुरानी दिखती हैं,वे बिजली का झटका या आग लगा सकती हैं,वे बहुत छोटी होती हैं,C
+sk02,l2,63,आपातकालीन निकास हमेशा साफ क्यों रखें?,साफ करने में आसानी के लिए,आपात स्थिति में जल्दी निकासी के लिए,अतिरिक्त सामग्री रखने के लिए,शोर कम करने के लिए,D
+sk02,l2,64,अगर कोई उपकरण टूटा या असुरक्षित है तो क्या करना चाहिए?,उसे वैसे ही इस्तेमाल करें,रिपोर्ट करें और तुरंत सेवा से हटा दें,किसी और के लिए छोड़ दें,साफ करके वापस रखें,B
+sk02,l2,65,संकीर्ण स्थान में प्रवेश करने से पहले क्या करना चाहिए?,सही वेंटिलेशन और परमिट सुनिश्चित करें,पानी की बोतल रखें,PPE हटा दें,अकेले काम करें,A
+sk02,l2,66,मटेरियल बिन्स को कैसे न मिलाएँ?,लेबल और कलर कोड का उपयोग करें,सभी बिन्स को एक साथ रखें,कोई भी बिन चुन सकता है,सिर्फ़ सुपरवाइज़र संभाले,A
+sk02,l2,67,इलेक्ट्रिकल फायर पर कौन सा फायर एक्सटिंग्विशर इस्तेमाल करें?,पानी वाला,फोम वाला,CO2 या ड्राय पाउडर वाला,कोई भी,C
+sk02,l2,68,अगर आपातकालीन निकास अवरुद्ध हो तो क्या करें?,रुकावट हटाएँ या तुरंत रिपोर्ट करें,"अन्य निकास उपलब्ध हैं, अनदेखा करें",केवल आपातकाल में उपयोग करें,किसी और के हटाने का इंतजार करें,A
+sk02,l2,69,पीठ की चोट से बचने का सबसे अच्छा तरीका क्या है?,पीठ सीधी रखें और घुटने मोड़ें,झटके से उठाएँ,एक साथ कई वस्तुएँ उठाएँ,किसी और से उठवाएँ,A
+sk02,l2,70,कौन सा संकेत इलेक्ट्रिकल खतरे का है?,साफ और सूखी केबल्स,मैट से ढकी केबल्स,फटे तार या खुले कंडक्टर,साफ-सुथरी केबल्स,B
+sk02,l2,71,अगर किसी मशीन से जलने की तेज़ गंध आए तो क्या करें?,नज़रअंदाज़ करें और काम पूरा करें,मशीन पर तुरंत पानी डालें,मशीन को रोकें और सुपरवाइज़र को बताएं,खिड़कियाँ खोलें और काम जारी रखें,C
+sk02,l2,72,पीठ की चोट से बचने का सबसे अच्छा तरीका क्या है?,पीठ सीधी रखें और घुटने मोड़ें,झटके से उठाएँ,एक साथ कई वस्तुएँ उठाएँ,किसी और से उठवाएँ,A
+sk02,l2,73,टूटी एक्सटेंशन कॉर्ड का उपयोग क्यों नहीं करना चाहिए?,वे सस्ती होती हैं,वे पुरानी दिखती हैं,वे बिजली का झटका या आग लगा सकती हैं,वे बहुत छोटी होती हैं,C
+sk02,l2,74,PPE को अच्छी स्थिति में क्यों रखना ज़रूरी है?,पैसे बचाने के लिए,सही सुरक्षा के लिए,प्रोफेशनल दिखने के लिए,दिखावे के लिए,B
+sk02,l2,75,"मशीन गार्ड्स को कभी न हटाएँ, क्यों?",वे मशीन को गंदा दिखाते हैं,काम धीमा करते हैं,वे उपयोगकर्ता को चलते हिस्सों से बचाते हैं,उन्हें बदलना कठिन है,C
+sk02,l2,76,अगर मशीन का सेफ्टी गार्ड टूटा है तो सबसे पहले क्या करें?,काम जारी रखें,रिपोर्ट करें और मशीन का उपयोग बंद करें,गार्ड पूरी तरह हटा दें,जल्दी काम खत्म करें,B
+sk02,l2,77,"इलेक्ट्रिकल पैनल का रास्ता कभी न रोकें, क्यों?",यह शायद ही कभी इस्तेमाल होता है,आपातकालीन शटडाउन के लिए तुरंत उपलब्ध होना चाहिए,यह स्टोरेज के लिए है,सिर्फ़ इलेक्ट्रिशियन के लिए है,B
+sk02,l2,78,तेज़ कचरे (जैसे टूटा कांच) को कैसे संभालें?,सामान्य कचरे में डालें,कागज़ में लपेटकर निर्धारित कंटेनर में डालें,फर्श पर छोड़ दें,सहकर्मी से उठवाएँ,D
+sk02,l2,79,अनलेबल्ड बिन्स में सामग्री क्यों न रखें?,समय बचता है,यह भ्रम और सही हैंडलिंग से बचाता है,बेहतर दिखता है,ऑडिट में मदद करता है,B
+sk02,l2,80,"अगर ""Wet Floor"" का साइन दिखे तो क्या करें?",तेज़ चलें,साइन को अनदेखा करें,सावधानी से चलें या क्षेत्र से बचें,साइन हटा दें,C
+sk02,l2,81,अगर वॉकवे में स्पिल दिखे तो क्या करें?,उसके चारों ओर चलें और अनदेखा करें,खुद साफ करें या तुरंत रिपोर्ट करें,साफ-सफाई स्टाफ का इंतजार करें,केवल दूसरों को चेतावनी दें,B
+sk02,l2,82,अगर कोई उपकरण गलत स्थान पर मिले तो क्या करें?,उसे वैसे ही छोड़ दें,रिपोर्ट करें और उसे सही स्थान पर रखें,अनदेखा करें,किसी और से हटवाएँ,D
+sk02,l2,83,भारी वस्तु को कैसे सुरक्षित रूप से ले जाएँ?,फर्श पर घसीटें,अकेले उठाएँ,ट्रॉली का उपयोग करें या मदद लें,पैर से धकेलें,C
+sk02,l2,84,उपकरणों को चिन्हित स्थानों पर रखना क्यों ज़रूरी है?,क्षेत्र को साफ-सुथरा दिखाने के लिए,उपकरण आसानी से ढूंढने और वापस रखने के लिए,मेहमानों को प्रभावित करने के लिए,कागज़ी काम कम करने के लिए,D
+sk02,l2,85,स्टोरेज बिन्स को स्पष्ट रूप से लेबल क्यों करें?,सजावट के लिए,भ्रम और गलत हैंडलिंग से बचने के लिए,मेहमानों को प्रभावित करने के लिए,कागज़ी काम कम करने के लिए,B
+sk02,l2,86,हीट एक्सहॉशन का कौन सा संकेत है?,कांपना,बहुत पसीना आना और कमजोरी,फोकस बढ़ना,ठंडी त्वचा,B
+sk02,l2,87,अगर मशीन से धुआं निकलता दिखे तो क्या करें?,पानी डालें,मशीन बंद करें और सुपरवाइज़र को बताएं,खिड़की खोलें और काम करें,अनदेखा करें,B
+sk02,l2,88,अगर उपकरण गलत स्थान पर मिले तो क्या करें?,उसे वैसे ही छोड़ दें,रिपोर्ट करें और उसे सही स्थान पर रखें,अनदेखा करें,किसी और से हटवाएँ,D
+sk02,l2,89,अगर केमिकल के पास काम करते हुए चक्कर आए तो क्या करें?,अनदेखा करें और काम जारी रखें,ताज़ी हवा में जाएँ और सुपरवाइज़र को बताएं,पानी पिएँ और काम जारी रखें,शिफ्ट खत्म होने का इंतजार करें,B
+sk02,l2,90,"मशीन गार्ड्स को कभी न हटाएँ, क्यों?",वे मशीन को गंदा दिखाते हैं,काम धीमा करते हैं,वे उपयोगकर्ता को चलते हिस्सों से बचाते हैं,उन्हें बदलना कठिन है,C
+sk02,l2,91,"सभी चोटें, चाहे छोटी हों, रिपोर्ट क्यों करें?",छुट्टी के लिए,सही इलाज और भविष्य में रोकथाम के लिए,कागज़ी काम कम करने के लिए,बॉस को प्रभावित करने के लिए,B
+sk02,l2,92,शॉप फ्लोर पर रंग कोडेड बिन्स का उद्देश्य क्या है?,सजावट,विभिन्न प्रकार की सामग्री को अलग और संगठित रखना,जगह बचाना,साफ-सफाई तेज़ करना,D
+sk02,l2,93,केमिकल का पहली बार उपयोग करने से पहले क्या करें?,सूंघ कर देखें,Safety Data Sheet (SDS) पढ़ें,सहकर्मी से पूछें,बिना देखे इस्तेमाल करें,B
+sk02,l2,94,सामग्री को सीधे फर्श पर क्यों न रखें?,समय बचता है,यह गंदगी और नुकसान से बचाता है,सॉर्टिंग आसान होती है,प्रकाश बढ़ता है,B
+sk02,l2,95,लंबी वस्तु को दोनों हाथों से उठाना क्यों ज़रूरी है?,पेशेवर दिखने के लिए,संतुलन बनाए रखने और दूसरों को चोट से बचाने के लिए,शक्ति दिखाने के लिए,जल्दी काम खत्म करने के लिए,D
+sk02,l2,96,अगर कोई सहकर्मी बिना ट्रेनिंग के मशीन चला रहा है तो क्या करें?,सीखने के लिए उसके साथ शामिल हो जाएँ,असुरक्षित व्यवहार की रिपोर्ट करें,अगर वह आत्मविश्वासी है तो अनदेखा करें,उससे सिखाएँ कहें,B
+sk02,l2,97,मूविंग मशीन के पास ढीले कपड़े क्यों न पहनें?,यह आरामदायक है,यह फँस सकता है और चोट का कारण बन सकता है,यह प्रोफेशनल नहीं लगता,यह आपको धीमा करता है,B
+sk02,l2,98,अगर कोई सहकर्मी PPE नहीं पहन रहा है तो क्या करें?,अनदेखा करें,उसे PPE पहनने की याद दिलाएँ,तुरंत रिपोर्ट करें,अपना PPE हटा दें,D
+sk02,l2,99,पीठ की चोट से बचने का सबसे अच्छा तरीका क्या है?,पीठ सीधी रखें और घुटने मोड़ें,झटके से उठाएँ,एक साथ कई वस्तुएँ उठाएँ,किसी और से उठवाएँ,A
+sk02,l2,100,टूटा या असुरक्षित टूल क्यों न इस्तेमाल करें?,यह तेज़ है,यह चोट या नुकसान कर सकता है,यह हल्का है,यह इस्तेमाल में आसान है,B

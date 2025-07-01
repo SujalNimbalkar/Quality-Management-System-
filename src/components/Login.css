@@ -1,0 +1,84 @@
+/* Login window styles - Modern Blue/Indigo Theme */
+
+.login-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #283e51 0%, #485563 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #111;
+}
+
+.login-form {
+  background: #fff;
+  padding: 2.5em 2em 2em 2em;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(40,62,81,0.15);
+  min-width: 320px;
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  color: #111;
+}
+
+.login-title {
+  color: #111;
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.login-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.login-label {
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 0.2em;
+}
+
+.login-input {
+  padding: 0.7em 1em;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  font-size: 1em;
+  background: #f8fafc;
+  transition: border 0.2s;
+  color: #111;
+}
+.login-input:focus {
+  outline: none;
+  border: 1.5px solid #2563eb;
+  background: #fff;
+  color: #111;
+}
+
+.login-btn-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+.login-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 2.2em;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(40,62,81,0.08);
+  transition: background 0.2s;
+}
+.login-btn:hover {
+  background: #1e40af;
+} 

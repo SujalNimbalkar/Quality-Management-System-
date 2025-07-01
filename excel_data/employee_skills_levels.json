@@ -1,0 +1,3019 @@
+[
+  {
+    "Employee": "Praveen Bajaj",
+    "Department": "CEO",
+    "Roles": [
+      "CEO"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Vaibhav Bajaj",
+    "Department": "Director, Sales & NPD",
+    "Roles": [
+      "Director, Sales & NPD"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Shashank Bajaj",
+    "Department": "Director, Operations",
+    "Roles": [
+      "Director, Operations"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Narendra Chauhan",
+    "Department": "Plant Head",
+    "Roles": [
+      "Plant Head",
+      "Internal Auditor"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "3"
+      },
+      {
+        "skill": "Safety",
+        "level": "3"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "3"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "4"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "4"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "4"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "3"
+      },
+      {
+        "skill": "Material Planning & Inventory Control",
+        "level": "3"
+      },
+      {
+        "skill": "Supply Chain Management",
+        "level": "2"
+      },
+      {
+        "skill": "Compliance & Ethical Responsibility",
+        "level": "3"
+      },
+      {
+        "skill": "Internal Auditor Certification*",
+        "level": "Y"
+      }
+    ]
+  },
+  {
+    "Employee": "Devendra Kumar",
+    "Department": "GM - Sales",
+    "Roles": [
+      "National Sales Manager"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "4"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "4"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "4"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "4"
+      },
+      {
+        "skill": "Data Analytics and Reporting",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Sachin Singh",
+    "Department": "RSM",
+    "Roles": [
+      "Regional Sales Manager"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "3"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "4"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "3"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "3"
+      },
+      {
+        "skill": "Data Analytics and Reporting",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Anil Kalra",
+    "Department": "RSM",
+    "Roles": [
+      "Regional Sales Manager"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "3"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "4"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "3"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "3"
+      },
+      {
+        "skill": "Data Analytics and Reporting",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Rajiv Sinha",
+    "Department": "RSM",
+    "Roles": [
+      "Regional Sales Manager"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "3"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "4"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "3"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "3"
+      },
+      {
+        "skill": "Data Analytics and Reporting",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Aman Dogra",
+    "Department": "ASM",
+    "Roles": [
+      "Area Sales Manager"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "2"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "3"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "3"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Kapil Chouhan",
+    "Department": "ASM",
+    "Roles": [
+      "Area Sales Manager"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "2"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "3"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "3"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Sunny Rawat",
+    "Department": "ASM",
+    "Roles": [
+      "Area Sales Manager"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "2"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "3"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "3"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Amit Aswal",
+    "Department": "Store",
+    "Roles": [
+      "Store Incharge"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "3"
+      },
+      {
+        "skill": "Safety",
+        "level": "3"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "2"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "2"
+      },
+      {
+        "skill": "Material Planning & Inventory Control",
+        "level": "3"
+      },
+      {
+        "skill": "Supply Chain Management",
+        "level": "3"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "3"
+      },
+      {
+        "skill": "Poka Yoke",
+        "level": "2"
+      },
+      {
+        "skill": "FIFO",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Anmol Kumar",
+    "Department": "Purchase Engineer",
+    "Roles": [
+      "Purchase Engineer"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "2"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "2"
+      },
+      {
+        "skill": "Material Planning & Inventory Control",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Amit Kumar",
+    "Department": "Design Engineer",
+    "Roles": [
+      "NPD Engineer (Mechanical)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (gauges)",
+        "level": "2"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "2"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "2"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "3"
+      },
+      {
+        "skill": "SPC",
+        "level": "2"
+      },
+      {
+        "skill": "MSA",
+        "level": "2"
+      },
+      {
+        "skill": "FMEA",
+        "level": "2"
+      },
+      {
+        "skill": "PPAP & APQP",
+        "level": "2"
+      },
+      {
+        "skill": "Poka Yoke",
+        "level": "3"
+      },
+      {
+        "skill": "7 QC Tools",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Amit Parida",
+    "Department": "Manager, Production & Maintenance",
+    "Roles": [
+      "Production Manager (Electronics)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "3"
+      },
+      {
+        "skill": "Safety",
+        "level": "3"
+      },
+      {
+        "skill": "SMT Electronics Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "4"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "3"
+      },
+      {
+        "skill": "Testing - PCBA",
+        "level": "4"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "3"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "3"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "3"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "3"
+      },
+      {
+        "skill": "4M Change",
+        "level": "3"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "4"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "3"
+      },
+      {
+        "skill": "Poka Yoke",
+        "level": "4"
+      },
+      {
+        "skill": "7 QC Tools",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Naresh Kumar",
+    "Department": "Quality Executive",
+    "Roles": [
+      "Quality Executive"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "3"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - PCBA",
+        "level": "2"
+      },
+      {
+        "skill": "Dimensional inspection (gauges)",
+        "level": "2"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "2"
+      },
+      {
+        "skill": "Wire Crimping",
+        "level": "2"
+      },
+      {
+        "skill": "Packing",
+        "level": "2"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "2"
+      },
+      {
+        "skill": "4M Change",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Poka Yoke",
+        "level": "2"
+      },
+      {
+        "skill": "Sampling and inspection",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Vikas Singh",
+    "Department": "Asst Manager Quality",
+    "Roles": [
+      "Asst Manager Quality"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "4"
+      },
+      {
+        "skill": "Safety",
+        "level": "3"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "3"
+      },
+      {
+        "skill": "SMT Electronics Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "3"
+      },
+      {
+        "skill": "Testing - PCBA",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (gauges)",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "3"
+      },
+      {
+        "skill": "Laser Printing",
+        "level": "3"
+      },
+      {
+        "skill": "Wire Crimping",
+        "level": "3"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "2"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "3"
+      },
+      {
+        "skill": "SPC",
+        "level": "3"
+      },
+      {
+        "skill": "MSA",
+        "level": "3"
+      },
+      {
+        "skill": "4M Change",
+        "level": "3"
+      },
+      {
+        "skill": "FMEA",
+        "level": "3"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "3"
+      },
+      {
+        "skill": "PPAP & APQP",
+        "level": "3"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "3"
+      },
+      {
+        "skill": "Poka Yoke",
+        "level": "3"
+      },
+      {
+        "skill": "7 QC Tools",
+        "level": "3"
+      },
+      {
+        "skill": "Compliance & Ethical Responsibility",
+        "level": "2"
+      },
+      {
+        "skill": "Sampling and inspection",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Vishal Singh",
+    "Department": "Sr. Executive, Warehouse & Logistics",
+    "Roles": [
+      "Manager, Despatch"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "3"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "2"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "2"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "2"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "2"
+      },
+      {
+        "skill": "Supply Chain Management",
+        "level": "3"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "FIFO",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Vinay Kumar",
+    "Department": "Accounts Head",
+    "Roles": [
+      "Accounts Manager"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "2"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "2"
+      },
+      {
+        "skill": "Data Analytics and Reporting",
+        "level": "3"
+      },
+      {
+        "skill": "MS Excel",
+        "level": "3"
+      },
+      {
+        "skill": "Compliance & Ethical Responsibility",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Pooja Mishra",
+    "Department": "Accounts Executive",
+    "Roles": [
+      "Accounts Executive"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Data Analytics and Reporting",
+        "level": "2"
+      },
+      {
+        "skill": "MS Excel",
+        "level": "2"
+      },
+      {
+        "skill": "Compliance & Ethical Responsibility",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Neeraj Sharma",
+    "Department": "Manager, Production",
+    "Roles": [
+      "Production Manager (Mechanical)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "3"
+      },
+      {
+        "skill": "Safety",
+        "level": "3"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (gauges)",
+        "level": "4"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "4"
+      },
+      {
+        "skill": "Laser Printing",
+        "level": "3"
+      },
+      {
+        "skill": "Wire Cutting-Stripping",
+        "level": "3"
+      },
+      {
+        "skill": "Wire Crimping",
+        "level": "3"
+      },
+      {
+        "skill": "Packing",
+        "level": "3"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "3"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "3"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "3"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "3"
+      },
+      {
+        "skill": "4M Change",
+        "level": "3"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "4"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "3"
+      },
+      {
+        "skill": "Poka Yoke",
+        "level": "4"
+      },
+      {
+        "skill": "7 QC Tools",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Hardeep Singh",
+    "Department": "Manager, NPD",
+    "Roles": [
+      "NPD Manager (Mechanical)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "3"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (gauges)",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "3"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "3"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "3"
+      },
+      {
+        "skill": "SPC",
+        "level": "3"
+      },
+      {
+        "skill": "MSA",
+        "level": "3"
+      },
+      {
+        "skill": "FMEA",
+        "level": "3"
+      },
+      {
+        "skill": "PPAP & APQP",
+        "level": "3"
+      },
+      {
+        "skill": "Poka Yoke",
+        "level": "3"
+      },
+      {
+        "skill": "7 QC Tools",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Rishav Raj",
+    "Department": "Manager, NPD",
+    "Roles": [
+      "NPD Manager (Mechanical)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "3"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (gauges)",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "3"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "3"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "3"
+      },
+      {
+        "skill": "SPC",
+        "level": "3"
+      },
+      {
+        "skill": "MSA",
+        "level": "3"
+      },
+      {
+        "skill": "FMEA",
+        "level": "3"
+      },
+      {
+        "skill": "PPAP & APQP",
+        "level": "3"
+      },
+      {
+        "skill": "Poka Yoke",
+        "level": "3"
+      },
+      {
+        "skill": "7 QC Tools",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Upendra Kumar",
+    "Department": "HR Manager",
+    "Roles": [
+      "HR Manager"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "3"
+      },
+      {
+        "skill": "Safety",
+        "level": "3"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "3"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "3"
+      },
+      {
+        "skill": "Compliance & Ethical Responsibility",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Manish Kumar",
+    "Department": "MIS Executive",
+    "Roles": [
+      "MIS Executive"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Data Analytics and Reporting",
+        "level": "3"
+      },
+      {
+        "skill": "MS Excel",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Naushad Ali",
+    "Department": "Quality Manager",
+    "Roles": [
+      "Quality Manager",
+      "Internal Auditor"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "4"
+      },
+      {
+        "skill": "Safety",
+        "level": "3"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "3"
+      },
+      {
+        "skill": "SMT Electronics Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "3"
+      },
+      {
+        "skill": "Testing - PCBA",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (gauges)",
+        "level": "4"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "4"
+      },
+      {
+        "skill": "Laser Printing",
+        "level": "3"
+      },
+      {
+        "skill": "Wire Crimping",
+        "level": "3"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "3"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "3"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "4"
+      },
+      {
+        "skill": "SPC",
+        "level": "3"
+      },
+      {
+        "skill": "MSA",
+        "level": "3"
+      },
+      {
+        "skill": "4M Change",
+        "level": "3"
+      },
+      {
+        "skill": "FMEA",
+        "level": "4"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "3"
+      },
+      {
+        "skill": "PPAP & APQP",
+        "level": "4"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "4"
+      },
+      {
+        "skill": "Poka Yoke",
+        "level": "4"
+      },
+      {
+        "skill": "7 QC Tools",
+        "level": "4"
+      },
+      {
+        "skill": "Compliance & Ethical Responsibility",
+        "level": "3"
+      },
+      {
+        "skill": "Sampling and inspection",
+        "level": "3"
+      },
+      {
+        "skill": "Internal Auditor Certification*",
+        "level": "Y"
+      }
+    ]
+  },
+  {
+    "Employee": "Aakash Sharma",
+    "Department": "Asst Manager Quality",
+    "Roles": [
+      "Asst Manager Quality",
+      "Internal Auditor",
+      "Management Representative"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "4"
+      },
+      {
+        "skill": "Safety",
+        "level": "3"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "3"
+      },
+      {
+        "skill": "SMT Electronics Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "3"
+      },
+      {
+        "skill": "Testing - PCBA",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (gauges)",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "3"
+      },
+      {
+        "skill": "Laser Printing",
+        "level": "3"
+      },
+      {
+        "skill": "Wire Crimping",
+        "level": "3"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "2"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "3"
+      },
+      {
+        "skill": "SPC",
+        "level": "3"
+      },
+      {
+        "skill": "MSA",
+        "level": "3"
+      },
+      {
+        "skill": "4M Change",
+        "level": "3"
+      },
+      {
+        "skill": "FMEA",
+        "level": "3"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "3"
+      },
+      {
+        "skill": "PPAP & APQP",
+        "level": "3"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "3"
+      },
+      {
+        "skill": "Poka Yoke",
+        "level": "3"
+      },
+      {
+        "skill": "7 QC Tools",
+        "level": "4"
+      },
+      {
+        "skill": "Compliance & Ethical Responsibility",
+        "level": "2"
+      },
+      {
+        "skill": "Sampling and inspection",
+        "level": "3"
+      },
+      {
+        "skill": "Internal Auditor Certification*",
+        "level": "Y"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "3"
+      },
+      {
+        "skill": "Data Analytics and Reporting",
+        "level": "2"
+      },
+      {
+        "skill": "MS Excel",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Pushpender Chouhan",
+    "Department": "Admin Incharge",
+    "Roles": [
+      "Admin Manager"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "3"
+      },
+      {
+        "skill": "Safety",
+        "level": "3"
+      },
+      {
+        "skill": "Compliance & Ethical Responsibility",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Prakash Swain",
+    "Department": "Production",
+    "Roles": [
+      "Team Leader, Testing & Packing",
+      "Rework Operator"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "3"
+      },
+      {
+        "skill": "Safety",
+        "level": "3"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "3"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (gauges)",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "2"
+      },
+      {
+        "skill": "Laser Printing",
+        "level": "3"
+      },
+      {
+        "skill": "Packing",
+        "level": "3"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "2"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "2"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "2"
+      },
+      {
+        "skill": "4M Change",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "3"
+      },
+      {
+        "skill": "Rework on electronic parts",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Neeraj Rawat",
+    "Department": "Production",
+    "Roles": [
+      "Production Operator (Manual Electronics Assy)",
+      "Testing Operator (PCBA)",
+      "Testing Operator (Electrical FG)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "3"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - PCBA",
+        "level": "3"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Vikram Sharma",
+    "Department": "Operator, Rework",
+    "Roles": [
+      "Rework Operator"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Rework on electronic parts",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Jitesh Kumar",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Manual Electronics Assy)",
+      "Testing Operator (PCBA)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "3"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - PCBA",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Aiklish",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Manual Electronics Assy)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Ram Kailash",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Manual Electronics Assy)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Amlesh",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Mechanical)",
+      "Production Operator (Manual Electronics Assy)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Laser Printing",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Kumer Ram",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Electronics SMT)",
+      "Testing Operator (PCBA)",
+      "Production Operator (Manual Electronics Assy)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "3"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "SMT Electronics Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - PCBA",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Abhishek Kumar",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Mechanical)",
+      "Production Operator (Manual Electronics Assy)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Laser Printing",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Ajay Kumar",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Manual Electronics Assy)",
+      "Testing Operator (PCBA)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "3"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "3"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - PCBA",
+        "level": "3"
+      }
+    ]
+  },
+  {
+    "Employee": "Shiv Prasad",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Manual Electronics Assy)",
+      "Production Operator (Mechanical)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Laser Printing",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Anshul Kumar",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Manual Electronics Assy)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Islamuddin",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Testing Operator (Electrical FG)",
+      "Packing Operator",
+      "Team Leader, Testing & Packing"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "3"
+      },
+      {
+        "skill": "Safety",
+        "level": "3"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "3"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "3"
+      },
+      {
+        "skill": "Packing",
+        "level": "3"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Dimensional inspection (gauges)",
+        "level": "3"
+      },
+      {
+        "skill": "Laser Printing",
+        "level": "3"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "2"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "2"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "2"
+      },
+      {
+        "skill": "4M Change",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Seema Devi",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Testing Operator (Sunshade)",
+      "Packing Operator",
+      "Testing Operator (Electrical FG)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Dimensional inspection (gauges)",
+        "level": "2"
+      },
+      {
+        "skill": "Packing",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Mamta",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Testing Operator (Sunshade)",
+      "Packing Operator",
+      "Testing Operator (Electrical FG)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Dimensional inspection (gauges)",
+        "level": "2"
+      },
+      {
+        "skill": "Packing",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Saurabh Kumar",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Packing Operator"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Packing",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Geeta",
+    "Department": "Helper",
+    "Roles": [
+      "Helper"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Shyama Rawat",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Mechanical)",
+      "Packing Operator"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Laser Printing",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Packing",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Manish Kumar",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Testing Operator (Electrical FG)",
+      "Production Operator (Mechanical)",
+      "Packing Operator"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Laser Printing",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Packing",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Anil Kumar",
+    "Department": "Helper",
+    "Roles": [
+      "Helper"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Suman Rawat",
+    "Department": "Helper",
+    "Roles": [
+      "Helper"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Rakesh Kumar",
+    "Department": "Helper",
+    "Roles": [
+      "Helper"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Mukesh Kumar",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Testing Operator (Electrical FG)",
+      "Production Operator (Wire Crimping)",
+      "Production Operator (Mechanical)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Wire Cutting-Stripping",
+        "level": "2"
+      },
+      {
+        "skill": "Wire Crimping",
+        "level": "3"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Laser Printing",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Sandeep Kumar",
+    "Department": "Helper",
+    "Roles": [
+      "Helper"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Pushkar Kumar",
+    "Department": "Helper",
+    "Roles": [
+      "Helper"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Deepu",
+    "Department": "Helper",
+    "Roles": [
+      "Helper"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Deepu Kumar",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Wire Crimping)",
+      "Production Operator (Wiring Harness)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Wire Cutting-Stripping",
+        "level": "2"
+      },
+      {
+        "skill": "Wire Crimping",
+        "level": "3"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Lekhraj",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Wiring Harness)",
+      "Testing Operator (Electrical FG)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Wire Cutting-Stripping",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "3"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Hina",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Wiring Harness)",
+      "Packing Operator"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Wire Cutting-Stripping",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Packing",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Pappy Verma",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Wiring Harness)",
+      "Packing Operator"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Wire Cutting-Stripping",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Packing",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Sana",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Wiring Harness)",
+      "Packing Operator"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Wire Cutting-Stripping",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Packing",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Dheeraj Mishra",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Store Executive"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "3"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "FIFO",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Pradeep Kumar",
+    "Department": "Purchase Manager",
+    "Roles": [
+      "Purchase Manager"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Leadership & Team Management",
+        "level": "2"
+      },
+      {
+        "skill": "Communication & Interpersonal Skill",
+        "level": "3"
+      },
+      {
+        "skill": "Problem Solving & Critical Thinking",
+        "level": "3"
+      },
+      {
+        "skill": "Planning & Time Management",
+        "level": "3"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "3"
+      },
+      {
+        "skill": "Material Planning & Inventory Control",
+        "level": "3"
+      },
+      {
+        "skill": "Compliance & Ethical Responsibility",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Shailesh Kumar",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Manual Electronics Assy)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Anmol Kumar",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Mechanical)",
+      "Production Operator (Manual Electronics Assy)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Mechanical Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Laser Printing",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Aniket Patel",
+    "Department": "Quality",
+    "Roles": [
+      "NA/ Exited"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Chhotu Kumar",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Manual Electronics Assy)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Ajay",
+    "Department": "Helper",
+    "Roles": [
+      "Helper"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Shobhit Singh",
+    "Department": "Helper",
+    "Roles": [
+      "Helper"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Shailendra Kumar",
+    "Department": "Helper",
+    "Roles": [
+      "Helper"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Ram Sanuj",
+    "Department": "Operator, Production",
+    "Roles": [
+      "NA/ Exited"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Anshul",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Manual Electronics Assy)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Manoj Vishwakarma",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Production Operator (Manual Electronics Assy)"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "2"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Manual Electronics Assembly",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Vikash",
+    "Department": "Operator, Production",
+    "Roles": [
+      "NA/ Exited"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Sandeep",
+    "Department": "Helper",
+    "Roles": [
+      "Helper"
+    ],
+    "Skills": []
+  },
+  {
+    "Employee": "Vimal Kumar",
+    "Department": "Operator, Production",
+    "Roles": [
+      "Quality Executive"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "3"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - Electrical/ Electronic Parts",
+        "level": "2"
+      },
+      {
+        "skill": "Testing - PCBA",
+        "level": "2"
+      },
+      {
+        "skill": "Dimensional inspection (gauges)",
+        "level": "2"
+      },
+      {
+        "skill": "Dimensional inspection (instruments)",
+        "level": "2"
+      },
+      {
+        "skill": "Wire Crimping",
+        "level": "2"
+      },
+      {
+        "skill": "Packing",
+        "level": "2"
+      },
+      {
+        "skill": "IATF 16949/ISO 9001:2015 QMS\n Awareness",
+        "level": "2"
+      },
+      {
+        "skill": "4M Change",
+        "level": "2"
+      },
+      {
+        "skill": "Abnormality Handling",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "Poka Yoke",
+        "level": "2"
+      },
+      {
+        "skill": "Sampling and inspection",
+        "level": "2"
+      }
+    ]
+  },
+  {
+    "Employee": "Gaurav Pihaal",
+    "Department": "Store",
+    "Roles": [
+      "Store Executive"
+    ],
+    "Skills": [
+      {
+        "skill": "5S",
+        "level": "3"
+      },
+      {
+        "skill": "Safety",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Electronics",
+        "level": "2"
+      },
+      {
+        "skill": "Basics of Quality",
+        "level": "2"
+      },
+      {
+        "skill": "Kaizen",
+        "level": "2"
+      },
+      {
+        "skill": "FIFO",
+        "level": "2"
+      }
+    ]
+  }
+]
