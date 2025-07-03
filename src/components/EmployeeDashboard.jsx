@@ -9,6 +9,9 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL;
 // --- Helper: Convert level number to code string ---
 const levelToCode = (level) => `l${level}`;
 
+// --- Helper: Normalize skill name for mapping ---
+const normalizeSkillName = s => s && typeof s === 'string' ? s.replace(/\r?\n|\r/g, '').trim().replace(/\s+/g, ' ') : s;
+
 /**
  * EmployeeDashboard component
  * Shows employee info, required skills/tests, and allows test taking
@@ -40,9 +43,11 @@ const EmployeeDashboard = ({
 
   useEffect(() => {
     if (location.state && location.state.submittedTest) {
+      // Always use code for submittedTest
+      const skillCode = skillNameToCode[normalizeSkillName(location.state.submittedTest.skill)] || location.state.submittedTest.skill;
       setSubmittedTests(prev => [
         ...prev,
-        `${location.state.submittedTest.skill}-${location.state.submittedTest.level}`
+        `${skillCode}-${location.state.submittedTest.level}`
       ]);
     }
   }, [location.state]);
@@ -52,7 +57,6 @@ const EmployeeDashboard = ({
     fetch(`${BACKEND}/api/mcq/submitted-answers`)
       .then(res => res.json())
       .then(data => {
-        console.log('Fetched submissions:', data.submissions); // Debug: inspect backend data
         const empName = employeeInfo?.name;
         const empId = employeeId;
         // Only include submissions for this employee, deduplicate, and filter out invalid
@@ -62,7 +66,11 @@ const EmployeeDashboard = ({
               (sub.employee_id && sub.employee_id === empId) ||
               (sub.employee_name && sub.employee_name === empName)
             )
-            .map(sub => sub.skill && sub.level ? `${sub.skill}-${sub.level}` : null)
+            .map(sub => {
+              // Always use code for submitted skill
+              const skillCode = skillNameToCode[normalizeSkillName(sub.skill)] || sub.skill;
+              return (skillCode && sub.level) ? `${skillCode}-${sub.level}` : null;
+            })
             .filter(Boolean)
         ));
         setSubmittedTests(submitted);
@@ -74,7 +82,6 @@ const EmployeeDashboard = ({
       const newCount = (prev[idx] || 0) + 1;
       return { ...prev, [idx]: newCount };
     });
-    console.log("Navigating to test with employeeInfo:", employeeInfo);
     navigate('/test', { state: { skill, level, employeeInfo, employeeRoles, employeeId } });
   };
 
@@ -152,25 +159,29 @@ const EmployeeDashboard = ({
           <strong>Required Skills/Tests{selectedRole ? ` for ${selectedRole}` : ''}:</strong>
           <ul className="employee-dashboard-skills-list">
             {filteredSkills && filteredSkills.length > 0 ? (
-              filteredSkills.map((s, idx) => (
-                <li key={idx} className="employee-dashboard-skill-item">
-                  <span className="employee-dashboard-skill-label">
-                    {s.skill} <span className="employee-dashboard-skill-level">(Level: {s.level})</span>
-                  </span>
-                  <button
-                    className="employee-dashboard-btn"
-                    onClick={() => handleTestClick(idx, s.skill, s.level)}
-                    disabled={submittedTests.includes(`${skillNameToCode[s.skill] || s.skill}-${String(s.level)}`)}
-                  >
-                    {submittedTests.includes(`${skillNameToCode[s.skill] || s.skill}-${String(s.level)}`) ? "Submitted" : "Take Test"}
-                  </button>
-                  {testClickCounts[idx] ? (
-                    <span className="employee-dashboard-click-count">
-                      Clicked {testClickCounts[idx]} times
+              filteredSkills.map((s, idx) => {
+                // Always use code for checking submitted
+                const skillCode = skillNameToCode[normalizeSkillName(s.skill)] || s.skill;
+                return (
+                  <li key={idx} className="employee-dashboard-skill-item">
+                    <span className="employee-dashboard-skill-label">
+                      {s.skill} <span className="employee-dashboard-skill-level">(Level: {s.level})</span>
                     </span>
-                  ) : null}
-                </li>
-              ))
+                    <button
+                      className="employee-dashboard-btn"
+                      onClick={() => handleTestClick(idx, s.skill, s.level)}
+                      disabled={submittedTests.includes(`${skillCode}-${String(s.level)}`)}
+                    >
+                      {submittedTests.includes(`${skillCode}-${String(s.level)}`) ? "Submitted" : "Take Test"}
+                    </button>
+                    {testClickCounts[idx] ? (
+                      <span className="employee-dashboard-click-count">
+                        Clicked {testClickCounts[idx]} times
+                      </span>
+                    ) : null}
+                  </li>
+                );
+              })
             ) : (
               <li>No skills/tests found.</li>
             )}
