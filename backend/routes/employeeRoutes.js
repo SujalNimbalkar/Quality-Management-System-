@@ -145,6 +145,7 @@ const express = require("express");
 const router = express.Router();
 const { loadEmployees } = require("../utils/excelUtils");
 const { readCsv } = require("../utils/csvUtils");
+const { fetchRoleCompetencies } = require("../utils/sheets");
 
 // API to fetch all employees
 router.get("/employees", (req, res) => {
@@ -189,36 +190,44 @@ router.get("/employee-exists/:employeeId", (req, res) => {
 });
 
 // API to get all required tests for an employee (by employeeId)
-router.get("/employee/:employeeId/required-tests", (req, res) => {
-  const employeeId = String(req.params.employeeId);
-  // 1. Get all roles for this employee
-  const employeeRoles = readCsv("employee_roles.csv").filter(
-    (er) => String(er.employee_id) === employeeId
-  );
-  const roleIds = employeeRoles.map((er) => String(er.role_id));
-  // 2. For each role, get required competencies
-  const roleCompetencies = readCsv("role_competencies.csv").filter((rc) =>
-    roleIds.includes(String(rc.role_id))
-  );
-  const competencyIds = roleCompetencies.map((rc) => String(rc.competency_id));
-  // 3. For each competency, get required tests
-  const assessments = readCsv("assessments.csv").filter((a) =>
-    competencyIds.includes(String(a.competency_id))
-  );
-  const testNames = [
-    ...new Set(assessments.map((a) => a.test_name).filter(Boolean)),
-  ];
-  // 4. For each test, get the link (if available)
-  const testLinks = readCsv("test_links.csv");
-  const tests = testNames.map((name) => {
-    const linkObj = testLinks.find((tl) => tl.TestName === name);
-    return { testName: name, testLink: linkObj ? linkObj.TestLink : null };
-  });
-  res.json({ tests });
+router.get("/employee/:employeeId/required-tests", async (req, res) => {
+  try {
+    const employeeId = String(req.params.employeeId);
+    // 1. Get all roles for this employee
+    const employeeRoles = readCsv("employee_roles.csv").filter(
+      (er) => String(er.employee_id) === employeeId
+    );
+    const roleIds = employeeRoles.map((er) => String(er.role_id));
+    // 2. For each role, get required competencies from Google Sheets
+    const roleCompetencies = await fetchRoleCompetencies();
+    const filteredRoleCompetencies = roleCompetencies.filter((rc) =>
+      roleIds.includes(String(rc.role_id))
+    );
+    const competencyIds = filteredRoleCompetencies.map((rc) =>
+      String(rc.competency_id)
+    );
+    // 3. For each competency, get required tests
+    const assessments = readCsv("assessments.csv").filter((a) =>
+      competencyIds.includes(String(a.competency_id))
+    );
+    const testNames = [
+      ...new Set(assessments.map((a) => a.test_name).filter(Boolean)),
+    ];
+    // 4. For each test, get the link (if available)
+    const testLinks = readCsv("test_links.csv");
+    const tests = testNames.map((name) => {
+      const linkObj = testLinks.find((tl) => tl.TestName === name);
+      return { testName: name, testLink: linkObj ? linkObj.TestLink : null };
+    });
+    res.json({ tests });
+  } catch (error) {
+    console.error("Error fetching required tests:", error);
+    res.status(500).json({ message: "Failed to fetch required tests" });
+  }
 });
 
 // API to get all unique tests for employee 26 (Quality Manager + Internal Auditor, no repeats)
-router.get("/employee/26/tests", (req, res) => {
+router.get("/employee/26/tests", async (req, res) => {
   try {
     const employeeId = "26";
     // Get all roles for employee 26
@@ -227,11 +236,12 @@ router.get("/employee/26/tests", (req, res) => {
     );
     // For this employee, get role_ids (should be [21, 5])
     const roleIds = employeeRoles.map((er) => String(er.role_id));
-    // For both roles, get all required competencies
-    const roleCompetencies = readCsv("role_competencies.csv").filter((rc) =>
+    // For both roles, get all required competencies from Google Sheets
+    const roleCompetencies = await fetchRoleCompetencies();
+    const filteredRoleCompetencies = roleCompetencies.filter((rc) =>
       roleIds.includes(String(rc.role_id))
     );
-    const competencyIds = roleCompetencies.map((rc) =>
+    const competencyIds = filteredRoleCompetencies.map((rc) =>
       String(rc.competency_id)
     );
     // For all competencies, get all required tests
@@ -250,6 +260,7 @@ router.get("/employee/26/tests", (req, res) => {
     });
     res.json({ tests });
   } catch (error) {
+    console.error("Error fetching tests for employee 26:", error);
     res.status(500).json({ message: "Failed to fetch tests for employee 26" });
   }
 });

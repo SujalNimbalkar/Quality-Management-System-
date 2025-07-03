@@ -2,6 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const { readCsv, writeCsv } = require("../utils/csvUtils");
+const { fetchRoleCompetencies } = require("../utils/sheets");
 
 const entityFiles = {
   employees: "employees.csv",
@@ -14,6 +15,37 @@ const entityFiles = {
   employee_assessment_results: "employee_assessment_results.csv",
   qualifications: "qualifications.csv",
 };
+
+// Special route for role_competencies that fetches from Google Sheets
+router.get("/role_competencies", async (req, res) => {
+  try {
+    const data = await fetchRoleCompetencies();
+    res.json(data);
+  } catch (error) {
+    console.error("Error fetching role competencies:", error);
+    res.status(500).json({ error: "Failed to fetch role competencies" });
+  }
+});
+
+// Test endpoint to verify Google Sheets integration
+router.get("/test-role-competencies", async (req, res) => {
+  try {
+    const data = await fetchRoleCompetencies();
+    res.json({
+      success: true,
+      count: data.length,
+      sample: data.slice(0, 3),
+      message: "Google Sheets integration is working",
+    });
+  } catch (error) {
+    console.error("Error testing role competencies:", error);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      message: "Google Sheets integration failed",
+    });
+  }
+});
 
 // Generic GET all
 router.get("/:entity", (req, res) => {

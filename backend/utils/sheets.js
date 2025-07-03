@@ -12,6 +12,9 @@ const SUBMISSION_SHEET_ID = process.env.GOOGLE_SUBMITTED_ID;
 // console.log("Using SUBMISSION_SHEET_ID:", SUBMISSION_SHEET_ID);
 const SCORE_LOG_SHEET_ID = process.env.GOOGLE_SCORE_LOG_ID;
 // console.log("Using SCORE_LOG_SHEET_ID:", SCORE_LOG_SHEET_ID);
+const ROLE_COMPETENCIES_SHEET_ID =
+  process.env.GOOGLE_ROLE_COMPETENCIES_SHEET_ID;
+// console.log("Using ROLE_COMPETENCIES_SHEET_ID:", ROLE_COMPETENCIES_SHEET_ID);
 
 // Auth helper
 async function getSheetsClient() {
@@ -226,6 +229,25 @@ async function appendScoreLogRow({
   });
 }
 
+// Fetch role competencies from Google Sheet (Sheet2)
+async function fetchRoleCompetencies() {
+  const sheets = await getSheetsClient();
+  const response = await sheets.spreadsheets.values.get({
+    spreadsheetId: ROLE_COMPETENCIES_SHEET_ID,
+    range: "Sheet2!A2:D", // Adjust range as needed for role_competencies data
+  });
+  const rows = response.data.values;
+  if (!rows || rows.length === 0) return [];
+
+  // Map each row to a role competency object
+  return rows.map((row) => ({
+    id: row[0],
+    role_id: row[1],
+    competency_id: row[2],
+    proficiency_required: row[3],
+  }));
+}
+
 module.exports = {
   getRandomQuestions,
   gradeAnswers,
@@ -234,4 +256,5 @@ module.exports = {
   appendSubmissionRows,
   getSheetsClient,
   appendScoreLogRow,
+  fetchRoleCompetencies,
 };
