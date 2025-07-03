@@ -19,7 +19,9 @@ const TestWindow = () => {
 
   useEffect(() => {
     if (skill && level) {
-      const skill_id = skillNameToCode[skill] || skill;
+      const normalizeSkillName = s => s.replace(/\r?\n|\r/g, '').trim().replace(/\s+/g, ' ');
+      const normalizedSkill = normalizeSkillName(skill);
+      const skill_id = skillNameToCode[normalizedSkill] || skill;
       fetch(`${BACKEND}/api/mcq/questions?skill_id=${encodeURIComponent(skill_id)}&level=${level}`)
         .then(res => res.json())
         .then(data => {

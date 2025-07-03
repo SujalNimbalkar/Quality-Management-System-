@@ -1,3 +1,9 @@
+const normalizeSkillName = (s) =>
+  s
+    .replace(/\r?\n|\r/g, "")
+    .trim()
+    .replace(/\s+/g, " ");
+
 export const skillNameToCode = {
   "5S": "sk01",
   Safety: "sk02",
@@ -41,4 +47,11 @@ export const skillNameToCode = {
 
 export const skillCodeToName = Object.fromEntries(
   Object.entries(skillNameToCode).map(([name, code]) => [code, name])
+);
+
+export const normalizedSkillNameToCode = Object.fromEntries(
+  Object.entries(skillNameToCode).map(([name, code]) => [
+    normalizeSkillName(name),
+    code,
+  ])
 );
