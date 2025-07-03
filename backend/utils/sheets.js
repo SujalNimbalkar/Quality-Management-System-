@@ -234,7 +234,7 @@ async function fetchRoleCompetencies() {
   const sheets = await getSheetsClient();
   const response = await sheets.spreadsheets.values.get({
     spreadsheetId: ROLE_COMPETENCIES_SHEET_ID,
-    range: "Sheet2!A2:D", // Adjust range as needed for role_competencies data
+    range: "role_competencies!A2:D", // Adjust range as needed for role_competencies data
   });
   const rows = response.data.values;
   if (!rows || rows.length === 0) return [];
