@@ -54,6 +54,8 @@ const TestWindow = () => {
     'Compliance & Ethical Responsibility': 'sk34',
     'Internal Auditor Certification*': 'sk35',
     'FIFO': 'sk36',
+    'Rework on electronic parts': 'sk37',
+    'Sampling and inspection': 'sk38',
   };
 
   useEffect(() => {
