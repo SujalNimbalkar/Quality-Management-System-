@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip, Legend } from 'recharts';
 import './EmployeePerformance.css';
+import { skillCodeToName } from '../utils/skillMaps';
 // If recharts is not installed, show a placeholder for the radar chart
 
 const EmployeePerformance = () => {
@@ -68,13 +69,15 @@ const BACKEND = import.meta.env.VITE_BACKEND_URL;
             <table className="employee-performance-table" border="1" cellPadding="4">
               <thead>
                 <tr>
-                  <th>Timestamp</th><th>Employee ID</th><th>Name</th><th>Position</th><th>Skill</th><th>Level</th><th>Score</th><th>Max Score</th><th>Percent</th><th>Status</th>
+                  <th>Timestamp</th><th>Employee ID</th><th>Name</th><th>Position</th><th>Skill Name</th><th>Skill</th><th>Level</th><th>Score</th><th>Max Score</th><th>Percent</th><th>Status</th>
                 </tr>
               </thead>
               <tbody>
                 {scoreLog.map((row, i) => (
                   <tr key={i}>
-                    <td>{row.timestamp}</td><td>{row.employee_id}</td><td>{row.employee_name}</td><td>{row.employee_position}</td><td>{row.skill}</td><td>{row.level}</td><td>{row.score}</td><td>{row.max_score}</td><td>{row.percent}</td><td>{row.status}</td>
+                    <td>{row.timestamp}</td><td>{row.employee_id}</td><td>{row.employee_name}</td><td>{row.employee_position}</td>
+                    <td>{skillCodeToName[row.skill] || row.skill}</td><td>{row.skill}</td>
+                    <td>{row.level}</td><td>{row.score}</td><td>{row.max_score}</td><td>{row.percent}</td><td>{row.status}</td>
                   </tr>
                 ))}
               </tbody>

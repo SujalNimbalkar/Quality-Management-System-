@@ -3,52 +3,11 @@ import ResultTable from './ResultTable';
 import EntityTable from './EntityTable';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './EmployeeDashboard.css';
+import { skillNameToCode } from '../utils/skillMaps';
 const BACKEND = import.meta.env.VITE_BACKEND_URL;
 
 // --- Helper: Convert level number to code string ---
 const levelToCode = (level) => `l${level}`;
-
-// Replace dynamic CSV loading with hardcoded mapping
-const skillNameToCode = {
-  '5S': 'sk01',
-  'Safety': 'sk02',
-  'Basics of Electronics': 'sk03',
-  'Basics of Quality': 'sk04',
-  'SMT Electronics Assembly': 'sk05',
-  'Manual Electronics Assembly': 'sk06',
-  'Mechanical Assembly': 'sk07',
-  'Testing - Electrical/ Electronic Parts': 'sk08',
-  'Testing - PCBA': 'sk09',
-  'Dimensional inspection (gauges)': 'sk10',
-  'Dimensional inspection (instruments)': 'sk11',
-  'Laser Printing': 'sk12',
-  'Wire Cutting-Stripping': 'sk13',
-  'Wire Crimping': 'sk14',
-  'Packing': 'sk15',
-  'Leadership & Team Management': 'sk16',
-  'Communication & Interpersonal Skill': 'sk17',
-  'Problem Solving & Critical Thinking': 'sk18',
-  'Planning & Time Management': 'sk19',
-  'IATF 16949/ISO 9001:2015 QMS Awareness': 'sk20',
-  'Material Planning & Inventory Control': 'sk21',
-  'Supply Chain Management': 'sk22',
-  'Data Analytics and Reporting': 'sk23',
-  'MS Excel': 'sk24',
-  'SPC': 'sk25',
-  'MSA': 'sk26',
-  '4M Change': 'sk27',
-  'FMEA': 'sk28',
-  'Abnormality Handling': 'sk29',
-  'PPAP & APQP': 'sk30',
-  'Kaizen': 'sk31',
-  'Poka Yoke': 'sk32',
-  '7 QC Tools': 'sk33',
-  'Compliance & Ethical Responsibility': 'sk34',
-  'Internal Auditor Certification*': 'sk35',
-  'FIFO': 'sk36',
-  'Rework on electronic parts': 'sk37',
-  'Sampling and inspection': 'sk38',
-};
 
 /**
  * EmployeeDashboard component
