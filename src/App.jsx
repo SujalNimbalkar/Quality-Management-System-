@@ -11,7 +11,6 @@ import Login from './components/Login';
 import TestWindow from './components/TestWindow';
 import SubmittedAnswers from './components/SubmittedAnswers';
 import EmployeePerformance from './components/EmployeePerformance';
-
 import './App.css';
 
 const BACKEND = import.meta.env.VITE_BACKEND_URL;
@@ -37,14 +36,32 @@ function App() {
 
   useEffect(() => {
     async function fetchCSVs() {
-      const [rolesData, roleCompData, compData] = await Promise.all([
+      const [rolesData, compData] = await Promise.all([
         loadCSV('/excel_data/roles.csv'),
-        loadCSV('/excel_data/role_competencies.csv'),
         loadCSV('/excel_data/competencies.csv'),
       ]);
       setRoles(rolesData);
-      setRoleCompetencies(roleCompData);
       setCompetencies(compData);
+      
+      // Fetch role competencies from Google Sheets API
+      try {
+        const roleCompResponse = await fetch(`${BACKEND}/api/role_competencies`);
+        if (roleCompResponse.ok) {
+          const roleCompData = await roleCompResponse.json();
+          setRoleCompetencies(roleCompData);
+        } else {
+          console.error('Failed to fetch role competencies from API');
+          // Fallback to CSV if API fails
+          const roleCompData = await loadCSV('/excel_data/role_competencies.csv');
+          setRoleCompetencies(roleCompData);
+        }
+      } catch (error) {
+        console.error('Error fetching role competencies:', error);
+        // Fallback to CSV if API fails
+        const roleCompData = await loadCSV('/excel_data/role_competencies.csv');
+        setRoleCompetencies(roleCompData);
+      }
+      
       const compMap = await loadCompetencyMap('/241119%20Competency%20map%20v0.7.csv');
       setCompetencyMap(compMap);
     }
