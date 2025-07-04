@@ -148,7 +148,7 @@ function App() {
         <Route path="/test" element={<TestWindow />} />
         <Route path="/submitted-answers" element={<SubmittedAnswers />} />
 
-        <Route path="/performance" element={<EmployeePerformance />} />
+        <Route path="/performance" element={<EmployeePerformance competencyMap={competencyMap} />} />
 
         {/* Add more admin/entity routes as needed */}
       </Routes>
