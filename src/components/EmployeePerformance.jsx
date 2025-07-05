@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip, Legend } from 'recharts';
 import './EmployeePerformance.css';
 import { skillNameToCode, skillCodeToName } from '../utils/skillMaps';
+import EmployeeRadarChart from './EmployeeRadarChart';
+import EmployeeSkillLevelsByPosition from './EmployeeSkillLevelsByPosition';
 
 // Helper to normalize skill names
 const normalizeSkillName = s => s && typeof s === 'string' ? s.replace(/\r?\n|\r/g, '').trim().replace(/\s+/g, ' ') : s;
@@ -27,6 +29,8 @@ const EmployeePerformance = () => {
       .then(data => setCompetencyMap(data));
   }, [BACKEND]);
 
+
+
   // Fetch employee data and test results
   const handleFetch = async () => {
     if (!empId) return;
@@ -35,7 +39,10 @@ const EmployeePerformance = () => {
     const allSkillsRes = await fetch(`${BACKEND}/excel_data/employee_skills_levels.json`);
     // const allSkillsRes = await fetch(`http://localhost:5000/excel_data/employee_skills_levels.json`);
     const allSkills = await allSkillsRes.json();
-    const empData = allSkills.find(e => e.Employee === employeeName || e.Employee === empId);
+    const empData = allSkills.find(e =>
+      (empId && String(e.Employee).trim() === empId.trim()) ||
+      (employeeName && e.Employee === employeeName)
+    );
     setEmployeeData(empData);
     setEmployeeRoles(empData?.Roles || []);
     setEmployeeSkills(empData?.Skills || []);
@@ -68,14 +75,41 @@ const EmployeePerformance = () => {
           // row.skill may be code or name, so check both
           return row.skill === skillCode || normalizeSkillName(row.skill) === normalizeSkillName(skillName);
         });
-        // If test found, use the level passed, else 0
-        let level = 0;
-        if (test && test.level && !isNaN(Number(test.level))) {
-          level = Number(test.level);
+        // Required level from map
+        let required = 0;
+        if (requiredLevel && !isNaN(Number(requiredLevel))) required = Number(requiredLevel);
+        // Achieved level from test
+        let achieved = 0;
+        let failed = false;
+        if (test) {
+          if (test.status && test.status.toLowerCase() === 'fail') {
+            achieved = 0;
+            failed = true;
+          } else if (
+            test.level && Number(test.level) === 2 &&
+            test.percent && Number(test.percent) >= 80
+          ) {
+            achieved = 3;
+          } else if (
+            test.level && Number(test.level) === 3 &&
+            test.percent && Number(test.percent) < 80 && Number(test.percent) > 60
+          ) {
+            achieved = 2;
+          } else if (
+            test.level && Number(test.level) === 3 &&
+            test.percent && Number(test.percent) <= 60
+          ) {
+            achieved = 0;
+            failed = true;
+          } else if (test.level && !isNaN(Number(test.level))) {
+            achieved = Number(test.level);
+          }
         }
         return {
           skill: skillName,
-          level,
+          required,
+          achieved,
+          failed,
         };
       });
     });
@@ -84,6 +118,7 @@ const EmployeePerformance = () => {
 
   return (
     <div className="employee-performance-root">
+      {/* <EmployeeSkillLevelsByPosition /> */}
       <div className="employee-performance-card">
         <h2 className="employee-performance-title">Employee Performance & Answers</h2>
         <div className="employee-performance-input-row">
@@ -108,17 +143,7 @@ const EmployeePerformance = () => {
           <div style={{marginTop: 16}}>
             <h4 className="employee-performance-section-title">Skill Performance by Role</h4>
             {Object.entries(radarDataByRole).map(([role, data]) => (
-              <div key={role} className="employee-performance-radar-container">
-                <h5 style={{textAlign:'center', marginBottom:8}}>{role}</h5>
-                <RadarChart cx={200} cy={200} outerRadius={150} width={400} height={400} data={data}>
-                  <PolarGrid />
-                  <PolarAngleAxis dataKey="skill" />
-                  <PolarRadiusAxis angle={30} domain={[0, 4]} />
-                  <Radar name="Level Passed" dataKey="level" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-                  <Tooltip />
-                  <Legend />
-                </RadarChart>
-              </div>
+              <EmployeeRadarChart key={role} data={data} role={role} />
             ))}
           </div>
         )}
