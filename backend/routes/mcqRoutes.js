@@ -65,11 +65,16 @@ router.post("/submit-answers", async (req, res) => {
     // Log score
     const first = submissions[0];
     let status;
-    if (first.level === "2" || first.level === 2) {
-      if (grading.percent > 80) status = "Eligible for L3";
+    // const levelStr = String(first.level);
+    const levelStr = String(first.level).trim();
+    console.log("DEBUG: levelStr =", levelStr, "percent =", grading.percent);
+    if (levelStr === "2") {
+      if (grading.percent >= 80) status = "Eligible for L3";
       else if (grading.percent >= 60) status = "Pass";
       else status = "Fail";
-    } else {
+    } else if (levelStr === "3") {
+      status = grading.percent <= 80 ? "Fail" : "Pass";
+    } else if (levelStr === "4") {
       status = grading.percent >= 60 ? "Pass" : "Fail";
     }
 
