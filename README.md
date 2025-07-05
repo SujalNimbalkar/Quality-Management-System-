@@ -61,20 +61,20 @@ npm run dev
 - **Login Window (Firebase Authentication):**
 
   - Secure login for employees and admins using Firebase authentication.
-  - ![Login Window](img1_login.png)
+  - ![Login Window](src/assets/Login.png)
 
 - **Admin Dashboard:**
 
   - View and analyze employee performance and answers.
   - Skill performance radar chart by role.
   - Score log with detailed breakdown of test results.
-  - ![Admin Dashboard - Performance](img2_admin_dashboard.png)
-  - ![Admin Dashboard - Score Log](img3_admin_scorelog.png)
+  - ![Admin Dashboard - Performance](src/assets/EmployeeDashboard.png)
+  - ![Admin Dashboard - Score Log](src/assets/EmployeeScorelog.png)
 
 - **Employee Dashboard:**
   - Personalized welcome with employee name and roles.
   - List of required skills/tests and submission status.
-  - ![Employee Dashboard](img4_employee_dashboard.png)
+  - ![Employee Dashboard](src/assets/TestWindow.png)
 
 ---
 
