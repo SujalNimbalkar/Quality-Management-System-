@@ -102,7 +102,7 @@ router.get("/employee_assessment_results/all", async (req, res) => {
     const sheets = await getSheetsClient();
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: SCORE_LOG_SHEET_ID,
-      range: "Sheet1!A2:J", // Adjust range as needed
+      range: "Sheet1!A2:K", // Adjust range as needed
     });
     const rows = response.data.values || [];
     const results = rows.map((row) => ({
@@ -116,6 +116,7 @@ router.get("/employee_assessment_results/all", async (req, res) => {
       max_score: row[7],
       percent: row[8],
       status: row[9],
+      StrLevel: row[10],
     }));
     res.json(results);
   } catch (e) {
