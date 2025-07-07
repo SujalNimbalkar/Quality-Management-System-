@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { skillNameToCode } from '../utils/skillMaps';
 import './EmployeePerformance.css';
+import * as XLSX from 'xlsx';
 
 // Helper to normalize skill names
 const normalizeSkillName = s => s && typeof s === 'string' ? s.replace(/\r?\n|\r/g, '').trim().replace(/\s+/g, ' ') : s;
@@ -59,6 +60,62 @@ const EmployeeSkillLevelsByPosition = () => {
     return { achieved, failed };
   };
 
+  const handleExportXLS = () => {
+    if (!selectedRole) return;
+    // Find required skills for this role
+    const roleEntry = competencyMap.find(r => r.Role === selectedRole);
+    if (!roleEntry) return;
+    const requiredSkills = Object.entries(roleEntry.Skills || {});
+    const employeesWithRole = allSkillsData.filter(e => 
+      Array.isArray(e.Roles) ? e.Roles.includes(selectedRole) : e.Roles === selectedRole
+    );
+    // Build data array: header row + data rows
+    const header = [
+      'Employee Name',
+      ...requiredSkills.map(([skillName]) => skillName)
+    ];
+    const data = employeesWithRole.map(emp => {
+      const empName = emp["Employee Name"] || emp.Name || emp.EmployeeName || emp.Employee;
+      const row = [empName];
+      requiredSkills.forEach(([skillName]) => {
+        const skillCode = skillNameToCode[normalizeSkillName(skillName)] || skillName;
+        const test = allScoreLog.find(row =>
+          (row.employee_name && row.employee_name.trim().toLowerCase() === String(empName).trim().toLowerCase()) &&
+          (row.skill === skillCode || normalizeSkillName(row.skill) === normalizeSkillName(skillName))
+        );
+        // Prefer StrLevel if present, else compute
+        let displayLevel = '';
+        let isFailed = false;
+        const strLevel = test?.StrLevel ? String(test.StrLevel).trim() : '';
+        if (strLevel) {
+          displayLevel = strLevel;
+          isFailed = strLevel.toLowerCase() === 'fail';
+        } else if (test) {
+          const level = Number(test.level);
+          const percent = Number(test.percent);
+          if (level === 2) {
+            if (percent >= 60 && percent < 80) displayLevel = 'L2';
+            else if (percent >= 80) displayLevel = 'L3';
+            else { displayLevel = 'Failed'; isFailed = true; }
+          } else if (level === 3) {
+            if (percent > 80) displayLevel = 'L3';
+            else if (percent >= 60 && percent <= 80) displayLevel = 'L2';
+            else { displayLevel = 'Failed'; isFailed = true; }
+          } else if (level === 4) {
+            if (percent > 60) displayLevel = 'L4';
+            else { displayLevel = 'Failed'; isFailed = true; }
+          }
+        }
+        row.push(displayLevel);
+      });
+      return row;
+    });
+    const ws = XLSX.utils.aoa_to_sheet([header, ...data]);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Skill Levels');
+    XLSX.writeFile(wb, `SkillLevels_${selectedRole.replace(/\s+/g, '_')}.xlsx`);
+  };
+
   return (
     <div className="employee-performance-card">
       <h2 className="employee-performance-title">Employee Skill Levels by Position</h2>
@@ -69,6 +126,10 @@ const EmployeeSkillLevelsByPosition = () => {
           {competencyMap.map((r, i) => r.Role && <option key={i} value={r.Role}>{r.Role}</option>)}
         </select>
       </div>
+      {/* Export to XLS Button */}
+      <button onClick={handleExportXLS} className="employee-performance-btn" style={{marginBottom: 16}}>Export to XLS</button>
+      {/* Print Button */}
+      <button onClick={() => window.print()} className="employee-performance-btn" style={{marginBottom: 16}}>Print Table</button>
       {selectedRole && (() => {
         // Find required skills for this role
         const roleEntry = competencyMap.find(r => r.Role === selectedRole);
@@ -81,11 +142,10 @@ const EmployeeSkillLevelsByPosition = () => {
         
         // Build table rows: for each employee, for each skill, show achieved level
         return (
-          <div style={{overflowX:'auto'}}>
+          <div id="print-skill-table" style={{overflowX:'auto'}}>
             <table className="employee-performance-table" border="1" cellPadding="4">
               <thead>
                 <tr>
-                  <th>Employee ID</th>
                   <th>Employee Name</th>
                   {requiredSkills.map(([skillName], i) => <th key={i}>{skillName}</th>)}
                 </tr>
@@ -94,22 +154,44 @@ const EmployeeSkillLevelsByPosition = () => {
                 {employeesWithRole.map((emp, idx) => {
                   return (
                     <tr key={idx}>
-                      <td>{emp.Employee}</td>
-                      <td>{emp["Employee Name"] || emp.Name || emp.EmployeeName || ""}</td>
+                      <td>{emp["Employee Name"] || emp.Name || emp.EmployeeName || emp.Employee}</td>
                       {requiredSkills.map(([skillName], i) => {
                         // Find test result for this employee and skill
                         const skillCode = skillNameToCode[normalizeSkillName(skillName)] || skillName;
+                        // Try to match on employee name (robust to different key names)
+                        const empName = emp["Employee Name"] || emp.Name || emp.EmployeeName || emp.Employee;
                         const test = allScoreLog.find(row =>
-                          (row.employee_id === String(emp.Employee) || row.employee_id === emp.Employee) &&
+                          (row.employee_name && row.employee_name.trim().toLowerCase() === String(empName).trim().toLowerCase()) &&
                           (row.skill === skillCode || normalizeSkillName(row.skill) === normalizeSkillName(skillName))
                         );
-                        
-                        // Calculate achieved level
-                        const { achieved, failed } = calculateAchievedLevel(test);
-                        
+
+                        // Prefer StrLevel if present
+                        let displayLevel = '';
+                        let isFailed = false;
+                        const strLevel = test?.StrLevel ? String(test.StrLevel).trim() : '';
+                        if (strLevel) {
+                          displayLevel = strLevel;
+                          isFailed = strLevel.toLowerCase() === 'Failed';
+                        } else if (test) {
+                          const level = Number(test.level);
+                          const percent = Number(test.percent);
+                          if (level === 2) {
+                            if (percent >= 60 && percent < 80) displayLevel = 'L2';
+                            else if (percent >= 80) displayLevel = 'L3';
+                            else { displayLevel = 'Failed'; isFailed = true; }
+                          } else if (level === 3) {
+                            if (percent > 80) displayLevel = 'L3';
+                            else if (percent >= 60 && percent <= 80) displayLevel = 'L2';
+                            else { displayLevel = 'Failed'; isFailed = true; }
+                          } else if (level === 4) {
+                            if (percent > 60) displayLevel = 'L4';
+                            else { displayLevel = 'Failed'; isFailed = true; }
+                          }
+                        }
+
                         return (
-                          <td key={i} style={failed ? {color:'red', fontWeight:'bold'} : {}}>
-                            {failed ? 'Failed' : achieved}
+                          <td key={i} style={isFailed ? {color:'red', fontWeight:'bold'} : {}}>
+                            {displayLevel}
                           </td>
                         );
                       })}
@@ -121,6 +203,15 @@ const EmployeeSkillLevelsByPosition = () => {
           </div>
         );
       })()}
+      {/* Print CSS */}
+      <style>{`
+        @media print {
+          body * { visibility: hidden; }
+          #print-skill-table, #print-skill-table * { visibility: visible; }
+          #print-skill-table { position: absolute; left: 0; top: 0; width: 100vw; background: white; }
+          .employee-performance-btn, .employee-performance-title, label, select { display: none !important; }
+        }
+      `}</style>
     </div>
   );
 };

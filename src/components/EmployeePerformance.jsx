@@ -118,7 +118,7 @@ const EmployeePerformance = () => {
 
   return (
     <div className="employee-performance-root">
-      {/* <EmployeeSkillLevelsByPosition /> */}
+      <EmployeeSkillLevelsByPosition />
       <div className="employee-performance-card">
         <h2 className="employee-performance-title">Employee Performance & Answers</h2>
         <div className="employee-performance-input-row">
