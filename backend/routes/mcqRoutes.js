@@ -73,7 +73,7 @@ router.post("/submit-answers", async (req, res) => {
       else if (grading.percent >= 60) status = "Pass";
       else status = "Fail";
     } else if (levelStr === "3") {
-      status = grading.percent <= 80 ? "Fail" : "Pass";
+      status = grading.percent >= 80 ? "Pass" : "Fail";
     } else if (levelStr === "4") {
       status = grading.percent >= 60 ? "Pass" : "Fail";
     }
