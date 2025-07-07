@@ -249,6 +249,38 @@ async function fetchRoleCompetencies() {
   }));
 }
 
+// Fetch employee email mapping from Sheet3
+async function fetchEmployeeEmailMappingFromSheet3() {
+  const sheets = await getSheetsClient();
+  const response = await sheets.spreadsheets.values.get({
+    spreadsheetId: ROLE_COMPETENCIES_SHEET_ID,
+    range: "Sheet3!A2:B", // Adjust range as needed (A: employee_id, B: email)
+  });
+  const rows = response.data.values;
+  if (!rows || rows.length === 0) return [];
+  return rows.map((row) => ({
+    employee_id: row[0],
+    email: row[1],
+  }));
+}
+
+// Fetch employees from Sheet4
+async function fetchEmployeesFromSheet4() {
+  const sheets = await getSheetsClient();
+  const response = await sheets.spreadsheets.values.get({
+    spreadsheetId: ROLE_COMPETENCIES_SHEET_ID,
+    range: "Sheet4!A2:D", // Adjust range as needed (A: employee_id, B: name, C: department, D: designation)
+  });
+  const rows = response.data.values;
+  if (!rows || rows.length === 0) return [];
+  return rows.map((row) => ({
+    employee_id: row[0],
+    name: row[1],
+    department: row[2],
+    designation: row[3],
+  }));
+}
+
 module.exports = {
   getRandomQuestions,
   gradeAnswers,
@@ -258,4 +290,6 @@ module.exports = {
   getSheetsClient,
   appendScoreLogRow,
   fetchRoleCompetencies,
+  fetchEmployeeEmailMappingFromSheet3,
+  fetchEmployeesFromSheet4,
 };
