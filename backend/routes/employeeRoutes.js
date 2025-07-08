@@ -10,10 +10,9 @@ const {
 } = require("../utils/sheets");
 
 // API to fetch all employees
-router.get("/employees", (req, res) => {
+router.get("/employees", async (req, res) => {
   try {
-    // Use employees.csv instead of employee_list.xlsx
-    const employees = readCsv("employees.csv");
+    const employees = await fetchEmployeesFromSheet4();
     res.json(employees);
   } catch (error) {
     res.status(500).json({ message: "Failed to fetch employees" });
@@ -21,30 +20,22 @@ router.get("/employees", (req, res) => {
 });
 
 // API to get employee_id by email
-router.get("/employee-id-by-email/:email", (req, res) => {
+router.get("/employee-id-by-email/:email", async (req, res) => {
   const email = decodeURIComponent(req.params.email || "").toLowerCase();
-  // employee_emails.csv should be in excel_data and have columns: employee_id,email
-  const mapping = readCsv("employee_emails.csv");
+  const mapping = await fetchEmployeeEmailMappingFromSheet3();
   const entry = mapping.find((m) => (m.email || "").toLowerCase() === email);
   if (!entry) return res.status(404).json({ message: "Employee not found" });
   res.json({ employee_id: entry.employee_id });
 });
 
 // API to check if an employee exists (for login validation)
-router.get("/employee-exists/:employeeId", (req, res) => {
+router.get("/employee-exists/:employeeId", async (req, res) => {
   const employeeId = req.params.employeeId;
-  // Use employees.csv for login validation
-  const employees = readCsv("employees.csv");
-  console.log("[DEBUG] Checking login for employeeId:", employeeId);
-  console.log(
-    "[DEBUG] Employees loaded:",
-    employees.map((e) => e.employee_id)
-  );
+  const employees = await fetchEmployeesFromSheet4();
   const employee = employees.find(
     (emp) => String(emp.employee_id) === String(employeeId)
   );
   if (!employee) {
-    console.log("[DEBUG] Employee not found for id:", employeeId);
     return res.status(404).json({ message: "Employee not found" });
   }
   const isAdminFlag = employeeId === "E1000";
@@ -128,15 +119,15 @@ router.get("/employee/26/tests", async (req, res) => {
 });
 
 // API to get employee details (name and department/designation) by employeeId
-router.get("/employee/:employeeId", (req, res) => {
+router.get("/employee/:employeeId", async (req, res) => {
   const employeeId = req.params.employeeId;
   let employees = [];
   try {
-    employees = readCsv("employees.csv");
+    employees = await fetchEmployeesFromSheet4();
   } catch (e) {
     return res
       .status(500)
-      .json({ message: "employees.csv not found or unreadable" });
+      .json({ message: "employees not found or unreadable" });
   }
   let employee = employees.find(
     (emp) => String(emp.employee_id) === String(employeeId)
@@ -144,13 +135,8 @@ router.get("/employee/:employeeId", (req, res) => {
   if (!employee) {
     return res.status(404).json({ message: "Employee not found" });
   }
-  const name =
-    employee.Employee || employee.name || employee.employee_name || null;
-  const department =
-    employee["Department/ Designation"] ||
-    employee.department ||
-    employee.designation ||
-    null;
+  const name = employee.name || null;
+  const department = employee.department || employee.designation || null;
   res.json({ name, department });
 });
 
@@ -170,12 +156,10 @@ router.get("/by-email/:email", async (req, res) => {
       return res.status(404).json({ message: "Employee not found" });
     res.json(employee);
   } catch (err) {
-    res
-      .status(500)
-      .json({
-        message: "Error fetching employee by email",
-        error: err.message,
-      });
+    res.status(500).json({
+      message: "Error fetching employee by email",
+      error: err.message,
+    });
   }
 });
 
