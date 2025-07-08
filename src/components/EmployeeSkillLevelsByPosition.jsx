@@ -86,11 +86,7 @@ const EmployeeSkillLevelsByPosition = () => {
         // Prefer StrLevel if present, else compute
         let displayLevel = '';
         let isFailed = false;
-        const strLevel = test?.StrLevel ? String(test.StrLevel).trim() : '';
-        if (strLevel) {
-          displayLevel = strLevel;
-          isFailed = strLevel.toLowerCase() === 'fail';
-        } else if (test) {
+        if (test) {
           const level = Number(test.level);
           const percent = Number(test.percent);
           if (level === 2) {
@@ -176,17 +172,17 @@ const EmployeeSkillLevelsByPosition = () => {
                             else if (percent >= 80) displayLevel = 'L3';
                             else { displayLevel = 'L1'; isFailed = true; }
                           } else if (level === 3) {
-                            if (percent > 80) displayLevel = 'L3';
-                            else if (percent >= 60 && percent <= 80) displayLevel = 'L2';
+                            if (percent >= 80) displayLevel = 'L3';
+                            else if (percent >= 60 && percent < 80) displayLevel = 'L2';
                             else { displayLevel = 'L1'; isFailed = true; }
                           } else if (level === 4) {
-                            if (percent > 60) displayLevel = 'L4';
+                            if (percent >= 60) displayLevel = 'L4';
                             else { displayLevel = 'L1'; isFailed = true; }
                           }
                         }
 
                         return (
-                          <td key={i} style={isFailed ? {color:'red', fontWeight:'bold'} : {}}>
+                          <td key={i}>
                             {displayLevel}
                           </td>
                         );
