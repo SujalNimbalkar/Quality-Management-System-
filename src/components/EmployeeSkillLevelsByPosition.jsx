@@ -86,24 +86,20 @@ const EmployeeSkillLevelsByPosition = () => {
         // Prefer StrLevel if present, else compute
         let displayLevel = '';
         let isFailed = false;
-        const strLevel = test?.StrLevel ? String(test.StrLevel).trim() : '';
-        if (strLevel) {
-          displayLevel = strLevel;
-          isFailed = strLevel.toLowerCase() === 'fail';
-        } else if (test) {
+        if (test) {
           const level = Number(test.level);
           const percent = Number(test.percent);
           if (level === 2) {
             if (percent >= 60 && percent < 80) displayLevel = 'L2';
             else if (percent >= 80) displayLevel = 'L3';
-            else { displayLevel = 'Failed'; isFailed = true; }
+            else { displayLevel = 'L1'; isFailed = true; }
           } else if (level === 3) {
             if (percent > 80) displayLevel = 'L3';
             else if (percent >= 60 && percent <= 80) displayLevel = 'L2';
-            else { displayLevel = 'Failed'; isFailed = true; }
+            else { displayLevel = 'L1'; isFailed = true; }
           } else if (level === 4) {
             if (percent > 60) displayLevel = 'L4';
-            else { displayLevel = 'Failed'; isFailed = true; }
+            else { displayLevel = 'L1'; isFailed = true; }
           }
         }
         row.push(displayLevel);
@@ -168,24 +164,20 @@ const EmployeeSkillLevelsByPosition = () => {
                         // Prefer StrLevel if present
                         let displayLevel = '';
                         let isFailed = false;
-                        const strLevel = test?.StrLevel ? String(test.StrLevel).trim() : '';
-                        if (strLevel) {
-                          displayLevel = strLevel;
-                          isFailed = strLevel.toLowerCase() === 'Failed';
-                        } else if (test) {
+                        if (test) {
                           const level = Number(test.level);
                           const percent = Number(test.percent);
                           if (level === 2) {
                             if (percent >= 60 && percent < 80) displayLevel = 'L2';
                             else if (percent >= 80) displayLevel = 'L3';
-                            else { displayLevel = 'Failed'; isFailed = true; }
+                            else { displayLevel = 'L1'; isFailed = true; }
                           } else if (level === 3) {
                             if (percent > 80) displayLevel = 'L3';
                             else if (percent >= 60 && percent <= 80) displayLevel = 'L2';
-                            else { displayLevel = 'Failed'; isFailed = true; }
+                            else { displayLevel = 'L1'; isFailed = true; }
                           } else if (level === 4) {
                             if (percent > 60) displayLevel = 'L4';
-                            else { displayLevel = 'Failed'; isFailed = true; }
+                            else { displayLevel = 'L1'; isFailed = true; }
                           }
                         }
 
