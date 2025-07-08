@@ -116,7 +116,7 @@ router.get("/employee_assessment_results/all", async (req, res) => {
       max_score: row[7],
       percent: row[8],
       status: row[9],
-      StrLevel: row[10],
+      // StrLevel: row[10],
     }));
     res.json(results);
   } catch (e) {

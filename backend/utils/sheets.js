@@ -218,7 +218,7 @@ async function appendScoreLogRow({
     max_score || "",
     percent || "",
     status || "",
-    StrLevel || "",
+    // StrLevel || "",
   ];
   console.log("Appending to score log:", row); // Debug log
   await sheets.spreadsheets.values.append({
