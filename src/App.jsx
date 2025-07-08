@@ -87,17 +87,15 @@ function App() {
     if (infoRes.ok) {
       const infoData = await infoRes.json();
       employeeInfo = infoData;
-      if (infoData.employee_id) {
-        // Fetch roles by employee_id
-        const rolesRes = await fetch(`${BACKEND}/api/employee/roles?employeeId=${encodeURIComponent(infoData.employee_id)}`);
+      if (infoData.name) {
+        const rolesRes = await fetch(`${BACKEND}/api/employee/roles?name=${encodeURIComponent(infoData.name)}`);
         if (rolesRes.ok) {
           const rolesData = await rolesRes.json();
           employeeRoles = rolesData.roles || [];
-          // Fetch all skills for this employee by employee_id
           const skillsRes = await fetch(`${BACKEND}/excel_data/employee_skills_levels.json`);
           if (skillsRes.ok) {
             const allSkills = await skillsRes.json();
-            const userSkills = allSkills.find(e => String(e.employee_id) === String(infoData.employee_id));
+            const userSkills = allSkills.find(e => e.Employee === infoData.name);
             employeeSkills = userSkills ? userSkills.Skills : [];
           }
         }

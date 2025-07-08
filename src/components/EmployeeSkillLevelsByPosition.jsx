@@ -86,7 +86,11 @@ const EmployeeSkillLevelsByPosition = () => {
         // Prefer StrLevel if present, else compute
         let displayLevel = '';
         let isFailed = false;
-        if (test) {
+        const strLevel = test?.StrLevel ? String(test.StrLevel).trim() : '';
+        if (strLevel) {
+          displayLevel = strLevel;
+          isFailed = strLevel.toLowerCase() === 'fail';
+        } else if (test) {
           const level = Number(test.level);
           const percent = Number(test.percent);
           if (level === 2) {
@@ -161,7 +165,7 @@ const EmployeeSkillLevelsByPosition = () => {
                           (row.skill === skillCode || normalizeSkillName(row.skill) === normalizeSkillName(skillName))
                         );
 
-                        // Prefer StrLevel if present
+                        // Only use computed logic from level and percent
                         let displayLevel = '';
                         let isFailed = false;
                         if (test) {
