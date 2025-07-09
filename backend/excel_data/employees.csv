@@ -1,0 +1,76 @@
+employee_id,name,department,designation
+1,Praveen Bajaj,CEO,CEO
+2,Vaibhav Bajaj,Director, Sales & NPD,Director, Sales & NPD
+3,Shashank Bajaj,Director, Operations,Director, Operations
+4,Narendra Chauhan,Plant Head,Plant Head
+5,Devendra Kumar,GM - Sales,National Sales Manager
+6,Sachin Singh,RSM,Regional Sales Manager
+7,Anil Kalra,RSM,Regional Sales Manager
+8,Rajiv Sinha,RSM,Regional Sales Manager
+9,Aman Dogra,ASM,Area Sales Manager
+10,Kapil Chouhan,ASM,Area Sales Manager
+11,Sunny Rawat,ASM,Area Sales Manager
+12,Amit Aswal,Store,Store Incharge
+13,Anmol Kumar,Purchase Engineer,Purchase Engineer
+14,Amit Kumar,Design Engineer,NPD Engineer (Mechanical)
+15,Amit Parida,Manager, Production & Maintenance,Production Manager (Electronics)
+16,Naresh Kumar,Quality Executive,Quality Executive
+17,Vikas Singh,Asst Manager Quality,Asst Manager Quality
+18,Vishal Singh,Sr. Executive, Warehouse & Logistics,Manager, Despatch
+19,Vinay Kumar,Accounts Head,Accounts Manager
+20,Pooja Mishra,Accounts Executive,Accounts Executive
+21,Neeraj Sharma,Manager, Production,Production Manager (Mechanical)
+22,Hardeep Singh,Manager, NPD,NPD Manager (Mechanical)
+23,Rishav Raj,Manager, NPD,NPD Manager (Mechanical)
+24,Upendra Kumar,HR Manager,HR Manager
+25,Manish Kumar,MIS Executive,MIS Executive
+26,Naushad Ali,Quality Manager,Quality Manager
+27,Aakash Sharma,Asst Manager Quality,Asst Manager Quality
+28,Pushpender Chouhan,Admin Incharge,Admin Manager
+29,Prakash Swain,Production,Team Leader, Testing & Packing
+30,Neeraj Rawat,Production,Production Operator (Manual Electronics Assy)
+31,Vikram Sharma,Operator, Rework,Rework Operator
+32,Jitesh Kumar,Operator, Production,Production Operator (Manual Electronics Assy)
+33,Aiklish,Operator, Production,Production Operator (Manual Electronics Assy)
+34,Ram Kailash,Operator, Production,Production Operator (Manual Electronics Assy)
+35,Amlesh,Operator, Production,Production Operator (Mechanical)
+36,Kumer Ram,Operator, Production,Production Operator (Electronics SMT)
+37,Abhishek Kumar,Operator, Production,Production Operator (Mechanical)
+38,Ajay Kumar,Operator, Production,Production Operator (Manual Electronics Assy)
+39,Shiv Prasad,Operator, Production,Production Operator (Manual Electronics Assy)
+40,Anshul Kumar,Operator, Production,Production Operator (Manual Electronics Assy)
+41,Islamuddin,Operator, Production,Testing Operator (Electrical FG)
+42,Seema Devi,Operator, Production,Testing Operator (Sunshade)
+43,Mamta,Operator, Production,Testing Operator (Sunshade)
+44,Saurabh Kumar,Operator, Production,Packing Operator
+45,Geeta,Helper,Helper
+46,Shyama Rawat,Operator, Production,Production Operator (Mechanical)
+47,Manish Kumar,Operator, Production,Testing Operator (Electrical FG)
+48,Anil Kumar,Helper,Helper
+49,Suman Rawat,Helper,Helper
+50,Rakesh Kumar,Helper,Helper
+51,Mukesh Kumar,Operator, Production,Testing Operator (Electrical FG)
+52,Sandeep Kumar,Helper,Helper
+53,Pushkar Kumar,Helper,Helper
+54,Deepu,Helper,Helper
+55,Deepu Kumar,Operator, Production,Production Operator (Wire Crimping)
+56,Lekhraj,Operator, Production,Production Operator (Wiring Harness)
+57,Hina,Operator, Production,Production Operator (Wiring Harness)
+58,Pappy Verma,Operator, Production,Production Operator (Wiring Harness)
+59,Sana,Operator, Production,Production Operator (Wiring Harness)
+60,Dheeraj Mishra,Operator, Production,Store Executive
+61,Pradeep Kumar,Purchase Manager,Purchase Manager
+62,Shailesh Kumar,Operator, Production,Production Operator (Manual Electronics Assy)
+63,Anmol Kumar PO,Operator, Production,Production Operator (Mechanical)
+64,Aniket Patel,Quality,NA/ Exited
+65,Chhotu Kumar,Operator, Production,Production Operator (Manual Electronics Assy)
+66,Ajay,Helper,Helper
+67,Shobhit Singh,Helper,Helper
+68,Shailendra Kumar,Helper,Helper
+69,Ram Sanuj,Operator, Production,NA/ Exited
+70,Anshul,Operator, Production,Production Operator (Manual Electronics Assy)
+71,Manoj Vishwakarma,Operator, Production,Production Operator (Manual Electronics Assy)
+72,Vikash,Operator, Production,NA/ Exited
+73,Sandeep,Helper,Helper
+74,Vimal Kumar,Operator, Production,Quality Executive
+75,Gaurav Pihaal,Store,Store Executive

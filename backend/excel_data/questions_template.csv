@@ -1,0 +1,10 @@
+SkillCode,Level,QuestionNumber,QuestionID,QuestionText,OptionA,OptionB,OptionC,OptionD
+sk01,L2,1,sk01_L2_1,What is the first S in 5S?,Sort,Shine,Sustain,Standardize
+sk01,L2,2,sk01_L2_2,Which S stands for cleaning?,Shine,Sort,Sustain,Standardize
+sk01,L3,1,sk01_L3_1,What is the last S in 5S?,Sustain,Sort,Shine,Standardize
+sk02,L2,1,sk02_L2_1,What is the color of a fire extinguisher?,Red,Blue,Green,Yellow
+sk02,L3,1,sk02_L3_1,Which PPE is mandatory for welding?,Gloves,Helmet,Sandals,Scarf
+sk02,L4,1,sk02_L4_1,What is the first step in a fire emergency?,Call supervisor,Evacuate,Ignore,Use lift
+sk03,L2,1,sk03_L2_1,What is Ohm's Law?,V=IR,P=IV,V=I/R,P=V/I
+sk03,L3,1,sk03_L3_1,Which is a conductor?,Copper,Plastic,Glass,Wood
+sk03,L4,1,sk03_L4_1,What is the SI unit of resistance?,Ohm,Volt,Ampere,Watt
