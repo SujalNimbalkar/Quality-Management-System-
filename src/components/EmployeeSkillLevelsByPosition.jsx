@@ -61,12 +61,57 @@ const EmployeeSkillLevelsByPosition = () => {
   };
 
   const handleExportXLS = () => {
-    const table = document.querySelector('#print-skill-table table');
-    if (!table) return;
-    const ws = XLSX.utils.table_to_sheet(table);
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, 'Skill Levels');
-    XLSX.writeFile(wb, `SkillLevels_${selectedRole.replace(/\s+/g, '_')}.xlsx`);
+    setTimeout(() => {
+      if (!selectedRole) return;
+      // Find required skills for this role
+      const roleEntry = competencyMap.find(r => r.Role === selectedRole);
+      if (!roleEntry) return;
+      const requiredSkills = Object.entries(roleEntry.Skills || {});
+      const employeesWithRole = allSkillsData.filter(e =>
+        Array.isArray(e.Roles) ? e.Roles.includes(selectedRole) : e.Roles === selectedRole
+      );
+      // Build data array: header row + data rows
+      const header = [
+        'Employee Name',
+        ...requiredSkills.map(([skillName]) => skillName)
+      ];
+      const data = employeesWithRole.map(emp => {
+        const empName = emp["Employee Name"] || emp.Name || emp.EmployeeName || emp.Employee;
+        const row = [empName];
+        requiredSkills.forEach(([skillName]) => {
+          const skillCode = skillNameToCode[normalizeSkillName(skillName)] || skillName;
+          const test = allScoreLog.find(row =>
+            (row.employee_name && row.employee_name.trim().toLowerCase() === String(empName).trim().toLowerCase()) &&
+            (row.skill === skillCode || normalizeSkillName(row.skill) === normalizeSkillName(skillName))
+          );
+          // Only use computed logic from level and percent
+          let displayLevel = '';
+          let isFailed = false;
+          if (test) {
+            const level = Number(test.level);
+            const percent = Number(test.percent);
+            if (level === 2) {
+              if (percent >= 60 && percent < 80) displayLevel = 'L2';
+              else if (percent >= 80) displayLevel = 'L3';
+              else { displayLevel = 'L1'; isFailed = true; }
+            } else if (level === 3) {
+              if (percent >= 80) displayLevel = 'L3';
+              else if (percent >= 60 && percent < 80) displayLevel = 'L2';
+              else { displayLevel = 'L1'; isFailed = true; }
+            } else if (level === 4) {
+              if (percent >= 60) displayLevel = 'L4';
+              else { displayLevel = 'L1'; isFailed = true; }
+            }
+          }
+          row.push(displayLevel);
+        });
+        return row;
+      });
+      const ws = XLSX.utils.aoa_to_sheet([header, ...data]);
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Skill Levels');
+      XLSX.writeFile(wb, `SkillLevels_${selectedRole.replace(/\s+/g, '_')}.xlsx`);
+    }, 1000);
   };
 
   return (
