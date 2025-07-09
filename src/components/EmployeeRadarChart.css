@@ -2,26 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 24px 0;
-  background: #f8f9fa;
+  margin-bottom: 32px;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  padding: 24px 0 16px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 16px 0 24px 0;
 }
 
 .employee-performance-radar-container h5 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 12px;
-  color: #222;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #1976d2;
+  font-weight: 600;
 }
 
-.recharts-default-legend {
-  margin-top: 12px;
-  text-align: center;
-}
-
-.recharts-legend-item-text {
-  font-size: 1rem;
-  font-weight: 500;
+@media (max-width: 500px) {
+  .employee-performance-radar-container {
+    padding: 0;
+  }
 } 
