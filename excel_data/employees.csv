@@ -23,7 +23,7 @@ employee_id,name,department,designation
 22,Hardeep Singh,Manager, NPD,NPD Manager (Mechanical)
 23,Rishav Raj,Manager, NPD,NPD Manager (Mechanical)
 24,Upendra Kumar,HR Manager,HR Manager
-25,Manish Kumar (MIS Executive),MIS Executive,MIS Executive
+25,Manish Kumar2,MIS Executive,MIS Executive
 26,Naushad Ali,Quality Manager,Quality Manager
 27,Aakash Sharma,Asst Manager Quality,Asst Manager Quality
 28,Pushpender Chouhan,Admin Incharge,Admin Manager
@@ -45,7 +45,7 @@ employee_id,name,department,designation
 44,Saurabh Kumar,Operator, Production,Packing Operator
 45,Geeta,Helper,Helper
 46,Shyama Rawat,Operator, Production,Production Operator (Mechanical)
-47,Manish Kumar,Operator, Production,Testing Operator (Electrical FG)
+47,Manish Kumar2,Operator, Production,Testing Operator (Electrical FG)
 48,Anil Kumar,Helper,Helper
 49,Suman Rawat,Helper,Helper
 50,Rakesh Kumar,Helper,Helper
