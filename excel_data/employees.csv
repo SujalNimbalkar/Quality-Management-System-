@@ -11,7 +11,7 @@ employee_id,name,department,designation
 10,Kapil Chouhan,ASM,Area Sales Manager
 11,Sunny Rawat,ASM,Area Sales Manager
 12,Amit Aswal,Store,Store Incharge
-13,Anmol Kumar,Purchase Engineer,Purchase Engineer
+13,Anmol KumarP,Purchase Engineer,Purchase Engineer
 14,Amit Kumar,Design Engineer,NPD Engineer (Mechanical)
 15,Amit Parida,Manager, Production & Maintenance,Production Manager (Electronics)
 16,Naresh Kumar,Quality Executive,Quality Executive
@@ -23,7 +23,7 @@ employee_id,name,department,designation
 22,Hardeep Singh,Manager, NPD,NPD Manager (Mechanical)
 23,Rishav Raj,Manager, NPD,NPD Manager (Mechanical)
 24,Upendra Kumar,HR Manager,HR Manager
-25,Manish Kumar,MIS Executive,MIS Executive
+25,Manish Kumar (MIS Executive),MIS Executive,MIS Executive
 26,Naushad Ali,Quality Manager,Quality Manager
 27,Aakash Sharma,Asst Manager Quality,Asst Manager Quality
 28,Pushpender Chouhan,Admin Incharge,Admin Manager
@@ -61,7 +61,7 @@ employee_id,name,department,designation
 60,Dheeraj Mishra,Operator, Production,Store Executive
 61,Pradeep Kumar,Purchase Manager,Purchase Manager
 62,Shailesh Kumar,Operator, Production,Production Operator (Manual Electronics Assy)
-63,Anmol Kumar PO,Operator, Production,Production Operator (Mechanical)
+63,Anmol Kumar,Operator, Production,Production Operator (Mechanical)
 64,Aniket Patel,Quality,NA/ Exited
 65,Chhotu Kumar,Operator, Production,Production Operator (Manual Electronics Assy)
 66,Ajay,Helper,Helper
