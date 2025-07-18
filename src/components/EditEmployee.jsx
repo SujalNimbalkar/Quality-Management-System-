@@ -7,6 +7,7 @@ const EditEmployee = () => {
   const [employee, setEmployee] = useState(null);
   const [roles, setRoles] = useState([]);
   const [roleOptions, setRoleOptions] = useState([]);
+  const [roleSkillMap, setRoleSkillMap] = useState({});
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -29,14 +30,18 @@ const EditEmployee = () => {
       })
       .then(data => setEmployee(data))
       .catch(() => setError('Failed to fetch employee data'));
-    // Fetch role options
+    // Fetch role options and role-skill map
     fetch(`${BACKEND}/api/competency_map`)
       .then(res => res.json())
       .then(data => {
         let roles = [];
-        if (Array.isArray(data)) roles = data.map(r => r.Role);
-        else if (data.data) roles = data.data.map(r => r.Role);
+        let skillMap = {};
+        if (Array.isArray(data)) {
+          roles = data.map(r => r.role);
+          data.forEach(r => { if (r.role) skillMap[r.role] = r.skills; });
+        }
         setRoleOptions(roles.filter(Boolean));
+        setRoleSkillMap(skillMap);
       })
       .finally(() => setLoading(false));
   }, [id]);
@@ -53,28 +58,16 @@ const EditEmployee = () => {
 
   // Compute skills union for selected roles
   const computeSkillsArray = () => {
-    // Use the same logic as AddEmployee
     let skillsUnion = {};
-    // Find the role-skill map from roleOptions (from competency_map)
-    let roleSkillMap = {};
-    fetch(`${BACKEND}/api/competency_map`)
-      .then(res => res.json())
-      .then(data => {
-        if (Array.isArray(data)) {
-          data.forEach(r => { roleSkillMap[r.Role] = r.Skills; });
-        } else if (data.data) {
-          data.data.forEach(r => { roleSkillMap[r.Role] = r.Skills; });
+    roles.forEach(role => {
+      const skills = roleSkillMap[role] || {};
+      Object.entries(skills).forEach(([skill, level]) => {
+        const numericLevel = typeof level === 'number' ? level : (parseInt(level) || level);
+        if (!(skill in skillsUnion) || (typeof numericLevel === 'number' && numericLevel > skillsUnion[skill])) {
+          skillsUnion[skill] = numericLevel;
         }
-        roles.forEach(role => {
-          const skills = roleSkillMap[role] || {};
-          Object.entries(skills).forEach(([skill, level]) => {
-            const numericLevel = typeof level === 'number' ? level : (parseInt(level) || level);
-            if (!(skill in skillsUnion) || (typeof numericLevel === 'number' && numericLevel > skillsUnion[skill])) {
-              skillsUnion[skill] = numericLevel;
-            }
-          });
-        });
       });
+    });
     return Object.entries(skillsUnion).map(([skill, level]) => ({ skill, level }));
   };
 
@@ -83,40 +76,7 @@ const EditEmployee = () => {
     setError('');
     setSuccess(false);
     // Compute new skills array
-    let skillsArray = [];
-    // Synchronously compute skills from current roleSkillMap if available
-    if (roleOptions.length > 0) {
-      let roleSkillMap = {};
-      // Use the same logic as in AddEmployee
-      fetch(`${BACKEND}/api/competency_map`)
-        .then(res => res.json())
-        .then(data => {
-          if (Array.isArray(data)) {
-            data.forEach(r => { roleSkillMap[r.Role] = r.Skills; });
-          } else if (data.data) {
-            data.data.forEach(r => { roleSkillMap[r.Role] = r.Skills; });
-          }
-          let skillsUnion = {};
-          roles.forEach(role => {
-            const skills = roleSkillMap[role] || {};
-            Object.entries(skills).forEach(([skill, level]) => {
-              const numericLevel = typeof level === 'number' ? level : (parseInt(level) || level);
-              if (!(skill in skillsUnion) || (typeof numericLevel === 'number' && numericLevel > skillsUnion[skill])) {
-                skillsUnion[skill] = numericLevel;
-              }
-            });
-          });
-          skillsArray = Object.entries(skillsUnion).map(([skill, level]) => ({ skill, level }));
-          // Now send the PUT request
-          doUpdate(skillsArray);
-        });
-    } else {
-      doUpdate([]);
-    }
-  };
-
-  // Helper to send the PUT request
-  const doUpdate = async (skillsArray) => {
+    const skillsArray = computeSkillsArray();
     try {
       const res = await fetch(`${BACKEND}/api/employee/${id}`, {
         method: 'PUT',
