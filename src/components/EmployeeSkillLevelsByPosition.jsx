@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { skillNameToCode } from '../utils/skillMaps';
 import './EmployeePerformance.css';
 import * as XLSX from 'xlsx';
 
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
 // Helper to normalize skill names
 const normalizeSkillName = s => s && typeof s === 'string' ? s.replace(/\r?\n|\r/g, '').trim().replace(/\s+/g, ' ') : s;
 
@@ -11,21 +11,40 @@ const EmployeeSkillLevelsByPosition = () => {
   const [allSkillsData, setAllSkillsData] = useState([]);
   const [allScoreLog, setAllScoreLog] = useState([]);
   const [selectedRole, setSelectedRole] = useState("");
+  const [skillNameToCode, setSkillNameToCode] = useState({});
+  const [skillCodeToName, setSkillCodeToName] = useState({});
+  const [roles, setRoles] = useState([]);
 
-  const BACKEND = import.meta.env.VITE_BACKEND_URL;
+
+  // Load roles for dropdown
+  useEffect(() => {
+    fetch(`${BACKEND}/api/roles`)
+      .then(res => res.json())
+      .then(setRoles);
+  }, []);
 
   // Load competency map JSON on mount
   useEffect(() => {
-    fetch(`${BACKEND}/excel_data/competency_map_Sheet1.json`)
+    fetch(`${BACKEND}/api/competency_map`)
       .then(res => res.json())
       .then(data => setCompetencyMap(data));
   }, [BACKEND]);
 
   // Load all employee skills and all score log on mount for filter table
   useEffect(() => {
-    fetch(`${BACKEND}/excel_data/employee_skills_levels.json`).then(res => res.json()).then(setAllSkillsData);
+    fetch(`${BACKEND}/api/employee_skills_levels`).then(res => res.json()).then(setAllSkillsData);
     fetch(`${BACKEND}/api/performance/employee_assessment_results/all`).then(res => res.json()).then(setAllScoreLog);
   }, [BACKEND]);
+
+  // Load skills mapping on mount
+  useEffect(() => {
+    fetch(`${BACKEND}/api/skills`)
+      .then(res => res.json())
+      .then(skills => {
+        setSkillNameToCode(Object.fromEntries(skills.map(s => [s.name, s.code])));
+        setSkillCodeToName(Object.fromEntries(skills.map(s => [s.code, s.name])));
+      });
+  }, []);
 
   // Helper function to calculate achieved level from test results
   const calculateAchievedLevel = (test) => {
@@ -76,7 +95,9 @@ const EmployeeSkillLevelsByPosition = () => {
         <label htmlFor="role-select">Select Position/Role: </label>
         <select id="role-select" value={selectedRole} onChange={e => setSelectedRole(e.target.value)}>
           <option value="">-- Select Role --</option>
-          {competencyMap.map((r, i) => r.Role && <option key={i} value={r.Role}>{r.Role}</option>)}
+          {roles.map((role, i) => (
+            <option key={i} value={role}>{role}</option>
+          ))}
         </select>
       </div>
       {/* Export to XLS Button */}
@@ -85,9 +106,9 @@ const EmployeeSkillLevelsByPosition = () => {
       <button onClick={() => window.print()} className="employee-performance-btn" style={{marginBottom: 16}}>Print Table</button>
       {selectedRole && (() => {
         // Find required skills for this role
-        const roleEntry = competencyMap.find(r => r.Role === selectedRole);
+        const roleEntry = competencyMap.find(r => r.role === selectedRole);
         if (!roleEntry) return null;
-        const requiredSkills = Object.entries(roleEntry.Skills || {});
+        const requiredSkills = Object.entries(roleEntry.skills || {});
         // Find all employees with this role
         const employeesWithRole = allSkillsData.filter(e => 
           Array.isArray(e.Roles) ? e.Roles.includes(selectedRole) : e.Roles === selectedRole

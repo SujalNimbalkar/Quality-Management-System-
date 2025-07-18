@@ -1,0 +1,78 @@
+/* EditEmployee.css - Modern clean theme with black font color */
+.edit-employee-root {
+  max-width: 420px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+  padding: 32px 28px 24px 28px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #111;
+}
+.edit-employee-root h2 {
+  margin-bottom: 18px;
+  color: #111;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.edit-employee-form label {
+  display: block;
+  margin-bottom: 16px;
+  color: #111;
+  font-weight: 500;
+}
+.edit-employee-form input[type="number"] {
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 1rem;
+  width: 100px;
+  color: #bbb;
+}
+.edit-employee-form select {
+  width: 100%;
+  min-height: 80px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  padding: 8px;
+  font-size: 1rem;
+  background: #fafbfc;
+  color: #111;
+}
+.edit-employee-form button {
+  background: #2d72d9;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.edit-employee-form button[type="button"] {
+  background: #e0e0e0;
+  color: #111;
+}
+.edit-employee-form button:hover {
+  background: #1a5bb8;
+}
+.edit-employee-form button[type="button"]:hover {
+  background: #c7c7c7;
+}
+.edit-employee-form div {
+  margin-bottom: 10px;
+  color: #111;
+}
+.edit-employee-form strong {
+  color: #2d72d9;
+}
+.edit-employee-root .error {
+  color: #c00;
+  margin-top: 10px;
+}
+.edit-employee-root .success {
+  color: #090;
+  margin-top: 10px;
+}

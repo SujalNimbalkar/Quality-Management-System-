@@ -1,0 +1,172 @@
+
+.assign-retest-root {
+  max-width: 520px;
+  margin: 48px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  padding: 36px 32px 28px 32px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #111;
+}
+
+.assign-retest-title {
+  text-align: center;
+  color: #2563eb;
+  margin-bottom: 28px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.assign-retest-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+  gap: 12px;
+}
+
+.assign-retest-input {
+  padding: 10px 12px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 1.08rem;
+  background: #f8fafc;
+  color: #000;
+  transition: border 0.2s;
+  min-width: 160px;
+}
+
+.assign-retest-input:focus {
+  border: 1.5px solid #2563eb;
+  outline: none;
+}
+
+.assign-retest-btn {
+  padding: 10px 22px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px #2563eb22;
+}
+
+.assign-retest-btn:disabled {
+  background: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.assign-retest-divider {
+  border: none;
+  border-top: 1.5px solid #e3e8ee;
+  margin: 24px 0 18px 0;
+}
+
+.assign-retest-card {
+  border: 2px solid #2563eb;
+  border-radius: 12px;
+  background: #f8fafc;
+  margin: 0 auto 28px auto;
+  max-width: 520px;
+  padding: 28px 36px;
+  box-shadow: 0 2px 12px 0 #2563eb18;
+}
+
+.assign-retest-card strong {
+  color: #2563eb;
+}
+
+.assign-retest-skills {
+  margin-top: 18px;
+}
+
+.assign-retest-skills ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.assign-retest-skills li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 1.08rem;
+  background: #eaf1fb;
+  border-radius: 6px;
+  padding: 8px 14px;
+}
+
+.assign-retest-reassign-btn {
+  background: #fff;
+  color: #2563eb;
+  border: 1.5px solid #2563eb;
+  border-radius: 5px;
+  padding: 5px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 18px;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.assign-retest-reassign-btn:hover {
+  background: #2563eb;
+  color: #fff;
+  border: 1.5px solid #2563eb;
+}
+
+.assign-retest-not-submitted {
+  margin-left: 18px;
+  color: #388e3c;
+  font-weight: 500;
+  font-size: 0.98rem;
+}
+
+.assign-retest-status {
+  margin-left: 18px;
+  background: #ffe0b2;
+  color: #f57c00;
+  font-weight: 600;
+  font-size: 0.98rem;
+  border-radius: 4px;
+  padding: 3px 10px;
+  display: inline-block;
+}
+
+.assign-retest-back-btn {
+  display: block;
+  margin: 36px auto 0 auto;
+  background: #fff;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+  border-radius: 7px;
+  padding: 12px 38px;
+  font-size: 1.15rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.assign-retest-back-btn:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .assign-retest-root, .assign-retest-card {
+    max-width: 98vw;
+    padding: 12px 4vw;
+  }
+  .assign-retest-card {
+    padding: 16px 2vw;
+  }
+  .assign-retest-title {
+    font-size: 1.2rem;
+  }
+}

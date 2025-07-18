@@ -1,5 +1,6 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip, Legend } from 'recharts';
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
 
 // Helper to normalize skill names
 const normalizeSkillName = s => s && typeof s === 'string' ? s.replace(/\r?\n|\r/g, '').trim().replace(/\s+/g, ' ') : s;
@@ -34,17 +35,29 @@ const EmployeeRadarChart = ({ data, role }) => {
 };
 
 // Section to render all radar charts for the employee's roles
-export const EmployeeRadarChartSection = ({ employeeRoles, competencyMap, scoreLog, skillNameToCode }) => {
+export const EmployeeRadarChartSection = ({ employeeRoles, competencyMap, scoreLog }) => {
+  const [skillNameToCode, setSkillNameToCode] = useState({});
+  const [skillCodeToName, setSkillCodeToName] = useState({});
+
+  useEffect(() => {
+    fetch(`${BACKEND}/api/skills`)
+      .then(res => res.json())
+      .then(skills => {
+        setSkillNameToCode(Object.fromEntries(skills.map(s => [s.name, s.code])));
+        setSkillCodeToName(Object.fromEntries(skills.map(s => [s.code, s.name])));
+      });
+  }, []);
+
   // Compute radar data for each role
   const radarDataByRole = useMemo(() => {
     if (!employeeRoles.length || !competencyMap.length) return {};
     const radarData = {};
     employeeRoles.forEach(role => {
-      // Find the entry for this role in the competency map
-      const roleEntry = competencyMap.find(r => r.Role && r.Role.trim().toLowerCase() === role.trim().toLowerCase());
+      // Find the entry for this role in the competency map (new structure: { role, skills })
+      const roleEntry = competencyMap.find(r => r.role && r.role.trim().toLowerCase() === role.trim().toLowerCase());
       if (!roleEntry) return;
       // Get all required skills for this role
-      const requiredSkills = Object.entries(roleEntry.Skills || {});
+      const requiredSkills = Object.entries(roleEntry.skills || {});
       radarData[role] = requiredSkills.map(([skillName, requiredLevel]) => {
         // Find the test result for this skill (by code)
         const skillCode = skillNameToCode[normalizeSkillName(skillName)] || skillName;

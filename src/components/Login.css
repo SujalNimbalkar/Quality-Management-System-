@@ -1,11 +1,12 @@
 /* Login window styles - Modern Blue/Indigo Theme */
 
 .login-root {
+  
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #283e51 0%, #485563 100%);
+  background: none;
   font-family: 'Segoe UI', Arial, sans-serif;
   color: #111;
 }

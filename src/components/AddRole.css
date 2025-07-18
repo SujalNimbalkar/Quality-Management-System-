@@ -1,0 +1,138 @@
+/* AddRole styles - Professional Blue/Indigo Theme with Variables */
+
+.add-role-root {
+  color: var(--color-text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #111;
+  font-family: var(--font-main);
+  padding: 2.5em 0;
+}
+
+.add-role-card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-card);
+  box-shadow: 0 8px 32px rgba(40,62,81,0.18);
+  padding: 3em 2.5em 2.5em 2.5em;
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 2em;
+  color: var(--color-text-main);
+  border: 1.5px solid var(--color-border);
+  position: relative;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.add-role-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 8px;
+  background: var(--color-primary);
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+  opacity: 0.12;
+}
+
+.add-role-root h2 {
+  text-align: center;
+  color: var(--color-accent);
+  margin-bottom: 2em;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.add-role-root form {
+  width: 100%;
+}
+
+.add-role-root label {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.add-role-root input[type="text"] {
+  padding: 10px 12px;
+  font-size: 1.08rem;
+  width: 100%;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-btn);
+  background: var(--color-bg-card-alt);
+  margin-top: 6px;
+  margin-bottom: 18px;
+  color: #111;
+  transition: border 0.2s, background 0.2s;
+}
+.add-role-root input[type="text"]:focus {
+  outline: none;
+  border: 1.5px solid var(--color-primary);
+  background: #fff;
+  color: #111;
+}
+
+.add-role-root table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: var(--color-bg-card-alt);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.add-role-root th {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  font-weight: 600;
+  padding: 0.8em 0.6em;
+  text-align: left;
+  font-size: 1.05rem;
+}
+.add-role-root td {
+  padding: 0.7em 0.6em;
+  border-bottom: 1px solid var(--color-border);
+}
+.add-role-root tr:last-child td {
+  border-bottom: none;
+}
+
+.add-role-root select {
+  padding: 8px 12px;
+  font-size: 1.08rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-btn);
+  background: #fff;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.add-role-root button[type="submit"] {
+  margin-top: 28px;
+  padding: 12px 32px;
+  font-size: 1.08rem;
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  border: none;
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(40,62,81,0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.add-role-root button[type="submit"]:hover {
+  background: var(--color-primary-dark);
+  box-shadow: 0 6px 20px rgba(40,62,81,0.16);
+  transform: translateY(-2px) scale(1.03);
+}
+.add-role-root .success {
+  color: #22c55e;
+  font-weight: 600;
+  margin-top: 16px;
+  text-align: center;
+}
+.add-role-root .error {
+  color: #ef4444;
+  font-weight: 600;
+  margin-top: 16px;
+  text-align: center;
+} 

@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './EmployeePerformance.css';
-import { skillNameToCode, skillCodeToName } from '../utils/skillMaps';
 import EmployeeSkillLevelsByPosition from './EmployeeSkillLevelsByPosition';
 import { EmployeeRadarChartSection } from './EmployeeRadarChart';
 
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
 // Helper to normalize skill names
 const normalizeSkillName = s => s && typeof s === 'string' ? s.replace(/\r?\n|\r/g, '').trim().replace(/\s+/g, ' ') : s;
 
 const EmployeePerformance = () => {
   const [empId, setEmpId] = useState("");
-  const [employeeName, setEmployeeName] = useState("");
   const [scoreLog, setScoreLog] = useState([]);
   const [submittedAnswers, setSubmittedAnswers] = useState([]);
   const [employeeRoles, setEmployeeRoles] = useState([]);
@@ -17,27 +16,38 @@ const EmployeePerformance = () => {
   const [employeeData, setEmployeeData] = useState(null);
   const [competencyMap, setCompetencyMap] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [skillNameToCode, setSkillNameToCode] = useState({});
+  const [skillCodeToName, setSkillCodeToName] = useState({});
+  const [skillsLoaded, setSkillsLoaded] = useState(false);
 
-  const BACKEND = import.meta.env.VITE_BACKEND_URL;
 
-  // Load competency map JSON on mount
+  // Load competency map JSON on mount (new structure: { role, skills })
   useEffect(() => {
-    fetch(`${BACKEND}/excel_data/competency_map_Sheet1.json`)
+    fetch(`${BACKEND}/api/competency_map`)
       .then(res => res.json())
       .then(data => setCompetencyMap(data));
   }, [BACKEND]);
+
+  // Load skills mapping on mount
+  useEffect(() => {
+    fetch(`${BACKEND}/api/skills`)
+      .then(res => res.json())
+      .then(skills => {
+        setSkillNameToCode(Object.fromEntries(skills.map(s => [s.name, s.code])));
+        setSkillCodeToName(Object.fromEntries(skills.map(s => [s.code, s.name])));
+        setSkillsLoaded(true);
+      });
+  }, []);
 
   // Fetch employee data and test results
   const handleFetch = async () => {
     if (!empId) return;
     setLoading(true);
-    // Fetch all employee skills/roles from JSON
-    const allSkillsRes = await fetch(`${BACKEND}/excel_data/employee_skills_levels.json`);
+    // Fetch all employee skills/roles from backend API
+    const allSkillsRes = await fetch(`${BACKEND}/api/employee_skills_levels`);
     const allSkills = await allSkillsRes.json();
-    const empData = allSkills.find(e =>
-      (empId && String(e.Employee).trim() === empId.trim()) ||
-      (employeeName && e.Employee === employeeName)
-    );
+    // Find employee by string or number id
+    const empData = allSkills.find(e => String(e.employee_id) === empId.trim() || Number(e.employee_id) === Number(empId.trim()));
     setEmployeeData(empData);
     setEmployeeRoles(empData?.Roles || []);
     setEmployeeSkills(empData?.Skills || []);
@@ -48,8 +58,8 @@ const EmployeePerformance = () => {
       fetch(`${BACKEND}/api/mcq/submitted-answers`)
     ]);
     const scoreData = await scoreRes.json();
-    setScoreLog(scoreData.filter(row => row.employee_id === empId));
-    setSubmittedAnswers((await answersRes.json()).submissions.filter(row => row.employee_id === empId));
+    setScoreLog(scoreData.filter(row => String(row.employee_id) === empId.trim() || Number(row.employee_id) === Number(empId.trim())));
+    setSubmittedAnswers((await answersRes.json()).submissions.filter(row => String(row.employee_id) === empId.trim() || Number(row.employee_id) === Number(empId.trim())));
     setLoading(false);
   };
 
@@ -66,26 +76,18 @@ const EmployeePerformance = () => {
             value={empId}
             onChange={e => setEmpId(e.target.value)}
           />
-          <input
-            type="text"
-            className="employee-performance-input"
-            placeholder="Enter Employee Name (optional)"
-            value={employeeName}
-            onChange={e => setEmployeeName(e.target.value)}
-          />
           <button className="employee-performance-btn" onClick={handleFetch}>Fetch</button>
         </div>
         {loading && <div>Loading...</div>}
         {/* Radar Chart Section */}
-        {employeeRoles.length > 0 && scoreLog.length > 0 && competencyMap.length > 0 && (
+        {skillsLoaded && employeeRoles.length > 0 && scoreLog.length > 0 && competencyMap.length > 0 && (
           <EmployeeRadarChartSection
             employeeRoles={employeeRoles}
             competencyMap={competencyMap}
             scoreLog={scoreLog}
-            skillNameToCode={skillNameToCode}
           />
         )}
-        {scoreLog.length > 0 && (
+        {skillsLoaded && scoreLog.length > 0 && (
           <div style={{marginTop: 16}}>
             <h4 className="employee-performance-section-title">Score Log</h4>
             <table className="employee-performance-table" border="1" cellPadding="4">
@@ -106,28 +108,9 @@ const EmployeePerformance = () => {
             </table>
           </div>
         )}
-        {/* {submittedAnswers.length > 0 && (
-          <div style={{marginTop: 16}}>
-            <h4 className="employee-performance-section-title">Submitted Answers</h4>
-            <table className="employee-performance-table" border="1" cellPadding="4">
-              <thead>
-                <tr>
-                  {Object.keys(submittedAnswers[0]).map((k, i) => <th key={i}>{k}</th>)}
-                </tr>
-              </thead>
-              <tbody>
-                {submittedAnswers.map((row, i) => (
-                  <tr key={i}>
-                    {Object.values(row).map((v, j) => <td key={j}>{v}</td>)}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )} */}
       </div>
     </div>
   );
 };
 
-export default EmployeePerformance; 
+export default EmployeePerformance;

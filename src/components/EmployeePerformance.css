@@ -1,14 +1,14 @@
 /* EmployeePerformance styles - Modern Blue/Indigo Theme */
 
 .employee-performance-root {
-  color: #222b45;
+  color: var(--color-text-main);
   margin-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #283e51 0%, #485563 100%);
-  font-family: 'Segoe UI', Arial, sans-serif;
+  background: none;
+  font-family: var(--font-main);
   padding: 2em 0;
 }
 

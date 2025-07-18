@@ -1,16 +1,22 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-bg-gradient: #111111;
+  --color-bg-card: #fff;
+  --color-bg-card-alt: #f8fafc;
+  --color-primary: #2563eb;
+  --color-primary-dark: #1e40af;
+  --color-accent: #3b82f6;
+  --color-border: #dbeafe;
+  --color-shadow: 0 4px 24px rgba(40,62,81,0.10);
+  --color-shadow-hover: 0 8px 32px rgba(40,62,81,0.15);
+  --color-text-main: #222b45;
+  --color-text-muted: #6366f1;
+  --color-text-light: #fff;
+  --radius-card: 18px;
+  --radius-btn: 8px;
+  --padding-card: 2.5em 2.5em;
+  --padding-btn: 0.7em 2.2em;
+  --font-main: 'Segoe UI', Arial, sans-serif;
+  background-color: #111111;
 }
 
 a {

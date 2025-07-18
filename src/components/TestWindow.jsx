@@ -1,40 +1,64 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './TestWindow.css';
-import { skillNameToCode } from '../utils/skillMaps';
-const BACKEND = import.meta.env.VITE_BACKEND_URL;
 
+const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
 const TestWindow = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { skill, level, employeeInfo, employeeRoles, employeeId } = location.state || {};
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [skillMap, setSkillMap] = useState({});
+  const [skillNameToCode, setSkillNameToCode] = useState({});
+  const [skillsLoaded, setSkillsLoaded] = useState(false);
   const [selectedAnswers, setSelectedAnswers] = useState({});
+  const [submitted, setSubmitted] = useState(false);
 
   console.log("TestWindow location.state:", location.state);
   console.log("TestWindow employeeInfo:", employeeInfo);
   console.log("TestWindow employeeRoles:", employeeRoles);
 
   useEffect(() => {
-    if (skill && level) {
-      const normalizeSkillName = s => s.replace(/\r?\n|\r/g, '').trim().replace(/\s+/g, ' ');
-      const normalizedSkill = normalizeSkillName(skill);
-      const skill_id = skillNameToCode[normalizedSkill] || skill;
-      fetch(`${BACKEND}/api/mcq/questions?skill_id=${encodeURIComponent(skill_id)}&level=${level}`)
-        .then(res => res.json())
-        .then(data => {
-          console.log("Requested skill_id:", skill_id, "difficulty:", level);
-          console.log("Found", data.questions.length, "matching questions");
-          setQuestions(data.questions || []);
-          setLoading(false);
-        })
-        .catch(() => setLoading(false));
-    } else if (!skill || !level) {
-      setLoading(false);
+    fetch(`${BACKEND}/api/skills`)
+      .then(res => res.json())
+      .then(skills => {
+        setSkillNameToCode(Object.fromEntries(skills.map(s => [s.name, s.code])));
+        setSkillsLoaded(true);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (!skill || !level || !skillsLoaded) return;
+    const normalizeSkillName = s => s.replace(/\r?\n|\r/g, '').trim().replace(/\s+/g, ' ');
+    const normalizedSkill = normalizeSkillName(skill);
+    const skill_id = skillNameToCode[normalizedSkill] || skill;
+    fetch(`${BACKEND}/api/mcq/questions?skill_id=${encodeURIComponent(skill_id)}&level=${level}`)
+      .then(res => res.json())
+      .then(data => {
+        setQuestions(data.questions || []);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, [skill, level, skillsLoaded, skillNameToCode]);
+
+  // Redirect to root if not navigated from EmployeeDashboard
+  useEffect(() => {
+    if (!location.state || !location.state.fromDashboard) {
+      navigate('/', { replace: true });
     }
-  }, [skill, level]);
+  }, [location.state, navigate]);
+
+  // Redirect to Login if back navigation comes from EmployeeDashboard
+  useEffect(() => {
+    const handlePopState = () => {
+      // If previous page was EmployeeDashboard, redirect to Login
+      if (location.state && location.state.fromDashboard) {
+        navigate('/login', { replace: true });
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [location.state, navigate]);
 
   const handleOptionChange = (qIdx, option) => {
     setSelectedAnswers((prev) => ({ ...prev, [qIdx]: option }));
@@ -42,6 +66,8 @@ const TestWindow = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (submitted || loading) return; // Prevent multiple submissions
+    setSubmitted(true); // Disable button immediately
 
     // Use employeeId from navigation state, fallback to employeeInfo
     const empId = employeeId || employeeInfo?.id || employeeInfo?.employee_id || employeeInfo?.emp_id;
@@ -74,6 +100,7 @@ const TestWindow = () => {
         if (data.success) {
           alert('Answers submitted!');
           navigate('/dashboard', {
+            replace: true, // <-- add this
             state: {
               employeeInfo,
               employeeRoles,
@@ -82,10 +109,12 @@ const TestWindow = () => {
             }
           });
         } else {
+          setSubmitted(false); // Allow retry
           alert('Submission failed');
         }
       })
       .catch(() => {
+        setSubmitted(false); // Allow retry
         alert('Submission failed');
       });
   };
@@ -125,9 +154,13 @@ const TestWindow = () => {
           ))}
         </ol>
         <div className="testwindow-submit-row">
-          <button type="submit" className="testwindow-submit-btn">
-            Submit
-          </button>
+          {submitted ? (
+            <span style={{ color: 'green', fontWeight: 'bold' }}>Submitted</span>
+          ) : (
+            <button type="submit" className="testwindow-submit-btn" disabled={submitted}>
+              Submit
+            </button>
+          )}
         </div>
       </form>
     </div>
