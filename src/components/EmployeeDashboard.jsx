@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './EmployeeDashboard.css';
+import { useSkills } from '../contexts/SkillsContext';
 const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
 
 const EmployeeDashboard = ({
@@ -18,7 +19,7 @@ const EmployeeDashboard = ({
   // Minimal state for test click tracking
   const [testClickCounts, setTestClickCounts] = useState({});
   const [submittedTests, setSubmittedTests] = useState([]);
-  const [skillNameToCode, setSkillNameToCode] = useState({});
+  const { skillNameToCode } = useSkills();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -28,12 +29,6 @@ const EmployeeDashboard = ({
       navigate('/', { replace: true });
     }
   }, [employeeInfo, employeeId, navigate]);
-
-  useEffect(() => {
-    fetch(`${BACKEND}/api/skills`)
-      .then(res => res.json())
-      .then(skills => setSkillNameToCode(Object.fromEntries(skills.map(s => [s.name, s.code]))));
-  }, []);
 
   useEffect(() => {
     // Fetch submitted tests for this employee
