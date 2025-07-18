@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const SubmittedAnswers = () => {
   const [scoreLog, setScoreLog] = useState([]);
   const [loading, setLoading] = useState(true);
-  const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+  const BACKEND = import.meta.env.VITE_BACKEND_URL;
   useEffect(() => {
     fetch(`${BACKEND}/api/mcq/score-log`)
       .then(res => res.json())
