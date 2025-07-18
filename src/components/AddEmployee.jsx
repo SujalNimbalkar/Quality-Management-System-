@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AddEmployee.css';
 
-const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+const BACKEND = import.meta.env.VITE_BACKEND_URL';
 const AddEmployee = () => {
   const [form, setForm] = useState({
     Employee: '',

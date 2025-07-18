@@ -3,7 +3,7 @@ import './EmployeePerformance.css';
 import EmployeeSkillLevelsByPosition from './EmployeeSkillLevelsByPosition';
 import { EmployeeRadarChartSection } from './EmployeeRadarChart';
 
-const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+const BACKEND = import.meta.env.VITE_BACKEND_URL;
 // Helper to normalize skill names
 const normalizeSkillName = s => s && typeof s === 'string' ? s.replace(/\r?\n|\r/g, '').trim().replace(/\s+/g, ' ') : s;
 

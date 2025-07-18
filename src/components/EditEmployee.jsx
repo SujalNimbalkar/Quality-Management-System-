@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './EditEmployee.css';
-const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+const BACKEND = import.meta.env.VITE_BACKEND_URL;
 const EditEmployee = () => {
   const { id } = useParams();
   const [employee, setEmployee] = useState(null);

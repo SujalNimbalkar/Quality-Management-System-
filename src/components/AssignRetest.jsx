@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AssignRetest.css';
 
-const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+const BACKEND = import.meta.env.VITE_BACKEND_URL;
 const normalizeSkill = s => s && typeof s === 'string' ? s.trim().toLowerCase() : s;
 
 const AssignRetest = () => {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './EmployeeDashboard.css';
 import { useSkills } from '../contexts/SkillsContext';
-const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+const BACKEND = import.meta.env.VITE_BACKEND_URL;
 
 const EmployeeDashboard = ({
   employeeId,
