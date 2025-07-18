@@ -1,6 +1,19 @@
 const { google } = require("googleapis");
 const dotenv = require("dotenv");
 dotenv.config();
+const Skill = require("../models/Skill");
+
+// Helper to load skills mapping from MongoDB
+async function getSkillMappings() {
+  const skills = await Skill.find({});
+  const skillNameToCode = Object.fromEntries(
+    skills.map((s) => [s.name, s.code])
+  );
+  const skillCodeToName = Object.fromEntries(
+    skills.map((s) => [s.code, s.name])
+  );
+  return { skillNameToCode, skillCodeToName };
+}
 
 const KEYFILEPATH =
   process.env.GOOGLE_APPLICATION_CREDENTIALS ||
@@ -12,8 +25,8 @@ const SUBMISSION_SHEET_ID = process.env.GOOGLE_SUBMITTED_ID;
 // console.log("Using SUBMISSION_SHEET_ID:", SUBMISSION_SHEET_ID);
 const SCORE_LOG_SHEET_ID = process.env.GOOGLE_SCORE_LOG_ID;
 // console.log("Using SCORE_LOG_SHEET_ID:", SCORE_LOG_SHEET_ID);
-const ROLE_COMPETENCIES_SHEET_ID =
-  process.env.GOOGLE_ROLE_COMPETENCIES_SHEET_ID;
+// const ROLE_COMPETENCIES_SHEET_ID =
+//   process.env.GOOGLE_ROLE_COMPETENCIES_SHEET_ID;
 // console.log("Using ROLE_COMPETENCIES_SHEET_ID:", ROLE_COMPETENCIES_SHEET_ID);
 
 // Auth helper
@@ -100,12 +113,11 @@ async function fetchSubmittedAnswers() {
   const sheets = await getSheetsClient();
   const response = await sheets.spreadsheets.values.get({
     spreadsheetId: SUBMISSION_SHEET_ID,
-    range: "Sheet1!A2:Z", // Adjust range and sheet name as needed
+    range: "Sheet1!A2:BY", // Adjusted to include status_flag (BY)
   });
   const rows = response.data.values;
   if (!rows || rows.length === 0) return [];
-  // Return only one object per test submission (not per question)
-  // Columns: 0:timestamp, 1:employee_id, 2:employee_name, 3:employee_position, 4:skill, 5:level
+  // Columns: 0:timestamp, 1:employee_id, 2:employee_name, 3:employee_position, 4:skill, 5:level, 76:status_flag
   return rows.map((row) => ({
     timestamp: row[0],
     employee_id: row[1],
@@ -113,6 +125,7 @@ async function fetchSubmittedAnswers() {
     employee_position: row[3],
     skill: row[4],
     level: row[5],
+    status_flag: row[76] || "", // Add status_flag (BY/76)
   }));
 }
 
@@ -139,21 +152,23 @@ async function fetchAllQuestions() {
 // Join submissions with questions and map submitted answer to A/B/C/D
 async function fetchJoinedSubmissions() {
   const submissions = await fetchSubmittedAnswers();
-  const questions = await fetchAllQuestions();
+  // Map skill code to name for each submission
+  const { skillNameToCode } = await getSkillMappings();
   return submissions.map((sub) => {
-    const q = questions.find((q) => q.question_id === sub.question_id);
-    let submitted_letter = "";
-    if (q && sub.selected_answer) {
-      const idx = q.options.findIndex((opt) => opt === sub.selected_answer);
-      if (idx !== -1) {
-        submitted_letter = String.fromCharCode(65 + idx); // 0->A, 1->B, etc.
-      }
+    let skillName = sub.skill;
+    // If skill is a code, map to name
+    if (skillNameToCode && skillNameToCode[sub.skill]) {
+      skillName = skillNameToCode[sub.skill];
     }
+    // If skillName is still empty, fallback to skill code
+    if (!skillName) skillName = sub.skill;
+    // Always return both code and name for clarity
     return {
       ...sub,
-      question_text: q ? q.question_text : sub.question_text,
-      options: q ? q.options : [],
-      submitted_letter,
+      skill_code: sub.skill,
+      skill: skillName,
+      level: sub.level,
+      employee_id: sub.employee_id,
     };
   });
 }
@@ -164,9 +179,9 @@ async function appendSubmissionRows(submissions) {
   const first = submissions[0];
   let row = [
     new Date().toISOString(),
-    first.employee_id || "", // Employee ID
-    first.employee_name || "", // Employee Name
-    first.employee_position || "", // Employee Position
+    first.employee_id || "",
+    first.employee_name || "",
+    first.employee_position || "",
     first.skill,
     first.level,
   ];
@@ -185,6 +200,12 @@ async function appendSubmissionRows(submissions) {
   for (let i = submissions.length; i < 10; i++) {
     row.push("", "", "", "", "", "", "");
   }
+  // Ensure row is at least 77 columns (BY = 76, 0-based)
+  while (row.length < 77) {
+    row.push("");
+  }
+  // Set status_flag in BY (index 76)
+  row[76] = "submitted";
   await sheets.spreadsheets.values.append({
     spreadsheetId: SUBMISSION_SHEET_ID,
     range: "Sheet1!A1",
@@ -192,6 +213,71 @@ async function appendSubmissionRows(submissions) {
     insertDataOption: "INSERT_ROWS",
     resource: { values: [row] },
   });
+}
+
+// Add a new function to set retest_allowed for latest submission
+async function setRetestAllowed(employee_id, skill, level) {
+  // Import skillNameToCode mapping
+  const { skillNameToCode } = await getSkillMappings();
+
+  // Normalize skill: if it's a name, map to code
+  let skillCode = skill;
+  if (skillNameToCode[skill]) {
+    skillCode = skillNameToCode[skill];
+  }
+
+  const sheets = await getSheetsClient();
+  // Read all rows
+  const response = await sheets.spreadsheets.values.get({
+    spreadsheetId: SUBMISSION_SHEET_ID,
+    range: "Sheet1!A2:BY",
+  });
+  const rows = response.data.values || [];
+  // Find the latest matching row
+  let latestIdx = -1;
+  for (let i = rows.length - 1; i >= 0; i--) {
+    if (
+      String(rows[i][1]) === String(employee_id) &&
+      String(rows[i][4]) === String(skillCode) &&
+      String(rows[i][5]) === String(level)
+    ) {
+      latestIdx = i;
+      break;
+    }
+  }
+  if (latestIdx === -1) throw new Error("No matching submission found");
+
+  // Check current status_flag
+  const STATUS_COL_IDX = 76;
+  const currentStatus = rows[latestIdx][STATUS_COL_IDX] || "";
+
+  let newStatus = "";
+  if (currentStatus === "submitted") {
+    newStatus = "retest_1";
+  } else if (/^retest_(\d+)$/.test(currentStatus)) {
+    const match = currentStatus.match(/^retest_(\d+)$/);
+    const count = parseInt(match[1], 10) + 1;
+    newStatus = `retest_${count}`;
+  } else {
+    throw new Error(
+      `Cannot allow retest. Current status is "${currentStatus}". Only "submitted" or "retest_N" status can be changed to next retest.`
+    );
+  }
+
+  // Update status_flag in BY column (index 76)
+  while (rows[latestIdx].length <= STATUS_COL_IDX) {
+    rows[latestIdx].push("");
+  }
+  rows[latestIdx][STATUS_COL_IDX] = newStatus;
+
+  // Write all rows back (excluding header)
+  await sheets.spreadsheets.values.update({
+    spreadsheetId: SUBMISSION_SHEET_ID,
+    range: `Sheet1!A2:BY`,
+    valueInputOption: "USER_ENTERED",
+    resource: { values: rows },
+  });
+  return true;
 }
 
 // Write a row to the score log sheet
@@ -231,23 +317,23 @@ async function appendScoreLogRow({
 }
 
 // Fetch role competencies from Google Sheet (Sheet2)
-async function fetchRoleCompetencies() {
-  const sheets = await getSheetsClient();
-  const response = await sheets.spreadsheets.values.get({
-    spreadsheetId: ROLE_COMPETENCIES_SHEET_ID,
-    range: "role_competencies!A2:D", // Adjust range as needed for role_competencies data
-  });
-  const rows = response.data.values;
-  if (!rows || rows.length === 0) return [];
+// async function fetchRoleCompetencies() {
+//   const sheets = await getSheetsClient();
+//   const response = await sheets.spreadsheets.values.get({
+//     spreadsheetId: ROLE_COMPETENCIES_SHEET_ID,
+//     range: "role_competencies!A2:D", // Adjust range as needed for role_competencies data
+//   });
+//   const rows = response.data.values;
+//   if (!rows || rows.length === 0) return [];
 
-  // Map each row to a role competency object
-  return rows.map((row) => ({
-    id: row[0],
-    role_id: row[1],
-    competency_id: row[2],
-    proficiency_required: row[3],
-  }));
-}
+//   // Map each row to a role competency object
+//   return rows.map((row) => ({
+//     id: row[0],
+//     role_id: row[1],
+//     competency_id: row[2],
+//     proficiency_required: row[3],
+//   }));
+// }
 
 module.exports = {
   getRandomQuestions,
@@ -257,5 +343,6 @@ module.exports = {
   appendSubmissionRows,
   getSheetsClient,
   appendScoreLogRow,
-  fetchRoleCompetencies,
+  // fetchRoleCompetencies,
+  setRetestAllowed,
 };

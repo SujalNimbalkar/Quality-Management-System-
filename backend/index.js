@@ -3,7 +3,8 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = 5000 || process.env.PORT;
+const connectDB = require("./utils/db");
 
 app.use(cors());
 app.use(express.json());
@@ -16,21 +17,24 @@ app.get("/", (req, res) => {
 });
 
 // Import and use modularized routes
-const testRoutes = require("./routes/testRoutes");
+
 const employeeRoutes = require("./routes/employeeRoutes");
-const entityRoutes = require("./routes/entityRoutes");
 const employeeRolesRoutes = require("./routes/employeeRoles");
+const entityRoutes = require("./routes/entityRoutes");
 const mcqRoutes = require("./routes/mcqRoutes");
 
-app.use(testRoutes);
-app.use(employeeRoutes);
+// Commented out to avoid root-level route conflicts
+app.use("/api/employee", employeeRolesRoutes); // Mount specific employee routes first
+app.use("/api", employeeRoutes);
 app.use("/api", entityRoutes);
-app.use("/api/employee", employeeRolesRoutes);
 app.use("/api/mcq", mcqRoutes);
 app.use("/api/performance", mcqRoutes);
 // Serve static files from excel_data for JSON/CSV access
-app.use("/excel_data", express.static(path.join(__dirname, "../excel_data")));
+// app.use("/excel_data", express.static(path.join(__dirname, "../excel_data")));
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+(async () => {
+  await connectDB();
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+})();

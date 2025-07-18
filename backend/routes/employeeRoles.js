@@ -1,36 +1,78 @@
 // backend/routes/employeeRoles.js
 const express = require("express");
-const fs = require("fs");
-const path = require("path");
-const csv = require("csv-parser");
+const Employee = require("../models/Employee");
 
 const router = express.Router();
-const employeeListPath = path.join(__dirname, "../../employee - Sheet1.csv");
 
-// GET /api/employee/roles?name=EmployeeName
-router.get("/roles", (req, res) => {
-  const name = req.query.name;
-  if (!name) return res.status(400).json({ error: "Missing employee name" });
+/**
+ * GET /api/employee/roles
+ * Query params: id (employee_id) or name (employee name)
+ * Returns: { employee_id, name, department, roles: [] }
+ */
+router.get("/roles", async (req, res) => {
+  const { name, id } = req.query;
+  if (!name && !id) {
+    return res.status(400).json({ error: "Missing employee name or id" });
+  }
 
-  const results = [];
-  fs.createReadStream(employeeListPath)
-    .pipe(csv())
-    .on("data", (data) => results.push(data))
-    .on("end", () => {
-      const emp = results.find(
-        (e) =>
-          (e.Employee || "").trim().toLowerCase() === name.trim().toLowerCase()
-      );
-      if (!emp) return res.status(404).json({ error: "Employee not found" });
-      const roles = [emp.Role1, emp.Role2, emp.Role3]
-        .map((r) => (r ? r.trim() : ""))
-        .filter((r) => r);
-      res.json({
-        name: emp.Employee,
-        department: emp["Department/ Designation"] || "",
-        roles,
+  try {
+    let emp = null;
+    if (id) {
+      emp = await Employee.findOne({
+        $or: [{ employee_id: id }, { employee_id: Number(id) }],
       });
+    } else if (name) {
+      emp = await Employee.findOne({
+        $or: [
+          { Employee: { $regex: new RegExp(`^${name.trim()}$`, "i") } },
+          { name: { $regex: new RegExp(`^${name.trim()}$`, "i") } },
+        ],
+      });
+    }
+
+    if (!emp) {
+      return res.status(404).json({ error: "Employee not found" });
+    }
+
+    const employee_id = emp.employee_id || null;
+    const employeeName = emp.Employee || emp.name || "N/A";
+    const department =
+      emp.Department || emp.department || emp.designation || null;
+    const roles = Array.isArray(emp.Roles) ? emp.Roles : [];
+
+    return res.json({
+      employee_id,
+      name: employeeName,
+      department,
+      roles,
     });
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to load employees" });
+  }
+});
+
+/**
+ * GET /api/employee/skills/:id
+ * Returns: { employee_id, name, department, skills: [] }
+ */
+router.get("/skills/:id", async (req, res) => {
+  const employeeId = req.params.id;
+  try {
+    const emp = await Employee.findOne({
+      $or: [{ employee_id: employeeId }, { employee_id: Number(employeeId) }],
+    });
+    if (!emp) {
+      return res.status(404).json({ error: "Employee not found" });
+    }
+    return res.json({
+      employee_id: emp.employee_id || null,
+      name: emp.Employee || emp.name || null,
+      department: emp.Department || emp.department || emp.designation || null,
+      skills: emp.Skills || [],
+    });
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to load employees" });
+  }
 });
 
 module.exports = router;

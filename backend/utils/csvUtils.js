@@ -1,26 +1,26 @@
-// Generic CSV utility functions for CRUD operations
+// Utility functions for importing/exporting CSV data to/from MongoDB
 const xlsx = require("xlsx");
-const path = require("path");
-const fs = require("fs");
+const Employee = require("../models/Employee");
+const Skill = require("../models/Skill");
+const CompetencyMap = require("../models/CompetencyMap");
 
-function getCsvPath(filename) {
-  return path.join(__dirname, "../../excel_data", filename);
-}
-
-function readCsv(filename) {
-  const filePath = getCsvPath(filename);
-  if (!fs.existsSync(filePath)) return [];
-  const workbook = xlsx.readFile(filePath, { type: "file", raw: false });
-  const sheet = workbook.Sheets[workbook.SheetNames[0]];
-  return xlsx.utils.sheet_to_json(sheet);
-}
-
-function writeCsv(filename, data) {
-  const filePath = getCsvPath(filename);
+// Export a MongoDB collection to CSV (returns CSV string)
+async function exportCollectionToCsv(model) {
+  const data = await model.find({}).lean();
   const sheet = xlsx.utils.json_to_sheet(data);
   const workbook = xlsx.utils.book_new();
   xlsx.utils.book_append_sheet(workbook, sheet, "Sheet1");
-  xlsx.writeFile(workbook, filePath, { bookType: "csv" });
+  return xlsx.utils.sheet_to_csv(sheet);
 }
 
-module.exports = { readCsv, writeCsv };
+// Import data from a CSV string to a MongoDB collection (overwrites collection)
+async function importCsvToCollection(model, csvString) {
+  const data = xlsx.utils.sheet_to_json(xlsx.utils.csv_to_sheet(csvString));
+  await model.deleteMany({});
+  await model.insertMany(data);
+}
+
+module.exports = {
+  exportCollectionToCsv,
+  importCsvToCollection,
+};

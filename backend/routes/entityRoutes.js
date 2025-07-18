@@ -1,20 +1,25 @@
 // Generic CRUD routes for all core entities
 const express = require("express");
 const router = express.Router();
-const { readCsv, writeCsv } = require("../utils/csvUtils");
-const { fetchRoleCompetencies } = require("../utils/sheets");
+const { fetchRoleCompetencies, setRetestAllowed } = require("../utils/sheets");
+const Skill = require("../models/Skill");
+const CompetencyMap = require("../models/CompetencyMap");
 
-const entityFiles = {
-  employees: "employees.csv",
-  roles: "roles.csv",
-  competencies: "competencies.csv",
-  employee_roles: "employee_roles.csv",
-  role_competencies: "role_competencies.csv",
-  employee_competencies: "employee_competencies.csv",
-  assessments: "assessments.csv",
-  employee_assessment_results: "employee_assessment_results.csv",
-  qualifications: "qualifications.csv",
-};
+// Endpoint to allow retest for an employee/skill/level
+router.post("/retest-allow", async (req, res) => {
+  const { employee_id, skill, level } = req.body;
+  if (!employee_id || !skill || !level) {
+    return res
+      .status(400)
+      .json({ error: "Missing employee_id, skill, or level" });
+  }
+  try {
+    await setRetestAllowed(employee_id, skill, level);
+    res.json({ success: true });
+  } catch (e) {
+    res.status(500).json({ error: String(e) });
+  }
+});
 
 // Special route for role_competencies that fetches from Google Sheets
 router.get("/role_competencies", async (req, res) => {
@@ -22,7 +27,6 @@ router.get("/role_competencies", async (req, res) => {
     const data = await fetchRoleCompetencies();
     res.json(data);
   } catch (error) {
-    console.error("Error fetching role competencies:", error);
     res.status(500).json({ error: "Failed to fetch role competencies" });
   }
 });
@@ -38,7 +42,6 @@ router.get("/test-role-competencies", async (req, res) => {
       message: "Google Sheets integration is working",
     });
   } catch (error) {
-    console.error("Error testing role competencies:", error);
     res.status(500).json({
       success: false,
       error: error.message,
@@ -47,44 +50,60 @@ router.get("/test-role-competencies", async (req, res) => {
   }
 });
 
-// Generic GET all
-router.get("/:entity", (req, res) => {
-  const file = entityFiles[req.params.entity];
-  if (!file) return res.status(404).json({ error: "Entity not found" });
-  const data = readCsv(file);
-  res.json(data);
+// GET all skills
+router.get("/skills", async (req, res) => {
+  try {
+    const skills = await Skill.find({});
+    res.json(skills);
+  } catch (e) {
+    res.status(500).json({ error: "Failed to load skills" });
+  }
 });
 
-// Generic POST (add new)
-router.post("/:entity", (req, res) => {
-  const file = entityFiles[req.params.entity];
-  if (!file) return res.status(404).json({ error: "Entity not found" });
-  const data = readCsv(file);
-  data.push(req.body);
-  writeCsv(file, data);
-  res.json({ success: true });
+// POST add new skill
+router.post("/skills", async (req, res) => {
+  const { name } = req.body;
+  if (!name || typeof name !== "string") {
+    return res.status(400).json({ error: "Skill name is required." });
+  }
+  try {
+    // Generate a new unique code (skXX)
+    const skills = await Skill.find({});
+    let maxNum = 0;
+    skills.forEach((s) => {
+      const match = String(s.code).match(/^sk(\d+)$/);
+      if (match) maxNum = Math.max(maxNum, parseInt(match[1]));
+    });
+    const newCode = `sk${String(maxNum + 1).padStart(2, "0")}`;
+    const newSkill = await Skill.create({ name, code: newCode });
+    res.json(newSkill);
+  } catch (e) {
+    res.status(500).json({ error: "Failed to save new skill." });
+  }
 });
 
-// Generic PUT (update by id)
-router.put("/:entity/:id", (req, res) => {
-  const file = entityFiles[req.params.entity];
-  if (!file) return res.status(404).json({ error: "Entity not found" });
-  let data = readCsv(file);
-  const idx = data.findIndex((row) => String(row.id) === req.params.id);
-  if (idx === -1) return res.status(404).json({ error: "Record not found" });
-  data[idx] = { ...data[idx], ...req.body };
-  writeCsv(file, data);
-  res.json({ success: true });
+// Add new role to competency map
+router.post("/competency_map", async (req, res) => {
+  const { Role, Skills } = req.body;
+  if (!Role || !Skills || typeof Skills !== "object") {
+    return res.status(400).json({ error: "Role and Skills are required." });
+  }
+  try {
+    const newMap = await CompetencyMap.create({ role: Role, skills: Skills });
+    res.json({ success: true, map: newMap });
+  } catch (e) {
+    res.status(500).json({ error: "Failed to update competency map" });
+  }
 });
 
-// Generic DELETE (by id)
-router.delete("/:entity/:id", (req, res) => {
-  const file = entityFiles[req.params.entity];
-  if (!file) return res.status(404).json({ error: "Entity not found" });
-  let data = readCsv(file);
-  data = data.filter((row) => String(row.id) !== req.params.id);
-  writeCsv(file, data);
-  res.json({ success: true });
+// GET all unique roles from CompetencyMap for dropdowns
+router.get("/roles", async (req, res) => {
+  try {
+    const roles = await CompetencyMap.distinct("role");
+    res.json(roles.filter(Boolean));
+  } catch (e) {
+    res.status(500).json({ error: "Failed to fetch roles" });
+  }
 });
 
 module.exports = router;
