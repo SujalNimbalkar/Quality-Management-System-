@@ -26,6 +26,7 @@ function App() {
   const [roleCompetencies, setRoleCompetencies] = useState([]);
   const [competencies, setCompetencies] = useState([]);
   const [competencyMap, setCompetencyMap] = useState({ headers: [], data: [] });
+  const [loading, setLoading] = useState(false); // <-- Add loading state
 
   useEffect(() => {
     async function fetchData() {
@@ -41,12 +42,14 @@ function App() {
   }, []);
 
   const handleLogin = async (firebaseUser) => {
+    setLoading(true); // <-- Start loading
     setUser(firebaseUser);
     const firebaseEmail = firebaseUser.email;
     const res = await fetch(`${BACKEND}/api/employee-id-by-email/${encodeURIComponent(firebaseEmail)}`);
     if (!res.ok) {
       alert("No matching employee found for your email.");
       setUser(null);
+      setLoading(false); // <-- Stop loading on error
       return;
     }
     const { employee_id } = await res.json();
@@ -77,6 +80,7 @@ function App() {
     setEmployeeInfo(employeeInfo);
     setEmployeeRoles(employeeRoles);
     setEmployeeSkills(employeeSkills);
+    setLoading(false); // <-- Stop loading when done
   };
 
   // Redirect to login on refresh if not logged in
@@ -92,6 +96,11 @@ function App() {
         <Route
           path="/"
           element={
+            loading ? (
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+                <div className="loader">Loading...</div>
+              </div>
+            ) :
             !user ? (
               <Login onLogin={handleLogin} />
             ) : isAdmin ? null : (
